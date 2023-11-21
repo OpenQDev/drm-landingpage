@@ -4,7 +4,7 @@ import FaqQuestion from "./faq-questions";
 const Faq = () => {
   return (
     <div className="top-content-padding">
-      <div className="flex flex-col px-8 bg-white justify-center items-center lg:text-center">
+      <div className="flex flex-col px-8 justify-center items-center lg:text-center">
         <div className="title-text-size">Frequently</div>
         <div className="title-text-size pt-3 pb-8">asked questions</div>
         <div className="w-full max-w-[1000px] ">
