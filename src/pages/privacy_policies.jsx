@@ -1,7 +1,7 @@
 import React from "react";
-import Nav from "../components/Sales/nav";
-import FooterBanner from "@/components/Sales/footer-banner";
-import Footer from "@/components/Sales/footer";
+import Nav from "../components/sales/nav";
+import FooterBanner from "@/components/sales/footer-banner";
+import Footer from "@/components/sales/footer";
 
 const Imprint = () => {
   return (

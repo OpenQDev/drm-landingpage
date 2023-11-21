@@ -1,15 +1,15 @@
 import React from "react";
-import Nav from "../components/Sales/nav";
-import DevRelHero from "../components/Sales/drm/devrel-hero";
-import DevRelCore from "../components/Sales/drm/devrel-core";
-import DevRelProblems from "../components/Sales/drm/devrel-problems";
-import ProductShowcase from "../components/Sales/drm/product-showcase/product-showcase";
-import Faq from "../components/Sales/drm/faq";
-import LeadDiscovery from "@/components/Sales/drm/lead-discovery";
-import HowItWorks from "@/components/Sales/drm/how-it-works";
-import DeveloperDynamics from "@/components/Sales/drm/developer-dynamics";
-import FooterBanner from "@/components/Sales/footer-banner";
-import Footer from "@/components/Sales/footer";
+import Nav from "../components/sales/nav";
+import DevRelHero from "../components/sales/drm/devrel-hero";
+import DevRelCore from "../components/sales/drm/devrel-core";
+import DevRelProblems from "../components/sales/drm/devrel-problems";
+import ProductShowcase from "../components/sales/drm/product-showcase/product-showcase";
+import Faq from "../components/sales/drm/faq";
+import LeadDiscovery from "@/components/sales/drm/lead-discovery";
+import HowItWorks from "@/components/sales/drm/how-it-works";
+import DeveloperDynamics from "@/components/sales/drm/developer-dynamics";
+import FooterBanner from "@/components/sales/footer-banner";
+import Footer from "@/components/sales/footer";
 
 const DRM = () => {
   return (
