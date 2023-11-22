@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Nav from "../components/sales/nav";
 import DevRelHero from "../components/sales/drm/devrel-hero";
 import DevRelCore from "../components/sales/drm/devrel-core";
@@ -13,21 +14,48 @@ import Footer from "@/components/sales/footer";
 
 const DRM = () => {
   return (
-    <main className="bg-bg-primary-color explore">
-      <Nav />
-      <div className="bg-bg-primary-color">
-        <DevRelHero />
-        <DevRelCore />
-        <DevRelProblems />
-        <ProductShowcase />
-        <LeadDiscovery />
-        <HowItWorks />
-        <DeveloperDynamics />
-        <Faq />
-        <FooterBanner />
-        <Footer />
-      </div>
-    </main>
+    <>
+      <Head>
+        <title>OpenQ DRM - Developer Relationship Management Platform</title>
+        <meta
+          name="description"
+          content="Harness the power of a CRM that helps you to better engage, understand and grow your developer community."
+        />
+        <meta
+          property="og:title"
+          content="Developer Relationship Management Platform"
+        />
+        <meta
+          property="og:description"
+          content="Harness the power of a CRM that helps you to better engage, understand and grow your developer community."
+        />
+        <meta property="og:image" content="/openq-website-thumbnail.png" />
+        <meta property="og:url" content="https://openq.dev" />
+        <meta property="og:type" content="website" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="Your Website Title" />
+        <meta
+          property="twitter:description"
+          content="Harness the power of a CRM that helps you to better engage, understand and grow your developer community."
+        />
+        <meta property="twitter:image" content="/openq-website-thumbnail.png" />
+      </Head>
+      <main className="bg-bg-primary-color explore">
+        <Nav />
+        <div className="bg-bg-primary-color">
+          <DevRelHero />
+          <DevRelCore />
+          <DevRelProblems />
+          <ProductShowcase />
+          <LeadDiscovery />
+          <HowItWorks />
+          <DeveloperDynamics />
+          <Faq />
+          <FooterBanner />
+          <Footer />
+        </div>
+      </main>
+    </>
   );
 };
 
