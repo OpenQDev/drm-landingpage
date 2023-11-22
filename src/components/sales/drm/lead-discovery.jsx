@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import LeadDiscoveryResult from "./product-showcase/lead-discovery-result";
+import TranslateAndFade from "../animations/translate-and-fade";
 
 const LeadDiscovery = () => {
   return (
@@ -120,16 +121,18 @@ const LeadDiscovery = () => {
             </div>
           </div>
           <div className="hidden lg:block">
-            <div className="title-text-size">
-              Beyond Data Enrichment: OpenQ's AI-Driven Lead Discovery
-            </div>
-            <div className="text-gray-700 text-lg pt-5">
-              Utilize OpenQ to enhance your CRM with robust lead discovery. Our
-              AI uncovers not just engaged community members and rekindling
-              opportunities, but also previously untapped developers profiles
-              that align with your offerings—expanding your reach to the ideal
-              audience.{" "}
-            </div>
+            <TranslateAndFade direction="left">
+              <div className="title-text-size">
+                Beyond Data Enrichment: OpenQ's AI-Driven Lead Discovery
+              </div>
+              <div className="text-gray-700 text-lg pt-5">
+                Utilize OpenQ to enhance your CRM with robust lead discovery.
+                Our AI uncovers not just engaged community members and
+                rekindling opportunities, but also previously untapped
+                developers profiles that align with your offerings—expanding
+                your reach to the ideal audience.{" "}
+              </div>
+            </TranslateAndFade>
           </div>
         </div>
       </div>
