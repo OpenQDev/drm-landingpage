@@ -69,7 +69,7 @@ const DeveloperDynamics = () => {
                 </div>
               </div>
               <div className="flex flex-col space-y-5 pt-5 lg:pt-0 lg:w-1/2">
-                <div className="border border-gray-200 rounded-lg p-5">
+                <div className="border border-gray-400 rounded-lg p-5">
                   <div className="flex flex-row justify-between text-xl ">
                     <div>Sync insights with your CRM</div>
                     <div>Import static data</div>
@@ -84,7 +84,7 @@ const DeveloperDynamics = () => {
                     />
                   </div>
                 </div>
-                <div className="border border-gray-200 rounded-lg p-5">
+                <div className="border border-gray-400 rounded-lg p-5">
                   <Image
                     className="rounded-md"
                     src="/landingpage/drm/devrel/DeveloperDynamicsFours.png"
