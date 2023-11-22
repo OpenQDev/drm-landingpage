@@ -33,7 +33,10 @@ const DRM = () => {
         <meta property="og:url" content="https://openq.dev" />
         <meta property="og:type" content="website" />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="Your Website Title" />
+        <meta
+          property="twitter:title"
+          content="Developer Relationship Management Platform"
+        />
         <meta
           property="twitter:description"
           content="Harness the power of a CRM that helps you to better engage, understand and grow your developer community."
