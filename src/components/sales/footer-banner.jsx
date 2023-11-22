@@ -29,7 +29,7 @@ const FooterBanner = () => {
                   target="_blank"
                   href="https://calendly.com/ricketh/openqdemo"
                 >
-                  Contact sales
+                  Request demo
                 </Link>
               </div>
             </div>
