@@ -28,6 +28,7 @@ const DevRelProblems = () => {
           height="auto"
           autoPlay
           muted
+          playsInline
           style={{ backgroundColor: "transparent" }}
         >
           <source
