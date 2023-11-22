@@ -55,7 +55,9 @@ const Footer = () => {
                   <span>Imprint</span>
                 </Link>
               </div>
-              <div>Privacy Policies</div>
+              <Link href="//privacy_policies">
+                <div>Privacy Policies</div>
+              </Link>
               <div>Terms of Use</div>
             </div>
           </div>

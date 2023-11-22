@@ -7,9 +7,11 @@ const Imprint = () => {
   return (
     <div>
       <Nav />
-      <main className="top-content-padding px-content-padding -mt-10">
-        <div className="">
-          <div className="text-3xl font-bold">Imprint</div>
+      <main className="top-content-padding px-content-padding md:-mt-10">
+        <div>
+          <div className="text-3xl font-bold border-b border-gray-400 pb-10">
+            Imprint
+          </div>
           <div className="font-bold pt-5">Information according to § 5 TMG</div>
           <div>OpenQ Labs GmbH</div>
           <div>
