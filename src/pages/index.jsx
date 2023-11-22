@@ -29,7 +29,10 @@ const DRM = () => {
           property="og:description"
           content="Harness the power of a CRM that helps you to better engage, understand and grow your developer community."
         />
-        <meta property="og:image" content="/openq-website-thumbnail.png" />
+        <meta
+          property="og:image"
+          content="https://openq.dev/openq-website-thumbnail.png"
+        />
         <meta property="og:url" content="https://openq.dev" />
         <meta property="og:type" content="website" />
         <meta property="twitter:card" content="summary_large_image" />
