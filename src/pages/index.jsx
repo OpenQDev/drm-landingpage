@@ -11,6 +11,7 @@ import HowItWorks from "@/components/sales/drm/how-it-works";
 import DeveloperDynamics from "@/components/sales/drm/developer-dynamics";
 import FooterBanner from "@/components/sales/footer-banner";
 import Footer from "@/components/sales/footer";
+import StepTwoContent from "@/components/sales/drm/elements/step-two-content";
 
 const DRM = () => {
   return (
