@@ -3,12 +3,15 @@ import Image from "next/image";
 import Card from "./card";
 import GarretCard from "./garret-card";
 import SideInfo from "./side-info";
+import TranslateAndFade from "../../animations/translate-and-fade";
 
 const TopSection = () => {
   return (
     <div className="flex flex-row space-x-5 px-8 md:px-10 lg:space-x-10 border-l border-r border-gray-400 pt-10">
       <div className="flex flex-col lg:pl-10">
-        <Card />
+        <TranslateAndFade direction="left">
+          <Card />
+        </TranslateAndFade>
         <div className="pl-7">
           <div className="flex items-center py-10 border-l border-gray-400">
             <div className="flex flex-row items-center -ml-5">
@@ -20,12 +23,14 @@ const TopSection = () => {
             </div>
           </div>
         </div>
-        <GarretCard subContext="wrote an email 90 days ago." />
-        <SideInfo
-          mainText="Positive response received; utilized OpenQ template, with follow-up activity underway"
-          subText="80% activity in the first 3 months utilizing dependency"
-          subTextIcon=""
-        />
+        <TranslateAndFade direction="left">
+          <GarretCard subContext="wrote an email 90 days ago." />
+          <SideInfo
+            mainText="Positive response received; utilized OpenQ template, with follow-up activity underway"
+            subText="80% activity in the first 3 months utilizing dependency"
+            subTextIcon=""
+          />
+        </TranslateAndFade>
       </div>
       <div className="hidden xl:block">
         <div className="title-text-size lg:w-2/3 ">
