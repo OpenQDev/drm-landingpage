@@ -15,6 +15,7 @@ const BottomSection = () => {
             "Created an account for our commercial product, started on a paid tier"
           }
           subText={"Wrote a review on X (Twitter)"}
+          subTextIcon={"ca"}
         />
 
         <SideInfo
@@ -22,6 +23,7 @@ const BottomSection = () => {
             "Tested competitor tool; discussed dependency issues in this GitHub issue"
           }
           subText={"10% activity on dependency-related project"}
+          subTextIcon={"crit"}
         />
 
         <GarretCard subContext={"wrote email 14 days ago"} bg={true} />
@@ -30,6 +32,7 @@ const BottomSection = () => {
             "Feedback received; expecting churn--additional action required"
           }
           subText={"Forward feedback to product team"}
+          subTextIcon={"fb"}
         />
       </div>
       <div className="hidden xl:block ">
