@@ -8,20 +8,23 @@ const DevRelProblems = () => {
 
     <div className="flex flex-col lg:flex-row lg:space-x-32 justify-center items-center top-content-padding px-content-padding">
       <div className="flex-1 flex flex-col text-left lg:mb-16">
-        <div className="font-bold text-q-purple text-md">THE PROBLEM</div>
-        <div className="title-text-size pt-3">
-          Uncharted developer <br />
-          dynamics
-        </div>
-        <div className="text-gray-700 text-lg pt-5">
-          For firms crafting the tech landscape with developer tools, APIs, or
-          SDKs, true insight into developer activity is crucial yet elusive. The
-          data is vast, scattered, and sometimes hidden in unknown repos — a
-          complex puzzle of engagement across the digital expanse. <br /> <br />
-          With OpenQ, you provide the tools; we reveal the hands that wield them
-          — every unseen developer move, mapped and distilled into a precise
-          developer fingerprint.
-        </div>
+        <TranslateAndFade direction="left">
+          <div className="font-bold text-q-purple text-md">THE PROBLEM</div>
+          <div className="title-text-size pt-3">
+            Uncharted developer <br />
+            dynamics
+          </div>
+          <div className="text-gray-700 text-lg pt-5">
+            For firms crafting the tech landscape with developer tools, APIs, or
+            SDKs, true insight into developer activity is crucial yet elusive.
+            The data is vast, scattered, and sometimes hidden in unknown repos —
+            a complex puzzle of engagement across the digital expanse. <br />{" "}
+            <br />
+            With OpenQ, you provide the tools; we reveal the hands that wield
+            them — every unseen developer move, mapped and distilled into a
+            precise developer fingerprint.
+          </div>
+        </TranslateAndFade>
       </div>
 
       <div className="w-full md:w-1/2 lg:w-1/3 top-collapse-padding justify-center items-center">
