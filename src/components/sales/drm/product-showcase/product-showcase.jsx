@@ -10,20 +10,19 @@ import TranslateAndFade from "../../animations/translate-and-fade";
 const ProductShowcase = () => {
   return (
     <div className="top-content-padding">
-      <TranslateAndFade direction="left">
-        <div className="sm:block xl:hidden px-content-padding">
-          <div className="title-text-size">
-            Enrich your developer accounts with precision and insight
-          </div>
-          <div className="text-gray-700 text-lg pt-5">
-            Dive into actionable insights beyond surface-level metrics. OpenQ
-            clarifies the impact of every developer account on your business
-            objectives , empowering you to track, measure and prove ROI
-            --transforming how you value investments from open source
-            contributions to event engagements.
-          </div>
+      <div className="sm:block xl:hidden px-content-padding">
+        <div className="title-text-size">
+          Enrich your developer accounts with precision and insight
         </div>
-      </TranslateAndFade>
+        <div className="text-gray-700 text-lg pt-5">
+          Dive into actionable insights beyond surface-level metrics. OpenQ
+          clarifies the impact of every developer account on your business
+          objectives , empowering you to track, measure and prove ROI
+          --transforming how you value investments from open source
+          contributions to event engagements.
+        </div>
+      </div>
+
       <div className="top-collapse-padding ">
         <div className="justify-center mx-auto md:max-w-[1280px] px-0 lg:px-20 md:px-20 sm:px-8 xl:px-0 md:pt-12 xl:pt-0">
           <div className="flex flex-row items-center space-x-5 border lg:rounded-t-md border-gray-400 w-full p-4 px-2 lg:pl-10">

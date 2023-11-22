@@ -10,31 +10,27 @@ const BottomSection = () => {
   return (
     <div className="flex flex-row items-center space-x-5 border-l border-r border-b rounded-bl-md border-gray-400 lg:pl-10">
       <div className="flex flex-col px-8 md:px-10">
-        <TranslateAndFade direction="left">
-          <SideInfo
-            mainText={
-              "Created an account for our commercial product, started on a paid tier"
-            }
-            subText={"Wrote a review on X (Twitter)"}
-          />
-        </TranslateAndFade>
-        <TranslateAndFade direction="left">
-          <SideInfo
-            mainText={
-              "Tested competitor tool; discussed dependency issues in this GitHub issue"
-            }
-            subText={"10% activity on dependency-related project"}
-          />
-        </TranslateAndFade>
-        <TranslateAndFade direction="left">
-          <GarretCard subContext={"wrote email 14 days ago"} bg={true} />
-          <SideInfo
-            mainText={
-              "Feedback received; expecting churn--additional action required"
-            }
-            subText={"Forward feedback to product team"}
-          />
-        </TranslateAndFade>
+        <SideInfo
+          mainText={
+            "Created an account for our commercial product, started on a paid tier"
+          }
+          subText={"Wrote a review on X (Twitter)"}
+        />
+
+        <SideInfo
+          mainText={
+            "Tested competitor tool; discussed dependency issues in this GitHub issue"
+          }
+          subText={"10% activity on dependency-related project"}
+        />
+
+        <GarretCard subContext={"wrote email 14 days ago"} bg={true} />
+        <SideInfo
+          mainText={
+            "Feedback received; expecting churn--additional action required"
+          }
+          subText={"Forward feedback to product team"}
+        />
       </div>
       <div className="hidden xl:block ">
         <div className="title-text-size lg:w-2/3  -ml-5">
