@@ -105,7 +105,7 @@ const SideInfo = ({ mainText, subText, subTextIcon }) => {
           <div className="p-3 bg-gray-300 rounded-full">
             {subTextIcon && <Icon name={subTextIcon} />}
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col space-y-2">
             <div className="pl-3 text-sm font-medium">{mainText}</div>
             <div className="pl-3 text-sm font-medium">{subText}</div>
           </div>
