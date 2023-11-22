@@ -27,10 +27,9 @@ const FooterBanner = () => {
               <div className="text-white border border-white rounded-lg p-2 px-3 font-semibold">
                 <Link
                   target="_blank"
-                  href="https://drm.openq.dev/"
-                  className="text-gray-900 text-xs lg:text-lg font-medium text-white"
+                  href="https://calendly.com/ricketh/openqdemo"
                 >
-                  Closed beta sign in
+                  Contact sales
                 </Link>
               </div>
             </div>
