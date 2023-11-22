@@ -121,18 +121,16 @@ const LeadDiscovery = () => {
             </div>
           </div>
           <div className="hidden lg:block">
-            <TranslateAndFade direction="left">
-              <div className="title-text-size">
-                Beyond Data Enrichment: OpenQ's AI-Driven Lead Discovery
-              </div>
-              <div className="text-gray-700 text-lg pt-5">
-                Utilize OpenQ to enhance your CRM with robust lead discovery.
-                Our AI uncovers not just engaged community members and
-                rekindling opportunities, but also previously untapped
-                developers profiles that align with your offerings—expanding
-                your reach to the ideal audience.{" "}
-              </div>
-            </TranslateAndFade>
+            <div className="title-text-size">
+              Beyond Data Enrichment: OpenQ's AI-Driven Lead Discovery
+            </div>
+            <div className="text-gray-700 text-lg pt-5">
+              Utilize OpenQ to enhance your CRM with robust lead discovery. Our
+              AI uncovers not just engaged community members and rekindling
+              opportunities, but also previously untapped developers profiles
+              that align with your offerings—expanding your reach to the ideal
+              audience.{" "}
+            </div>
           </div>
         </div>
       </div>

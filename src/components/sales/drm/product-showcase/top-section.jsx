@@ -10,7 +10,6 @@ const TopSection = () => {
     <div className="flex flex-row space-x-5 px-8 md:px-10 lg:space-x-10 border-l border-r border-gray-400 pt-10">
       <div className="flex flex-col lg:pl-10">
         <Card />
-
         <div className="pl-7">
           <div className="flex items-center py-10 border-l border-gray-400">
             <div className="flex flex-row items-center -ml-5">
@@ -22,7 +21,6 @@ const TopSection = () => {
             </div>
           </div>
         </div>
-
         <GarretCard subContext="wrote an email 90 days ago." />
         <SideInfo
           mainText="Positive response received; utilized OpenQ template, with follow-up activity underway"
