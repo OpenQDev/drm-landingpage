@@ -12,6 +12,7 @@ const Imprint = () => {
           <div className="text-3xl font-bold border-b border-gray-400 pb-10">
             Imprint
           </div>
+          <p className="pt-1">Last Updated 22.11.2023</p>
           <div className="font-bold pt-5">Information according to § 5 TMG</div>
           <div>OpenQ Labs GmbH</div>
           <div>

@@ -12,7 +12,9 @@ const Imprint = () => {
           <h1 className="text-3xl font-bold border-b border-gray-400 pb-10">
             Privacy Policy
           </h1>
+          <p className="pt-1">Last Updated 22.11.2023</p>
           <br />
+
           <p className="pt-2">
             This Privacy Policy describes Our policies and procedures on the
             collection, use and disclosure of Your information when You use the

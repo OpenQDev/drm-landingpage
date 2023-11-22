@@ -12,8 +12,10 @@ const Imprint = () => {
           <h1 className="text-3xl font-bold border-b border-gray-400 pb-10">
             Terms of Use
           </h1>
-
+          <p className="pt-1">Last Updated 22.11.2023</p>
           <br />
+          <h2>Agreement to our Legal Terms</h2>
+          <p></p>
         </div>
       </main>
       <FooterBanner />
