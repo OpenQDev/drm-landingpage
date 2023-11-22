@@ -21,15 +21,11 @@ const DevRelHero = () => {
             </div>
           </Typeform>
 
-          <Link
-            target="_blank"
-            href="https://calendly.com/ricketh/openqdemo"
-            className="text-gray-900 text-xs lg:text-lg font-medium"
-          >
-            <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium md:text-xs lg:text-lg">
+          <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium md:text-xs lg:text-lg">
+            <Link target="_blank" href="https://calendly.com/ricketh/openqdemo">
               Contact sales
-            </div>
-          </Link>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
