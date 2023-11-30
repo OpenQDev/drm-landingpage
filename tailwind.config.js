@@ -19,6 +19,13 @@ module.exports = {
       },
       fontFamily: {
         custom: ["Gilroy", "sans-serif"], // Use your font name here
+        "ui-monospace": [
+          "ui-monospace",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "monospace",
+        ],
       },
       fontSize: {
         "5.5xl": "3.2rem", // Custom font size between 5xl and 6xl
