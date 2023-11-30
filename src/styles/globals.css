@@ -65,3 +65,34 @@ body {
   transform: scale(0);
   transform-origin: top;
 }
+
+/* Blog Markdown CSS*/
+
+.markdown {
+  @apply text-[#24292F];
+}
+
+.markdown h1 {
+  @apply text-2xl font-bold;
+}
+
+.markdown h3 {
+  @apply text-xl font-bold;
+}
+
+.markdown ul {
+  @apply list-disc;
+}
+
+.markdown li {
+  @apply mb-2;
+}
+
+.markdown ul li,
+.markdown ol li {
+  @apply ml-6;
+}
+
+.markdown strong {
+  @apply font-semibold;
+}
