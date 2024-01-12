@@ -4,24 +4,89 @@ import { allPosts } from "contentlayer/generated";
 import Nav from "../components/sales/nav";
 import Footer from "@/components/sales/footer";
 import FooterBanner from "@/components/sales/footer-banner";
+import Image from "next/image";
 
-function PostCard({ title, url, date, body }) {
+function PostCardHighlight({
+  title,
+  subtitle,
+  url,
+  date,
+  body,
+  postImage,
+  author,
+}) {
   return (
     <div className="mb-8">
-      <h2 className="mb-1 text-xl">
+      <Image
+        className="rounded-md"
+        src={postImage}
+        alt="Post thumbnail"
+        width={1570}
+        height={856}
+      />
+      <h2 className="mb-5 mt-5">
         <Link href={url}>
-          <span className="text-blue-700 hover:text-blue-900 dark:text-blue-400">
-            {title}
-          </span>
+          <div className="font-extrabold text-4xl">{title}</div>
+          <div className="text-lg text-gray-600 mt-2">{subtitle}</div>
         </Link>
       </h2>
-      <time dateTime={date} className="mb-2 block text-xs text-gray-600">
-        {format(parseISO(date), "LLLL d, yyyy")}
-      </time>
-      <div
+      <div className="flex flex-row space-x-2 items-center">
+        <Image
+          className="rounded-full"
+          src={author.image}
+          alt="Post thumbnail"
+          width={25}
+          height={25}
+        />
+        <div className="font-bold">{author.name}</div>
+        <time
+          dateTime={date}
+          className="block text-sm text-gray-600 font-ui-monospace mt-1"
+        >
+          {format(parseISO(date), "LLLL d, yyyy")}
+        </time>
+      </div>
+      {/*  <div
         className="text-sm"
         dangerouslySetInnerHTML={{ __html: body.html }}
-      />
+      /> */}
+    </div>
+  );
+}
+
+function PostCard({ title, subtitle, url, date, body, postImage, author }) {
+  return (
+    <div className="flex flex-row space-x-2 border-b border-gray-300 py-7">
+      <div className="h-full">
+        <Image
+          className="rounded-md"
+          src={postImage}
+          alt="Post thumbnail"
+          width={250}
+          height={250}
+        />
+      </div>
+      <div>
+        <h2 className="">
+          <Link href={url}>
+            <div className="font-extrabold text-lg">{title}</div>
+            <div className="text-md text-gray-600 mt-2">{subtitle}</div>
+          </Link>
+        </h2>
+        <div className="flex flex-col space-y-1 mb-2 mt-2">
+          <div className="font-bold">{author.name}</div>
+          <time
+            dateTime={date}
+            className="block text-xs text-gray-600 font-ui-monospace mt-1"
+          >
+            {format(parseISO(date), "LLLL d, yyyy")}
+          </time>
+        </div>
+        {/*  <div
+        className="text-sm"
+        dangerouslySetInnerHTML={{ __html: body.html }}
+      /> */}
+      </div>
     </div>
   );
 }
@@ -32,15 +97,23 @@ export default function Blog() {
   );
 
   return (
-    <div>
-      <Nav />
-      <div className="mx-auto max-w-xl py-8">
-        <h1 className="mb-8 text-center text-2xl font-black font-custom">
-          Blog Posts
-        </h1>
-        {posts.map((post, idx) => (
-          <PostCard key={idx} {...post} />
-        ))}
+    <div className="">
+      <div className="sticky top-0 border-b border-gray-300 bg-[#FBFBFB]">
+        <Nav />
+      </div>
+      <div className="flex flex-row px-content-padding pt-10 space-x-10">
+        <div className="">
+          {posts.slice(0, 1).map((post, idx) => (
+            <PostCardHighlight key={idx} {...post} />
+          ))}
+        </div>
+        <div className="flex flex-col space-y-3 -mt-7">
+          <div className="">
+            {posts.slice(1, 3).map((post, idx) => (
+              <PostCard key={idx + 4} {...post} />
+            ))}
+          </div>
+        </div>
       </div>
       <FooterBanner />
       <Footer />

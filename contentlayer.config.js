@@ -13,12 +13,12 @@ const Post = defineDocumentType(() => ({
   computedFields: {
     url: {
       type: "string",
-      resolve: (post) => `/posts/${post._raw.flattenedPath}`,
+      resolve: (post) => `/blog/${post._raw.flattenedPath}`,
     },
   },
 }));
 
 export default makeSource({
-  contentDirPath: "src/pages/posts", // Adjusted to point to the correct directory
+  contentDirPath: "src/pages/blog", // Adjusted to point to the correct directory
   documentTypes: [Post],
 });

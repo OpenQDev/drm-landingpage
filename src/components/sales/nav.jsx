@@ -7,7 +7,7 @@ const Subnav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="pt-3 px-content-padding">
+    <div className="pt-1 px-content-padding bg-[#FBFBFB] pb-1">
       <div className={`flex flex-row justify-between items-center w-full py-4`}>
         <div className="flex flex-row items-center">
           <Link href="/">

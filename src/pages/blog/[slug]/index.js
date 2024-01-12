@@ -34,10 +34,10 @@ const PostLayout = ({ post }) => {
   return (
     <div>
       <Nav />
-      <article className="mx-auto font-custom max-w-5xl py-8 pt-20">
+      <article className="font-custom px-content-padding-blog py-8 pt-20">
         <div className="flex flex-col max-w-3xl justify-center mb-8">
           <h1 className="text-5xl font-extrabold">{post.title}</h1>
-          <h2 className="text-xl font-semibold pt-3 text-[#424242]">
+          <h2 className="text-xl font-semibold pt-5 text-[#424242]">
             {post.subtitle}
           </h2>
         </div>

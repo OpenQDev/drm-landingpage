@@ -1,6 +1,6 @@
 ---
-title: Universe’s key takeaway Innovate better with AI-powered workflows on a single, unified platform
-subtitle: Discover new AI-powered features and tools to help developers stay in the flow and organizations innovate at scale.
+title: How to track developer activity
+subtitle: Our take on developer activity based on github commits
 
 date: 2021-12-24
 author:
@@ -14,10 +14,6 @@ postImage: /landingpage/drm/devrel/devrel-landingpage-image-2.png
 **Author: John Doe**
 ![John Doe](/landingpage/drm/devrel/Kai.jpg)
 _December 24, 2021_ -->
-
-Ullamco et nostrud magna commodo nostrud...
-
-Ullamco et nostrud magna commodo nostrud. Aliqua dolore laborum id nulla dolore aliqua exercitation dolore. Aliqua laboris dolore ullamco eiusmod. Non nulla eu eiusmod do commodo proident.
 
 ### Test
 

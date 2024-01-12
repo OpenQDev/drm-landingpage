@@ -38,6 +38,10 @@ body {
   @apply mx-auto max-w-[1280px] px-8 lg:px-20 md:px-20 sm:px-8 xl:px-0;
 }
 
+.px-content-padding-blog {
+  @apply mx-auto max-w-[1000px] px-8 lg:px-28 md:px-20 sm:px-8 xl:px-0;
+}
+
 .pl-content-padding {
   @apply w-[1280px];
 }
@@ -73,11 +77,11 @@ body {
 }
 
 .markdown h1 {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-bold pt-3 pb-3;
 }
 
 .markdown h3 {
-  @apply text-xl font-bold;
+  @apply text-xl font-bold pt-3 pb-3;
 }
 
 .markdown ul {
