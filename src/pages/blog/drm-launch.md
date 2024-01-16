@@ -1,8 +1,8 @@
 ---
-title: DRM product closed beta test 1
+title: OpenQ DRM first closed beta test
 subtitle: You provide the tools; we reveal the hands that wield them — every unseen developer move, mapped and distilled into a precise developer fingerprint.
 
-date: 2022-08-03
+date: 2023-08-03
 author:
   name: Andrew O'Brien
   image: /landingpage/blog/authors/andrew.jpg

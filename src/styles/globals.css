@@ -105,3 +105,8 @@ body {
   color: #322ee9;
   font-weight: bold;
 }
+
+.markdown img {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}

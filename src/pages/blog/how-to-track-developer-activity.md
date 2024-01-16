@@ -1,26 +1,170 @@
 ---
 title: How to track developer activity
-subtitle: Our take on developer activity based on github commits
+subtitle: How to find developers using your dependencies and track if they are still actively using them
 
-date: 2021-12-24
+date: 2023-09-28
 author:
   name: Riccardo Lamanna
-  image: /landingpage/drm/devrel/Kai.jpg
-postImage: /landingpage/drm/devrel/devrel-landingpage-image-2.png
+  image: /landingpage/blog/authors/rick.png
+postImage: /landingpage/blog/how-to-track-developer-activity/header.png
 ---
 
-<!-- ![Post Image](/landingpage/drm/devrel/devrel-landingpage-image-2.png)
+In 2021, while consulting for several developer tooling companies in the dynamic realm of blockchain, I encountered diverse challenges in cultivating developer communities. Some clients were at the initial stages of building their developer base, while others boasted a rich pool of thousands who had dabbled in their technology.
 
-**Author: John Doe**
-![John Doe](/landingpage/drm/devrel/Kai.jpg)
-_December 24, 2021_ -->
+For those with an established community, my primary inquiry revolved around the vibrancy and engagement levels of these developers. Understanding the pulse of a developer community is crucial, as it directly influences the strategies employed in Developer Relations (DevRel).
+In the world of DevRel, the overarching goal is to amplify product awareness. However, a subtle but significant metric often shadows this objective: the count of active developers or users.
 
-### Test
+This insight emerged as a predominant measure of success in the [Developer Report 2023 by Commonroom.](https://www.commonroom.io/resources/2023-developer-relations-compensation-and-culture-report/)
 
-- **Point One**: Elit adipisicing elit irure incididunt est.
-- **Point Two**: Dolore aliqua in enim labore dolore magna.
-- **Point Three**: Excepteur sint occaecat cupidatat non proident.
+![Post Image](/landingpage/blog/how-to-track-developer-activity/1.png)
+
+Highlighting the intricate difficulties that DevRel professionals encounter, particularly when it comes to accessing essential metrics, a lack of access to data can significantly impact their effectiveness and overall well-being. Therefore, let's talk about this issue and learn how to solve it.
+
+![Post Image](/landingpage/blog/how-to-track-developer-activity/2.png)
+
+I empathize deeply with this scenario, having navigated the maze of developer profiles and GitHub projects. The quest to identify active engagement often felt Sisyphean, overshadowed by other pressing responsibilities.
+
+Moreover, the absence of a concrete starting point, like a spreadsheet, compounds this challenge. When dependencies can be downloaded anonymously, gauging who's utilizing your tools becomes akin to finding a needle in a haystack.
+
+In this article, I'll delve into effective systems for accurately measuring developer activity. We'll explore existing tools striving for comprehensive developer activity reports and take a closer look at OpenQ's innovative approach, aiming to streamline this process for DevRel professionals.
+
+### "Who uses my tool?" - Unraveling developer engagement
+
+In the quest to understand who is actively using your tool, especially when it involves blockchain technology or dependencies downloaded anonymously, the following approaches can be employed:
+
+## **1. Ecosystem lists on your website**
+
+Create a section on your website where projects using your tool can be listed. This not only showcases your tool's versatility but also provides a platform for developers to gain visibility. Incorporate a form for submissions, explicitly requesting GitHub account details. This approach turns your website into a dynamic hub of user engagement.
+
+## **2. Social media surveys**
+
+Leverage your social media presence to engage with the developer community. Conduct surveys or polls, asking followers to share their GitHub accounts if they're using your tool. This not only aids in identifying users but also fosters community engagement.
+
+## **3. GitHub CodeSearch API**
+
+Utilize the [GitHub Codesearch API](https://github.com/features/code-search/) to search for instances of your tool being used in public repositories. While this method offers limited scope, given its restrictions, it can still unearth valuable insights into how your tool is being integrated into projects.
+
+## **4. Hackathon & event participation tracking**
+
+During hackathons, conferences, or meetups, especially those you sponsor or organize, ensure you collect participant details. Pay special attention to those who submit projects related to your challenge. This not only identifies active users but also highlights potential advocates or power users.
+
+## **5. Ticket system integration**
+
+In your support or ticketing system, encourage users to link their GitHub accounts. This could be an opt-in feature, respecting user privacy, yet offering an avenue to connect support queries with actual user profiles.
+
+## **6. StackOverflow engagement**
+
+Actively monitor StackOverflow for questions related to your tool. Check the profiles of users posting these questions or answers, as they often include their GitHub accounts. This method provides a dual benefit: understanding common issues or use cases, and identifying active users.
+
+## **7. Effective communication through DevRel channels**
+
+A significant aspect of Developer Relations involves engaging with developers on platforms like Twitter, Telegram, Discord, or via Email. While it may seem tedious initially, these interactions can be a goldmine for collecting GitHub profiles. DevRel professionals can often find these profiles without needing to ask directly, by simply visiting the personal websites linked in the developers' social media bios.
+
+## **8. Leveraging commercial/SaaS offerings**
+
+It may seem straightforward, but capturing GitHub profiles from developers who use your SaaS or commercial offerings alongside open-source tools is crucial. Many users create accounts using GitHub, but some opt for alternatives like Google, resulting in unlinked GitHub accounts. Ensure your account creation process includes a step to request GitHub details. My experience with companies that implemented this strategy reveals its effectiveness: they were able to amass thousands of profiles, gaining valuable insights into their paying customers. This not only aided in retention strategies but also facilitated gathering targeted product feedback from the most relevant users for specific features or updates.
+
+Your search for active users of your tool requires a multi-faceted approach, combining direct engagement with indirect data gathering methods. Each of these strategies contributes to building a comprehensive picture of your developer community, enabling you to tailor your DevRel strategies more effectively.
+
+To kickstart this process, I suggest using Airtable as your central repository. Gather and organize all developer profiles, enriched with data acquired through forms or event participations. Additionally, you can integrate a form for your ecosystem list on your website, allowing it to feed data directly into your Airtable. This streamlined approach ensures you have a comprehensive and easily accessible database of developer interactions and engagement.
+
+### "Which developers are active in my community?"
+
+Now that you have compiled a list of GitHub profiles, the next step is to determine who is actively engaged and at what level. Recognizing active members within your developer community is crucial for promoting engagement and facilitating growth. I've put together a list of activities that many companies I'm familiar with employ. Keep in mind that the appropriateness of these activities may vary based on your community's size, with some being suitable for smaller communities and others more suitable for larger ones.
+
+## **1. GitHub repository activity**
+
+Begin by evaluating recent projects on GitHub profiles within your community. Focus on projects that utilize your development tool and scrutinize their commit history. A practical KPI is to look for projects with at least one commit in the past six weeks, which indicates recent activity.
+
+## **2. Community events participation**
+
+Regularly hosting community events is an excellent way to gauge and increase engagement. Keep track of attendees and encourage them to link their GitHub accounts. Post-event, engage with participants to understand their needs and assist them further. Treat active developers like they’re part of an accelerator, especially if they’re working on startups. Offer them resources like investor connections, feedback, and customer introductions.
+
+## **3. Structured communication**
+
+Keep in touch with your community through consistent, structured communication. While CRMs are commonly used, they may not be the best fit for developer relations. Instead, consider using a customized table or documentation system to log communications and follow-ups.
+
+## **4. Monitoring social media engagement**
+
+Actively monitor platforms like Twitter, Discord, and GitHub. Track how your community engages with your posts and measure metrics like likes, shares, and comments. Monitor the growth of your followers within the developer community to get a sense of your expanding reach.
+
+## **5. Engagement in online forums and Q&A sites**
+
+Participate in developer forums like Stack Overflow and Reddit. Monitor the number of discussions and questions about your tool or related technologies. Engage with these platforms to offer support and establish a presence in the community.
+
+## **6. Surveys and feedback collection**
+
+Regularly collect feedback through surveys and other methods. While feedback is essential, balance it with insights from the broader user base. Remember, the most vocal community members may not represent the majority. Proactively reach out to the silent majority to gain a well-rounded understanding of your user base.
+
+Combining these strategies will provide a detailed picture of your developer community's activity and engagement. Tailor your approach to suit the community's size and preferences, and utilize automation to make data collection and analysis more efficient. Building a thriving developer community is an ongoing process that demands understanding and catering to your members' needs and interests.
+
+### Automated developer activity tracking via OpenQ
+
+The notion of manually tracking whether a GitHub repository is related to your technology and its activity level might seem daunting. However, automation can significantly simplify this task. Here's an insight into automating the flow of tracking active GitHub repositories:
+
+## **Fingerprinting developer profiles**
+
+To effectively fingerprint developer profiles, establish a connection with GitHub data. At OpenQ, instead of relying solely on the GitHub API, we download repositories directly. This approach allows us to comb through the codebase to learn about the project.
+
+The key is setting a marker to identify if a repository is using your dependency, API, SDK, or blockchain technology.
+
+![Post Image](/landingpage/blog/how-to-track-developer-activity/3.png)
+
+With OpenQ, you can name your dependency, and we search through the repository’s config files to identify your technology. We also track other metrics like the commit range, contributors, number of forks, stars, and more. This results in a comprehensive table enriched with these metrics, highlighting whether a project is using your technology and its current activity state.
+
+![Post Image](/landingpage/blog/how-to-track-developer-activity/4.png)
+
+## **Differentiating user activity states**
+
+Our platform categorizes user activity into various states, such as 'Leads' (recent users of your dependency), 'Churned' (users who have removed your dependency), and others. This classification helps in understanding the engagement level of developers with your technology.
+
+## **Engagement beyond repositories**
+
+After analyzing a GitHub repository, we look into the contributors’ other projects. By downloading their relevant repositories, we determine if these contain your technology and assess their activity level.
+
+![Post Image](/landingpage/blog/how-to-track-developer-activity/5.png)
+
+If active, you can access a dedicated page for each contributor to discover the projects they are currently working on and whether they are using your technology.
+
+![Post Image](/landingpage/blog/how-to-track-developer-activity/6.png)
+
+Through this method, we've discovered that many developers work discreetly, often unnoticed. Clients have reported finding up to 60% more active projects with OpenQ using their technology than they previously knew.
+
+![Post Image](/landingpage/blog/how-to-track-developer-activity/7.png)
+
+This automated approach not only saves time but also uncovers valuable insights into developer engagement with your technology. By leveraging such tools, you can effectively manage and grow your developer community with precise and data-driven strategies.
+
+### **Leveraging automated developer activity analytics with OpenQ**
+
+When we began our research and spoke to dev tooling companies, a crucial need emerged aside from identifying active developers: the ability to set objectives and KPIs and measure their success with actionable ROI stats. These metrics need to be accurate, reliable, frequently updated, fully automated, and, most importantly, based on a trustworthy source.
+
+Having already learned a bit about our platform, you might anticipate the next feature. We focus on segmenting your developer community based on programs and events to measure their outcomes. We introduce a model called 'campaigns', which helps list engineers for certain event periods within a specific table. The goal is to measure the outcome of that event.
+
+![Post Image](/landingpage/blog/how-to-track-developer-activity/8.png)
+
+You can set a start and end date for a campaign to analyze as much as possible about the results. We use this data to analyze repository commits in correlation to those dates to estimate when a user joined your ecosystem, whether they are returning users, or already active. Post-event, say three months later, we provide an overview of how that event turned out. Examples could include a hackathon you organized, bringing together your community and new members, or an educational program.
+
+![Post Image](/landingpage/blog/how-to-track-developer-activity/9.gif)
+
+ROI can now be defined based on active developers and converted users (developers who are using your tools for the first time and continue to be active). Divide the total budget of your event by these numbers, and we can set metrics like cost per lead and cost per active user. This is something every developer relations professional wishes for: a way to set clear objectives and understand the outcomes of marketing strategies.
+
+In addition, we also analyze activity levels:
+
+- **Full-time contributors** - Contributed code 10+ days out of a month.
+- **Part-time contributors** - Contributed code fewer than 10 days out of a month.
+- **One-time contributors** - Contributed code once in a rolling 3-month window.
+
+We use the same methodology as the [Developer Report](https://www.developerreport.com/)
+from Electric Capital to count developers' activity.
+
+### What we are working on next
+
+Remember when I mentioned the importance of collecting GitHub accounts in your ticket system? We're currently developing a Discord bot that automates this process, seamlessly integrating developer accounts into our platform. Additionally, we're starting to leverage other data sources like Slack, Discourse, GitHub, Twitter, and more, while also enhancing the data we gather from GitHub.
+
+Our focus is on providing social graphs of your community, insights into tools often used alongside yours, and detailed analyses of commits on GitHub. We're also exploring incorporating feedback from GitHub issues related to your tool.
+
+We're open to your ideas and suggestions, and we plan to release a full roadmap soon. Stay tuned and [let us know on X what you think.](https://twitter.com/intent/tweet?text=I%20read%20the%20article%20about%20developer%20activity%20from%20%40openqlabs%20and%20would%20wish%20they%20include%20...)
 
 ### Conclusion
 
-Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+I hope this article has been helpful and inspiring for DevRel professionals. If you have suggestions or ideas to elevate these concepts further, feel free to DM us on Twitter. Also, please [share this article](https://twitter.com/intent/tweet?text=Awesome%20article%20from%20%40openqlabs%20talking%20about%20developer%20activity..) if you find it recommendable to others in the field.
