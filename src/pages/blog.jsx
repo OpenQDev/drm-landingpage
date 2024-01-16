@@ -17,13 +17,15 @@ function PostCardHighlight({
 }) {
   return (
     <div className="mb-8">
-      <Image
-        className="rounded-md"
-        src={postImage}
-        alt="Post thumbnail"
-        width={1570}
-        height={856}
-      />
+      <Link href={url}>
+        <Image
+          className="rounded-md"
+          src={postImage}
+          alt="Post thumbnail"
+          width={1570}
+          height={856}
+        />
+      </Link>
       <h2 className="mb-5 mt-5">
         <Link href={url}>
           <div className="font-extrabold text-4xl">{title}</div>
@@ -57,14 +59,17 @@ function PostCardHighlight({
 function PostCard({ title, subtitle, url, date, body, postImage, author }) {
   return (
     <div className="flex flex-row space-x-2 border-b border-gray-300 py-7">
-      <div className="h-full">
-        <Image
-          className="rounded-md"
-          src={postImage}
-          alt="Post thumbnail"
-          width={250}
-          height={250}
-        />
+      <div className="h-64 w-64 flex-shrink-0">
+        <Link href={url}>
+          <Image
+            className="rounded-md"
+            src={postImage}
+            alt="Post thumbnail"
+            width={250}
+            height={250}
+            objectFit="cover"
+          />
+        </Link>
       </div>
       <div>
         <h2 className="">

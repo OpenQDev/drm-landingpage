@@ -39,7 +39,7 @@ body {
 }
 
 .px-content-padding-blog {
-  @apply mx-auto max-w-[1000px] px-8 lg:px-28 md:px-20 sm:px-8 xl:px-0;
+  @apply mx-auto max-w-[700px] px-8 lg:px-28 md:px-20 sm:px-8 xl:px-0;
 }
 
 .pl-content-padding {
@@ -77,11 +77,11 @@ body {
 }
 
 .markdown h1 {
-  @apply text-2xl font-bold pt-3 pb-3;
+  @apply text-2xl font-extrabold pt-5    pb-3;
 }
 
 .markdown h3 {
-  @apply text-xl font-bold pt-3 pb-3;
+  @apply text-xl font-extrabold pt-5    pb-3;
 }
 
 .markdown ul {
@@ -99,4 +99,9 @@ body {
 
 .markdown strong {
   @apply font-semibold;
+}
+
+.markdown a {
+  color: #322ee9;
+  font-weight: bold;
 }

@@ -1,19 +1,13 @@
 ---
-title: DRM product closed beta test launch
+title: DRM product closed beta test 1
 subtitle: You provide the tools; we reveal the hands that wield them — every unseen developer move, mapped and distilled into a precise developer fingerprint.
 
-date: 2022-12-24
+date: 2022-08-03
 author:
   name: Andrew O'Brien
-  image: /landingpage/drm/devrel/Kai.jpg
+  image: /landingpage/blog/authors/andrew.jpg
 postImage: /landingpage/drm/devrel/devrel-landingpage-image-2.png
 ---
-
-<!-- ![Post Image](/landingpage/drm/devrel/devrel-landingpage-image-2.png)
-
-**Author: John Doe**
-![John Doe](/landingpage/drm/devrel/Kai.jpg)
-_December 24, 2021_ -->
 
 There was a time not long ago when “software engineer” evoked images of LED-lined back offices with cubicle-gridded devs typing out their magic, far from the centers of decision-making power in the organizations they worked for.
 
@@ -60,7 +54,7 @@ Presenting, The OpenQ Developer Relationship Management (DRM) Platform!
 
 ### 🏡 Introducing the OpenQ Developer Relationship Management (DRM) Platform
 
-![Post Image](/landingpage/drm/devrel/devrel-landingpage-image-2.png)
+![Post Image](/landingpage/blog/drm-launch/3.png)
 
 Git preserves the DNA of a developer’s coding interests, skills, and achievements across time like a fly in amber.
 
@@ -71,6 +65,14 @@ Just provide the name of your package, SDK, API, or beyond, and OpenQ does the r
 Achieving this with a traditional CRM or spreadsheets would rapidly become a nightmare to maintain in-house. With OpenQ, it just works.
 
 Everything from tracking changes in engagement levels in response to ecosystem events, to pinpointing the most active contributors in your ecosystem, to detecting when a project has migrated to a competitor - a wealth of information is at your disposal.
+&nbsp;
+
+&nbsp;
+![Post Image](/landingpage/blog/drm-launch/1.png)
+
+### The OpenQ DRM enhances every responsibility of a DevRel - from discovery to support to retention.
+
+![Post Image](/landingpage/blog/drm-launch/2.png)
 
 ### 📫 Log communications
 
@@ -83,6 +85,8 @@ Whether it's sharing the latest updates, providing needed support, or acknowledg
 This ensures a consistent and effective support mechanism throughout the developer journey, enhancing the overall relationship between the organization and its developers.
 
 ### The Outcome: Less 🤔. More 📈 - No More Guesswork in Your DevRel
+
+![Post Image](/landingpage/blog/drm-launch/4.png)
 
 What do all of these tools get you? Mainly, it lets you bid farewell to uncertainty and guesswork when it comes to determining the ROI of your DevRel efforts.
 
@@ -102,6 +106,6 @@ OpenQ’s mission is to orchestrate the world wide symphony of developers, code,
 
 If that’s something you can get behind, we’d love for you to try us out and let us know what you think.
 
-Sign up for the OpenQ DRM waitlist here.
+Sign up for the OpenQ DRM waitlist [here](https://itzldldbwlt.typeform.com/to/TzsJCiRT).
 
 If you’re so excited you can’t wait, schedule a demo here and provide feedback.

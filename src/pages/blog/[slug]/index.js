@@ -57,7 +57,7 @@ const PostLayout = ({ post }) => {
               {post.author && post.author.image && (
                 <div className="w-10 h-10 rounded-full mr-2 overflow-hidden">
                   <Image
-                    src={"/landingpage/drm/devrel/Kai.jpg"}
+                    src={post.author.image}
                     alt={"rick"}
                     width={40}
                     height={40}
