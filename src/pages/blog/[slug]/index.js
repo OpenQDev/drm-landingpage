@@ -43,8 +43,11 @@ const PostLayout = ({ post }) => {
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content={post.title} />
         <meta property="twitter:description" content={post.subtitle} />
-        <meta property="twitter:image" content={`https://${post.postImage}`} />
-
+        <meta
+          property="twitter:image"
+          content={`https://openq.dev${post.postImage}`}
+        />
+        {console.log("post: ", post.postImage)}
         {/* Additional meta tags as needed */}
       </Head>
       <Nav />
