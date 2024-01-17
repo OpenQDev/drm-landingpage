@@ -6,7 +6,7 @@ date: 2023-09-28
 author:
   name: Riccardo Lamanna
   image: /landingpage/blog/authors/rick.png
-postImage: /landingpage/blog/how-to-track-developer-activity/header.png
+postImage: /landingpage/blog/how-to-track-developer-activity/header-2.png
 ---
 
 In 2021, while consulting for several developer tooling companies in the dynamic realm of blockchain, I encountered diverse challenges in cultivating developer communities. Some clients were at the initial stages of building their developer base, while others boasted a rich pool of thousands who had dabbled in their technology.

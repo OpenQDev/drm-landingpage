@@ -58,21 +58,20 @@ function PostCardHighlight({
 
 function PostCard({ title, subtitle, url, date, body, postImage, author }) {
   return (
-    <div className="flex flex-row space-x-2 border-b border-gray-300 py-7">
-      <div className="h-64 w-64 flex-shrink-0">
+    <div className="flex flex-row space-x-4 border-b border-gray-300 py-7">
+      <div className="h-[150px] w-[150px] flex-shrink-0 relative">
         <Link href={url}>
           <Image
             className="rounded-md"
             src={postImage}
             alt="Post thumbnail"
-            width={250}
-            height={250}
+            layout="fill"
             objectFit="cover"
           />
         </Link>
       </div>
       <div>
-        <h2 className="">
+        <h2 className="-mt-1">
           <Link href={url}>
             <div className="font-extrabold text-lg">{title}</div>
             <div className="text-md text-gray-600 mt-2">{subtitle}</div>

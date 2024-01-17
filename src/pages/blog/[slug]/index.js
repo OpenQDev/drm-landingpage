@@ -4,6 +4,7 @@ import Nav from "@/components/sales/nav";
 import Footer from "@/components/sales/footer";
 import FooterBanner from "@/components/sales/footer-banner";
 import Image from "next/image";
+import Head from "next/head";
 
 // This function determines which paths will be pre-rendered.
 export async function getStaticPaths() {
@@ -33,6 +34,18 @@ const PostLayout = ({ post }) => {
 
   return (
     <div>
+      <Head>
+        <title>{post.title}</title>
+        <meta name="description" content={post.subtitle} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.subtitle} />
+        <meta property="og:image" content={post.postImage} />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content={post.title} />
+        <meta property="twitter:description" content={post.subtitle} />
+        <meta property="twitter:image" content={post.postImage} />
+        {/* Additional meta tags as needed */}
+      </Head>
       <Nav />
       <article className="font-custom px-content-padding-blog py-8 pt-20">
         <div className="flex flex-col max-w-3xl justify-center mb-8">
