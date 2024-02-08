@@ -58,8 +58,8 @@ function PostCardHighlight({
 
 function PostCard({ title, subtitle, url, date, body, postImage, author }) {
   return (
-    <div className="flex flex-row space-x-4 border-b border-gray-300 py-7">
-      <div className="h-[150px] w-[150px] flex-shrink-0 relative">
+    <div className="flex flex-col md:flex-row space-x-0 md:space-x-4 border-b border-gray-300 py-7">
+      <div className="h-[150px] w-[300px] md:h-[150px] md:w-[150px] flex-shrink-0 relative">
         <Link href={url}>
           <Image
             className="rounded-md"
@@ -71,7 +71,7 @@ function PostCard({ title, subtitle, url, date, body, postImage, author }) {
         </Link>
       </div>
       <div>
-        <h2 className="-mt-1">
+        <h2 className="-mt-1 pt-5 md:pt-0">
           <Link href={url}>
             <div className="font-extrabold text-lg">{title}</div>
             <div className="text-md text-gray-600 mt-2">{subtitle}</div>
@@ -102,10 +102,10 @@ export default function Blog() {
 
   return (
     <div className="">
-      <div className="sticky top-0 border-b border-gray-300 bg-[#FBFBFB]">
+      <div className="sticky top-0 z-10 border-b border-gray-300 bg-[#FBFBFB]">
         <Nav />
       </div>
-      <div className="flex flex-row sm:flex-col px-content-padding pt-10 space-x-10">
+      <div className="flex flex-col md:flex-row  px-content-padding pt-10 space-x-0 md:space-x-10">
         <div className="">
           {posts.slice(0, 1).map((post, idx) => (
             <PostCardHighlight key={idx} {...post} />
