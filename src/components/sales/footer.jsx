@@ -34,7 +34,9 @@ const Footer = () => {
                 <div className="font-bold sm:text-sm md:text-mdlg:text-md xl:text-md 2xl:textl-lg">
                   Resources
                 </div>
-                <div>Blog</div>
+                <Link href="/blog">
+                  <span>Blog</span>
+                </Link>
                 <div>Docs</div>
               </div>
             </div>
