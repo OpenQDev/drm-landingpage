@@ -22,7 +22,10 @@ const DevRelHero = () => {
           </Typeform>
 
           <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium md:text-xs lg:text-lg">
-            <Link target="_blank" href="https://calendly.com/ricketh/openqdemo">
+            <Link
+              target="_blank"
+              href="https://calendly.com/rickkdev/openqdemo"
+            >
               Request demo
             </Link>
           </div>

@@ -27,7 +27,7 @@ const FooterBanner = () => {
               <div className="text-white border border-white rounded-lg p-2 px-3 font-semibold">
                 <Link
                   target="_blank"
-                  href="https://calendly.com/ricketh/openqdemo"
+                  href="https://calendly.com/rickkdev/openqdemo"
                 >
                   Request demo
                 </Link>

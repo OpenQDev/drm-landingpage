@@ -105,7 +105,7 @@ export default function Blog() {
       <div className="sticky top-0 border-b border-gray-300 bg-[#FBFBFB]">
         <Nav />
       </div>
-      <div className="flex flex-row px-content-padding pt-10 space-x-10">
+      <div className="flex flex-row sm:flex-col px-content-padding pt-10 space-x-10">
         <div className="">
           {posts.slice(0, 1).map((post, idx) => (
             <PostCardHighlight key={idx} {...post} />
