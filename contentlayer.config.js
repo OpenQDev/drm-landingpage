@@ -18,7 +18,37 @@ const Post = defineDocumentType(() => ({
   },
 }));
 
+// Define the Docs document type for documentation
+const Docs = defineDocumentType(() => ({
+  name: "Docs",
+  filePathPattern: `docs/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    id: {
+      type: "string",
+    },
+    title: {
+      type: "string",
+      required: true,
+    },
+  },
+  computedFields: {
+    id: {
+      type: "string",
+      resolve: (doc) => doc.id || doc._raw.flattenedPath.replace("docs/", ""),
+    },
+    slug: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.replace("docs/", ""),
+    },
+  },
+}));
+
 export default makeSource({
-  contentDirPath: "src/pages/blog", // Adjusted to point to the correct directory
-  documentTypes: [Post],
+  contentDirPath: ".", // Adjusted to point to the correct directory
+  documentTypes: [Post, Docs],
+  mdx: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [[rehypePrismPlus, { ignoreMissing: true }]],
+  },
 });
