@@ -19,7 +19,7 @@ const Post = defineDocumentType(() => ({
 }));
 
 // Define the Docs document type for documentation
-const Doc = defineDocumentType(() => ({
+const Docs = defineDocumentType(() => ({
   name: "Docs",
   filePathPattern: `docs/**/*.mdx`,
   contentType: "mdx",
@@ -44,10 +44,9 @@ const Doc = defineDocumentType(() => ({
   },
 }));
 
-// Combine both document types in a single source
 export default makeSource({
-  contentDirPath: ".", // Set to the root if your content directories are not nested
-  documentTypes: [Post, Doc],
+  contentDirPath: ".", // Adjusted to point to the correct directory
+  documentTypes: [Post, Docs],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [[rehypePrismPlus, { ignoreMissing: true }]],
