@@ -2,23 +2,55 @@ import { defineDocumentType, makeSource } from "contentlayer/source-files";
 
 const Post = defineDocumentType(() => ({
   name: "Post",
-  filePathPattern: "**/*.md",
+  filePathPattern: "blog/**/*.md",
   fields: {
     title: { type: "string", required: true },
-    subtitle: { type: "string", required: "true" },
+    subtitle: { type: "string", required: true },
     date: { type: "date", required: true },
     author: { type: "json" },
     postImage: { type: "string" }, // Assuming postImage is a string path
   },
   computedFields: {
+    slug: {
+      type: "string",
+      // Generate slug based on the file name, stripping the .md extension
+      resolve: (post) => post._raw.sourceFileName.replace(/\.md$/, ""),
+    },
+    // If you still need the URL for some reason, adjust it accordingly
     url: {
       type: "string",
-      resolve: (post) => `/blog/${post._raw.flattenedPath}`,
+      resolve: (post) =>
+        `/blog/${post._raw.sourceFileName.replace(/\.md$/, "")}`,
     },
   },
 }));
 
+// const Help = defineDocumentType(() => ({
+//   name: "Help",
+//   filePathPattern: "help/**/*.md",
+//   fields: {
+//     title: { type: "string", required: true },
+//     subtitle: { type: "string", required: true },
+//     date: { type: "date", required: true },
+//     author: { type: "json" },
+//     helpImage: { type: "string" }, // Assuming postImage is a string path
+//   },
+//   computedFields: {
+//     slug: {
+//       type: "string",
+//       // Generate slug based on the file name, stripping the .md extension
+//       resolve: (help) => help._raw.sourceFileName.replace(/\.md$/, ""),
+//     },
+//     // If you still need the URL for some reason, adjust it accordingly
+//     url: {
+//       type: "string",
+//       resolve: (help) =>
+//         `/help/${help._raw.sourceFileName.replace(/\.md$/, "")}`,
+//     },
+//   },
+// }));
+
 export default makeSource({
-  contentDirPath: "src/pages/blog", // Adjusted to point to the correct directory
+  contentDirPath: "content", // Adjusted to point to the general content directory
   documentTypes: [Post],
 });

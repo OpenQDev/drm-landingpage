@@ -8,16 +8,17 @@ import Head from "next/head";
 
 // This function determines which paths will be pre-rendered.
 export async function getStaticPaths() {
-  const paths = allPosts.map((post) => ({
-    params: { slug: post._raw.flattenedPath },
-  }));
+  const paths = allPosts
+    .map((post) => ({
+      params: { slug: post.slug }, // Ensure 'post.slug' exists and is a string
+    }))
+    .filter(({ params }) => params.slug); // Filter out any undefined slugs
 
   return { paths, fallback: false };
 }
 
-// This function gets the data for each pre-rendered page based on the slug.
 export async function getStaticProps({ params }) {
-  const post = allPosts.find((p) => p._raw.flattenedPath === params.slug);
+  const post = allPosts.find((p) => p.slug === params.slug);
 
   if (!post) {
     return { notFound: true };
@@ -47,7 +48,7 @@ const PostLayout = ({ post }) => {
           property="twitter:image"
           content={`https://openq.dev${post.postImage}`}
         />
-        {console.log("post: ", post.postImage)}
+
         {/* Additional meta tags as needed */}
       </Head>
       <Nav />
@@ -58,8 +59,6 @@ const PostLayout = ({ post }) => {
             {post.subtitle}
           </h2>
         </div>
-
-        {console.log("post: ", post)}
 
         {/* Image (Assuming you have a post.image property) */}
         {post.postImage && <img src={post.postImage} alt="Post image" />}
