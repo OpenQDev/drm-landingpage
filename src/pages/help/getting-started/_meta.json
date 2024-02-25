@@ -1,0 +1,11 @@
+{
+  "index": {
+    "title": "Getting started",
+    "display": "hidden"
+  },
+  "what-is-openq": "What is OpenQ?",
+  "openq-glossary": "OpenQ glossary",
+  "import-your-data": "Import your data",
+  "dependency-tracking": "Dependency tracking",
+  "navigate-your-workspace": "Navigate your workspace"
+}

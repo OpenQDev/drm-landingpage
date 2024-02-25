@@ -1,0 +1,29 @@
+# Tracking dependencies
+
+Our approach to tracking dependencies involves comprehensive analysis of each repository and contributor. This process includes downloading the relevant repository for a single-repository contact or all repositories for a contributor. We then scrutinize common configuration files for signs of your technology's usage and examine commit timestamps to distinguish between new and existing users based on when your technology was incorporated.
+
+### Specifying your dependency
+
+Begin by specifying your dependency. This could be anything typically defined in a configuration file or a package.json-like file that lists such dependencies. Our tracking capabilities extend to blockchain networks as well, where we look through standard deployment files for evidence of use.
+
+### Identifying files holding the dependency
+
+We automatically search the following files for dependencies:
+
+- package.json
+- .config
+- .yaml
+- .yml
+- truffle
+- .toml
+- network
+- hardhat
+- deploy
+- go.mod
+- composer.json
+
+Feel free to extend this list by appending additional file names, each separated by a comma. While we do not typically recommend scanning markdown files to identify technology usage due to methodological concerns, our experience and manual cross-referencing have shown that this approach generates very few false positives.
+
+### Naming Your Tracker
+
+Assign a name to your tracker. This feature is important as we are planning to introduce the ability to run multiple trackers within a single campaign, allowing for direct comparison of different datasets. For instance, you might compare how many of your users are also familiar with tools from competitors.
