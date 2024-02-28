@@ -1,0 +1,7 @@
+{
+  "index": {
+    "display": "hidden"
+  },
+  "import-data-into-openq-via-csv": "Import data into OpenQ via CSV",
+  "export-data": "Export data"
+}
