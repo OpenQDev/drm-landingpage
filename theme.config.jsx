@@ -26,6 +26,13 @@ const themeConfig = {
   useNextSeoProps() {
     return {
       title: "OpenQ - Help",
+      titleTemplate: "%s | OpenQ",
+      additionalMetaTags: [
+        {
+          name: "description",
+          content: "Welcome to OpenQ help center",
+        },
+      ],
     };
   },
   darkMode: false,
