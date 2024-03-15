@@ -9,8 +9,13 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center px-content-padding lg:space-x-[3rem] pb-8">
           <div className="flex flex-col lg:flex-row lg:space-x-8 justify-between">
             <div className="lg:w-1/3">
-              <div className="pb-3">OpenQ Logo</div>
-              <div className="">
+              <Image
+                src="/openq-logo-white.png"
+                alt="OpenQ Logo"
+                width={96}
+                height={96}
+              />
+              <div className="pt-3">
                 The CRM for developer relations to connect community, product
                 and customer data.
               </div>
