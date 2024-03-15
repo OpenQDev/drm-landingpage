@@ -20,8 +20,39 @@ const Footer = () => {
                 <div className="font-bold sm:text-sm md:text-md lg:text-md xl:text-md 2xl:textl-lg">
                   Help me
                 </div>
-                <div>Contact Us</div>
-                <div>Feature requests</div>
+                <div>
+                  <Link href="#">
+                    <button
+                      onClick={() => window.open("mailto:info@openq.dev")}
+                      style={{
+                        cursor: "pointer",
+                        border: "none",
+                        background: "none",
+                        padding: "0",
+                        fontSize: "inherit",
+                        color: "inherit",
+                      }}
+                    >
+                      Contact Us
+                    </button>
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    href="https://github.com/OpenQDev/openq-feedback/issues"
+                    target="_blank"
+                  >
+                    <span>Feature requests</span>
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    href="https://github.com/OpenQDev/openq-feedback/issues"
+                    target="_blank"
+                  >
+                    <span>Feedback</span>
+                  </Link>
+                </div>
               </div>
               <div className="flex flex-col pb-5 lg:pb-0">
                 <div className="font-bold sm:text-sm md:text-mdlg:text-md xl:text-md 2xl:textl-lg">
@@ -37,7 +68,11 @@ const Footer = () => {
                 <Link href="/blog">
                   <span>Blog</span>
                 </Link>
-                <div>Docs</div>
+                <div>
+                  <Link href="/help" target="_blank">
+                    <span>Help center</span>
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="flex flex-col">
