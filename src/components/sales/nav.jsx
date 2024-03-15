@@ -25,6 +25,11 @@ const Subnav = () => {
               <span className="font-semibold text-gray-700">Features</span>
             </Link>
           </div>
+          <div>
+            <Link href="/blog" target="_blank">
+              <span className="font-semibold text-gray-700">Blog</span>
+            </Link>
+          </div>
 
           <div className="hidden md:block pl-10 pb-1">
             {/* <Link
