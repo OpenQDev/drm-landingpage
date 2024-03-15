@@ -27,7 +27,7 @@ const themeConfig = {
   useNextSeoProps() {
     return {
       titleTemplate: "OpenQ | %s",
-      descripton: "OpenQ help center portal",
+      description: "OpenQ help center portal",
     };
   },
   darkMode: false,
