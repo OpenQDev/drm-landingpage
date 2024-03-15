@@ -25,8 +25,7 @@ const themeConfig = {
   docsRepositoryBase: "https://github.com/OpenQDev/openq-feedback",
   useNextSeoProps() {
     return {
-      title: "OpenQ - Help",
-      titleTemplate: "%s | OpenQ",
+      titleTemplate: "OpenQ | %s",
       additionalMetaTags: [
         {
           name: "description",
