@@ -19,8 +19,15 @@ const themeConfig = {
     defaultMenuCollapseLevel: "1",
     titleComponent: CustomSidebarTitle,
   },
-
-  // ... other theme options
+  editLink: {
+    component: null,
+  },
+  docsRepositoryBase: "https://github.com/OpenQDev/openq-feedback",
+  useNextSeoProps() {
+    return {
+      title: "OpenQ - Help",
+    };
+  },
 };
 
 export default themeConfig;
