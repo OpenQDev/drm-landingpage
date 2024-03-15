@@ -28,6 +28,7 @@ const themeConfig = {
       title: "OpenQ - Help",
     };
   },
+  darkMode: false,
 };
 
 export default themeConfig;
