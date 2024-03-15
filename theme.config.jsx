@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Footer from "@/components/sales/footer";
 import CustomSidebarTitle from "@/components/sales/custom-sidebar-title";
+import { NextSeo } from "next-seo";
 
 const themeConfig = {
   logo: (
@@ -24,15 +25,12 @@ const themeConfig = {
   },
   docsRepositoryBase: "https://github.com/OpenQDev/openq-feedback",
   useNextSeoProps() {
-    return {
-      titleTemplate: "OpenQ | %s",
-      additionalMetaTags: [
-        {
-          name: "description",
-          content: "Welcome to OpenQ help center",
-        },
-      ],
-    };
+    return (
+      <NextSeo
+        title="OpenQ"
+        description="Your help center that guides you through OpenQ."
+      />
+    );
   },
   darkMode: false,
 };
