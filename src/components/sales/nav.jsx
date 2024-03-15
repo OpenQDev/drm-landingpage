@@ -9,7 +9,7 @@ const Subnav = () => {
   return (
     <div className="pt-1 px-content-padding bg-[#FBFBFB] pb-1">
       <div className={`flex flex-row justify-between items-center w-full py-4`}>
-        <div className="flex flex-row items-center">
+        <div className="flex flex-row items-center space-x-12">
           <Link href="/">
             <div>
               <Image
@@ -20,6 +20,11 @@ const Subnav = () => {
               />
             </div>
           </Link>
+          <div>
+            <Link href="/help" target="_blank">
+              <span className="font-semibold text-gray-700">Features</span>
+            </Link>
+          </div>
 
           <div className="hidden md:block pl-10 pb-1">
             {/* <Link

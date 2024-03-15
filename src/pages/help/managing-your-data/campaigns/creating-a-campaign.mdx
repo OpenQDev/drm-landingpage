@@ -1,0 +1,26 @@
+# Creating a campaign
+
+![Campaign page](/help/campaign-page.png)
+
+To create a new campaign, you have two options. You can either navigate to the campaign page [here](https://drm.openq.dev/campaigns), or simply click on the plus icon in the sidebar.
+
+We offer two distinct modes for campaigns: light and deep.
+
+## Light Mode
+
+![Lightmode](/help/lightmode-campaign.png)
+
+Enabling light mode provides a swift analysis tailored for handling large volumes of data. It focuses on recent activity within the last 6 weeks without extensive backtracking through GitHub repositories. Light mode is ideal for monitoring current community engagement levels, distinguishing between new and existing users.
+
+## Deep Mode
+
+![Deepmode](/help/deepmode-campaign.png)
+
+Disabling light mode activates a more comprehensive analysis, designed for smaller groups of developers. Deep mode conducts thorough backtracking through GitHub repositories, facilitating the identification of when developers joined your ecosystem.
+
+We have the capability to trace events up to three years in the past. This entails examining commits made in GitHub repositories over the past three years to determine when users committed a dependency to their project that we are tracking for you or participated in a project containing your dependency.
+
+### Use Cases
+
+Deep mode is best utilized for assessing the ROI of past events. For instance, if you hosted a meetup or hackathon a year ago, deep mode allows you to track participants' pre-event engagement with your development tool and their continued usage thereafter. It enables differentiation between "leads" and "customers/existing users," enabling the creation of tailored ROI metrics based on current activity.
+The timing of the event holds significance as we capture commits both before and during the event. This allows us to assess the outcomes of the event and determine each developer's familiarity with your development tool during the event and afterwards. More on how that results in different metrics in the [dashboards section](/help/managing-your-data/campaigns/dashboards).

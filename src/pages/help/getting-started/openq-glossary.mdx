@@ -1,0 +1,115 @@
+# OpenQ Glossary
+
+### Campaigns
+
+Campaigns compile lists of GitHub organizations, repositories, or contributors. Light mode enables tracking of their active use of your technology. Deep mode quantifies engagement over specific event timeframes, distinguishing between new users and existing customers. Further information on dependency states and how campaigns quantify team and contributor engagement is available.
+
+### Overview
+
+The Overview page consolidates information from all GitHub organizations, repositories, and contributors into one comprehensive view, providing a complete snapshot of your community. Future plans include adding a dashboard and stats page for enhanced monitoring, similar to what is available for campaigns.
+
+### Deep developer fingerprinting
+
+Our approach, termed 'deep fingerprinting,' involves downloading all repositories associated with a given contributor and meticulously scanning through files to identify the dependencies utilized, as well as their frequency of use. Furthermore, we monitor the programming languages employed by the developer, assess their code quality, and examine how various aspects of their skills interrelate. This comprehensive analysis allows us to construct a detailed profile of each developer's capabilities and preferences.
+
+### Contact
+
+A Contact refers to a GitHub organization, repository, or contributor added to a campaign. These are tracked based on GitHub events, which we fetch and process into digestible insights for you.
+
+### Dependency
+
+Dependencies include APIs, SDKs, or even blockchains. We identify dependencies within repositories by scanning files for specific keywords in expected locations, such as configuration files.
+
+### Enriched Data
+
+After processing all contacts in a campaign, we display a variety of data points to help you gauge the health, reputation, interests, and engagement of each contact with your technology. This enables precise analytics and targeted communication with the right developer at the right time.
+
+### Evaluations
+
+Evaluations detail our process of analyzing a requested campaign. This involves downloading GitHub repositories from organizations and individual contributors, fetching archived GitHub data, and processing this information. The data is then displayed in a table after calculating metrics with our proprietary algorithms, making the information more accessible.
+
+### Backtracing
+
+Backtracing entails examining campaigns configured in deep mode to identify the state of individual developers at the time of an event. This approach enables the calculation of ROI for community events, such as meetups or hackathons, while also gauging the familiarity level of each developer involved.
+
+### Lead Discovery
+
+Our Lead Discovery tool helps you identify developers on GitHub who are using your tool or a contributor's tool, even if you don't already have a list. This enables you to analyze campaign results and learn more about your user base.
+
+### Fork Discovery
+
+Similar to Lead Discovery, Fork Discovery allows you to find forks of your repository and incorporate them into a campaign for further analysis.
+
+### Dashboard
+
+The Dashboard tracks the activity results of contributors, offering more detailed data in deep mode. It differentiates between new and existing users and further refines developer fingerprinting, even tracking historical activity.
+
+**Budget**
+Budget refers to the expenditure on a specific campaign, which can be analyzed to calculate Key Performance Indicators (KPIs).
+
+**Leads**
+Leads are developers who have used your technology for the first time within the timeframe of a campaign.
+
+**Post-Campaign Leads**
+Post-Campaign Leads are developers who started using your technology after the campaign event, having not used it before.
+
+**Returning Users**
+Also known as customers, these are developers who have used your technology before the event.
+
+**Total Users & Teams**
+This represents the total number of users and teams, excluding those who have not used your technology (cold leads).
+
+**Primary Insights**
+Primary Insights provide an initial analysis of each contributor's status at the campaign's start, differentiating between new users (leads), existing users (customers), and post-campaign leads.
+
+**Secondary Insights**
+Secondary Insights present post-campaign results, indicating whether tracked contacts remain active. They categorize contacts into converted leads, post-campaign leads, and returning users, with a waiting period of at least 6 weeks for recent events.
+
+### Stats
+
+Stats offer experimental analytics aimed at detailing the activity within your community during a campaign, along with other relevant information.
+
+### Teams
+
+Teams are defined as either GitHub organizations or repositories.
+
+### Contributors
+
+Contributors are GitHub users automatically included in the contributors section for a repository or organization.
+
+### Metrics
+
+Metrics represent the data columns we fetch based on GitHub data and display in our table.
+
+**Dependencies**
+This metric indicates how contacts interact with your technology. Further details on contact dependency states are provided.
+
+**Email Addresses**
+Email addresses of contacts found on GitHub.
+
+**Description**
+The description of a contact as fetched from GitHub.
+
+**Location**
+The location of a contact as fetched from GitHub.
+
+**Last Commit**
+The date of the last commit made by the contact on GitHub.
+
+**Socials**
+Social media links found on GitHub for a contact.
+
+**Activity**
+An activity score calculated from commit frequency and combined with lines of code (LOC).
+
+**Top Languages**
+The programming languages used by a contributor or in a repository. We distinguish between languages used by contributors within a monorepo, allowing differentiation between frontend and backend development.
+
+**Commits**
+The number of commits fetched from the contact in the last 6 weeks.
+
+**Stars**
+The total number of stars fetched for a contact's repositories.
+
+**Followers**
+The number of followers a contact has on GitHub.

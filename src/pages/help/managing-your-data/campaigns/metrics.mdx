@@ -1,0 +1,118 @@
+# Metrics
+
+At OpenQ, we aim to create opinionated metrics to facilitate a better understanding of the information we retrieve from GitHub repositories or users. To enhance comprehension of each metric, we provide a list of algorithms utilized. We welcome any feedback you may have.
+
+## Repo activity score
+
+This algorithm calculates a repository's activity score based on several factors:
+
+1. Commit Count and Time Frame: It considers the number of commits made to the repository and the duration over which these commits occurred.
+
+2. Consistency Scores: It takes into account the consistency of these commits over time, represented by a set of consistency scores.
+
+3. Calculation Steps:
+   - It first calculates the average number of commits per day by dividing the total commit count by the number of days.
+   - It calculates a combined consistency score by averaging the provided consistency scores.
+   - It prepares a score using a mathematical formula involving logarithms and weighting factors based on commit frequency and consistency.
+   - The prepared score is capped at a maximum of 100% to prevent it from exceeding this limit.
+   - It ensures a minimum activity score of 10% if at least one commit was made in the past 6 weeks.
+   - Negative scores are prevented, with the minimum score being set at 0%.
+
+Overall, this algorithm aims to provide a comprehensive measure of a repository's activity level, taking into account both the quantity and consistency of commits over time.
+
+## User activity score
+
+This function calculates the activity score for a user based on the following parameters:
+
+- **commitCount**: The total number of commits made by the user.
+- **days**: The duration, in days, over which the commits occurred.
+- **combinedConsistencyScores**: An array of consistency scores representing the consistency of the user's commits over time.
+- **log**: A logger object used for error logging.
+
+The algorithm follows these steps:
+
+1. **Calculate Commit Frequency**: It computes the average number of commits per day by dividing the total commit count by the number of days.
+
+2. **Compute Combined Consistency Score**: It calculates the combined consistency score by taking the mean of the provided consistency scores.
+
+3. **Prepare Score**: Using a mathematical formula involving logarithms and weighting factors, it computes a prepared score that accounts for commit frequency and consistency.
+
+4. **Score Adjustment**:
+   - If the prepared score exceeds 1, it limits the activity score to 100%.
+   - If the prepared score falls below 0.1, it ensures a minimum activity score of 10% if at least one commit was made in the past 6 weeks.
+   - Negative scores are prevented, with the minimum score set at 0%.
+
+Overall, this function aims to provide a comprehensive measure of a user's activity level, considering both the quantity and consistency of commits over time.
+
+## Popularity score
+
+This function calculates the popularity score of a repository based on the number of stars it has received. Here's how it works:
+
+1. **Input Parameters**:
+
+   - **repository**: Information about the repository, including the number of stargazers (users who have starred the repository).
+   - **log**: A logger object used for error logging.
+
+2. **Handling Missing Repository**:
+
+   - If the repository information is missing, the function returns a default score of 0.
+
+3. **Calculating Simplified Score**:
+   - The function assigns a simplified score based on the number of stars:
+     - 0 stars: Score of 0
+     - 1 to 10 stars: Score of 1
+     - 11 to 20 stars: Score of 2
+     - And so on, up to 10 stars: Score of 10
+
+Overall, this function provides a basic measure of a repository's popularity based on the number of stars it has received, with higher scores indicating greater popularity.
+
+## User reputation score:
+
+This function calculates the reputation score of a user based on various factors, including their contributions to reputable projects, popularity score, and interactions with issues. Here's how it works:
+
+1. **Input Parameters**:
+
+   - **userData**: Information about the user, including their top repositories and issue comments.
+   - **commits**: Information about the user's commits.
+   - **userPopularityScore**: The popularity score of the user.
+   - **log**: A logger object used for error logging.
+
+2. **Calculating User Reputation Score**:
+
+   - It calculates the user's contributions to reputable projects using the `getUserReputableProjectsContributions` function.
+   - It computes the user's interactions with issues, represented by the total count of issue comments, normalized to a scale of 200.
+   - The reputation score is then calculated using a weighted sum of these factors:
+     - 50% based on contributions to reputable projects.
+     - 40% based on the user's popularity score.
+     - 10% based on interactions with issues.
+
+3. **Logarithmic Scaling**:
+
+   - The calculated score is scaled logarithmically using the `logWithBase` function with a base of 3.5 to ensure a balanced scale.
+
+Overall, this function provides a measure of a user's reputation based on their contributions to reputable projects, popularity, and interactions with issues, with higher scores indicating a higher level of reputation.
+
+## Repo reputation score:
+
+This function calculates the reputation score of a repository based on the contributions made by its assignable users. Here's how it works:
+
+1. **Input Parameters**:
+
+   - **repository**: Information about the repository, including assignable users and their contributions.
+   - **log**: A logger object used for error logging.
+
+2. **Handling Missing Repository**:
+
+   - If the repository information is missing, the function returns a default score of 0.
+
+3. **Calculating Reputation Score**:
+
+   - For each assignable user:
+     - It calculates the reputation score based on their contributions to repositories.
+     - Contributions are determined by factors such as the number of stars and forks received by the repository and the number of commits made by the user.
+     - The reputation score is calculated as the sum of the reputation scores of all users divided by the total number of assignable users.
+
+4. **Final Score Adjustment**:
+   - The preliminary reputation score is adjusted using a logarithmic function to ensure a balanced scale.
+
+Overall, this function provides a measure of a repository's reputation based on the contributions made by its assignable users, with higher scores indicating a higher level of contribution and reputation.

@@ -1,0 +1,34 @@
+# Dashboards
+
+## Light Mode
+
+![Lightmode dashboard](/help/lightmode-dashboard.png)
+
+A light mode dashboard displays the total number of users and teams you are tracking, the activity rate, and the cost per active user. To calculate the cost, you can set up a budget in the settings, such as your yearly marketing and developer relations budget. Additionally, we differentiate between the commitment level of each developer based on their commit consistency in projects containing your dependency.
+
+### Identifying Active Users
+
+Our analysis predominantly centers on contributors directly. For instance, upon importing a repository from GitHub, we scrutinize all contributors and examine all repositories they contributed to in the past. If a contributor is [monitored via a dependency](/help/managing-your-data/dependency-tracking), we can promptly discern whether they have ever committed to or created a repository with your dependency. Only then do we regard a developer as being part of your ecosystem. Subsequently, basic activity entails having made at least one commit within the last six weeks.
+
+### Activity Insights
+
+- Full-Time Contributors: Contributed code on 10 or more days within a month.
+- Part-Time Contributors: Contributed code on fewer than 10 days within a month.
+- One-Time Contributors: Contributed code once within a rolling 3-month window.
+
+This metric is inspired by the [developer report from Electric Capital](https://www.developerreport.com/) and is consistently used in our methodology.
+
+## Deep Mode
+
+![Deepmode dashboard 1](/help/deepmode-dashboard-1.png)
+![Deepmode dashboard 2](/help/deepmode-dashboard-2.png)
+
+Deep mode offers more comprehensive analytics by tracing developers back three years in commits from all contributor projects. This allows us to differentiate between different stages of developers during the event timeframe. For example, we can identify whether developers were already familiar with your development tool before an event like a hackathon or if they started using it afterward. Additionally, we check whether people used your development tool during the event, such as in a hackathon project (leads), or if they used it afterward (post-campaign leads).
+
+### KPIs
+
+Calculation of KPIs involves dividing the budget by the corresponding ROI metric. It's recommended to include every expenditure related to the event in the budget for precise outcomes. If the KPI is not available (N/A) it either means you have not setup a budget or the ROI of that specific metric is 0.
+
+### Explaining dependency states for users in more detail
+
+To understand each state of a contact read further [here](/help/managing-your-data/dependency-tracking#understanding-the-meaning-of-each-state)
