@@ -25,12 +25,10 @@ const themeConfig = {
   },
   docsRepositoryBase: "https://github.com/OpenQDev/openq-feedback",
   useNextSeoProps() {
-    return (
-      <NextSeo
-        title="OpenQ"
-        description="Your help center that guides you through OpenQ."
-      />
-    );
+    return {
+      titleTemplate: "OpenQ | %s",
+      descripton: "OpenQ help center portal",
+    };
   },
   darkMode: false,
 };
