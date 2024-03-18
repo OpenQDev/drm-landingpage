@@ -45,7 +45,10 @@ const DRM = () => {
           property="twitter:description"
           content="Harness the power of a CRM that helps you to better engage, understand and grow your developer community."
         />
-        <meta property="twitter:image" content="/openq-website-thumbnail.png" />
+        <meta
+          property="twitter:image"
+          content="https://openq.dev/openq-website-thumbnail.png"
+        />
       </Head>
       <main className="bg-bg-primary-color explore">
         <Nav />
