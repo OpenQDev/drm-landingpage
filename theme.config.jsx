@@ -24,7 +24,7 @@ const themeConfig = {
       canonical: "https://www.openq.dev/help",
       openGraph: {
         url: "https://www.openq.dev/help",
-        title: "%s | OpenQ Help Center",
+        title: "How can we help? | OpenQ Help Center",
         description:
           "Discover comprehensive support and in-depth guides on OpenQ - your CRM for developer relations. Whether you're looking for feature references, detailed tutorials, or answers to FAQs, our Help Page offers everything you need to maximize your OpenQ experience.",
         images: [
