@@ -12,44 +12,40 @@ import DeveloperDynamics from "@/components/sales/drm/developer-dynamics";
 import FooterBanner from "@/components/sales/footer-banner";
 import Footer from "@/components/sales/footer";
 import StepTwoContent from "@/components/sales/drm/elements/step-two-content";
+import { NextSeo } from "next-seo";
 
 const DRM = () => {
   return (
     <>
-      <Head>
-        <title>OpenQ DRM - Developer Relationship Management Platform</title>
-        <meta
-          name="description"
-          content="Harness the power of a CRM that helps you to better engage, understand and grow your developer community."
-        />
-        <meta
-          property="og:title"
-          content="Developer Relationship Management Platform"
-        />
-        <meta
-          property="og:description"
-          content="Harness the power of a CRM that helps you to better engage, understand and grow your developer community."
-        />
-        <meta
-          property="og:image"
-          content="https://openq.dev/openq-website-thumbnail.png"
-        />
-        <meta property="og:url" content="https://openq.dev" />
-        <meta property="og:type" content="website" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:title"
-          content="Developer Relationship Management Platform"
-        />
-        <meta
-          property="twitter:description"
-          content="Harness the power of a CRM that helps you to better engage, understand and grow your developer community."
-        />
-        <meta
-          property="twitter:image"
-          content="https://openq.dev/openq-website-thumbnail.png"
-        />
-      </Head>
+      <NextSeo
+        title="OpenQ DRM - Developer Relationship Management Platform"
+        description="Harness the power of a CRM that helps you to better engage, understand and grow your developer community."
+        canonical="https://openq.dev"
+        openGraph={{
+          url: "https://openq.dev",
+          title: "Developer Relationship Management Platform",
+          description:
+            "Harness the power of a CRM that helps you to better engage, understand and grow your developer community.",
+          images: [
+            {
+              url: "https://openq.dev/openq-website-thumbnail.png",
+              width: 1200,
+              height: 630,
+              alt: "OpenQ",
+              type: "image/png",
+            },
+          ],
+          siteName: "OpenQ",
+          type: "website",
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+          title: "Developer Relationship Management Platform",
+          description:
+            "Harness the power of a CRM that helps you to better engage, understand and grow your developer community.",
+          image: "https://openq.dev/openq-website-thumbnail.png",
+        }}
+      />
       <main className="bg-bg-primary-color explore">
         <Nav />
         <div className="bg-bg-primary-color">

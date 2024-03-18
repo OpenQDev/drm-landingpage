@@ -4,6 +4,7 @@ import { allPosts } from "contentlayer/generated";
 import Nav from "../components/sales/nav";
 import Footer from "@/components/sales/footer";
 import FooterBanner from "@/components/sales/footer-banner";
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 
 function PostCardHighlight({
@@ -102,6 +103,36 @@ export default function Blog() {
 
   return (
     <div className="">
+      <NextSeo
+        title="The OpenQ Blog - Updates, ideas and inspiration from OpenQ to enhance developer relations."
+        description="Latest insights, strategies, and inspiration from OpenQ for enhancing developer relations, accelerating your community's growth, and boosting engagement effectively."
+        canonical="https://openq.dev/blog"
+        openGraph={{
+          url: "https://openq.dev/blog",
+          title: "Developer Relationship Management Platform",
+          description:
+            "Harness the power of a CRM that helps you to better engage, understand and grow your developer community.",
+          images: [
+            {
+              url: "https://openq.dev/openq-website-thumbnail.png",
+              width: 1200,
+              height: 630,
+              alt: "OpenQ",
+              type: "image/png",
+            },
+          ],
+          siteName: "OpenQ",
+          type: "website",
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+          title:
+            "The OpenQ Blog - Updates, ideas and inspiration from OpenQ to enhance developer relations.",
+          description:
+            "Latest insights, strategies, and inspiration from OpenQ for enhancing developer relations, accelerating your community's growth, and boosting engagement effectively.",
+          image: "https://openq.dev/openq-website-thumbnail.png",
+        }}
+      />
       <div className="sticky top-0 z-10 border-b border-gray-300 bg-[#FBFBFB]">
         <Nav />
       </div>
