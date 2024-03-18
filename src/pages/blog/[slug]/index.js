@@ -1,4 +1,5 @@
 import { format, parseISO } from "date-fns";
+import { NextSeo } from "next-seo";
 import { allPosts } from "contentlayer/generated";
 import Nav from "@/components/sales/nav";
 import Footer from "@/components/sales/footer";
@@ -35,22 +36,34 @@ const PostLayout = ({ post }) => {
 
   return (
     <div>
-      <Head>
-        <title>{post.title}</title>
-        <meta name="description" content={post.subtitle} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.subtitle} />
-        <meta property="og:image" content={post.postImage} />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content={post.title} />
-        <meta property="twitter:description" content={post.subtitle} />
-        <meta
-          property="twitter:image"
-          content={`https://openq.dev${post.postImage}`}
-        />
-
-        {/* Additional meta tags as needed */}
-      </Head>
+      <NextSeo
+        title={post.title}
+        description={post.subtitle}
+        canonical={`https://openq.dev/blog/${post.slug}`}
+        openGraph={{
+          url: `https://openq.dev/blog/${post.slug}`,
+          title: post.title,
+          description: post.subtitle,
+          images: [
+            {
+              url: `https://openq.dev${post.postImage}`,
+              width: 800, // You might want to specify the actual size of your images
+              height: 600, // You might want to specify the actual size of your images
+              alt: post.title,
+              type: "image/jpeg", // Or the correct image type (e.g., image/png)
+            },
+          ],
+          siteName: "OpenQ",
+        }}
+        twitter={{
+          handle: "@openqlabs",
+          site: "@openqlabs",
+          cardType: "summary_large_image",
+          title: post.title,
+          description: post.subtitle,
+          image: `https://openq.dev${post.postImage}`,
+        }}
+      />
       <Nav />
       <article className="font-custom px-content-padding-blog py-8 pt-20">
         <div className="flex flex-col max-w-3xl justify-center mb-8">
