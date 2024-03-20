@@ -42,6 +42,10 @@ const themeConfig = {
         handle: "@openqlabs",
         site: "@openqlabs",
         cardType: "summary_large_image",
+        title: "How can we help? | OpenQ Help Center",
+        description:
+          "Discover comprehensive support and in-depth guides on OpenQ - your CRM for developer relations. Whether you're looking for feature references, detailed tutorials, or answers to FAQs, our Help Page offers everything you need to maximize your OpenQ experience.",
+        image: "https://openq.dev/openq-website-thumbnail.png",
       },
     };
   },
