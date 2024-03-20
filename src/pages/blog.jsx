@@ -109,7 +109,8 @@ export default function Blog() {
         canonical="https://openq.dev/blog"
         openGraph={{
           url: "https://openq.dev/blog",
-          title: "Developer Relationship Management Platform",
+          title:
+            "The OpenQ Blog - Updates, ideas and inspiration from OpenQ to enhance developer relations.",
           description:
             "Harness the power of a CRM that helps you to better engage, understand and grow your developer community.",
           images: [
