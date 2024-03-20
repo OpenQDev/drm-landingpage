@@ -50,6 +50,7 @@ const themeConfig = {
     };
   },
   darkMode: false,
+  head: null,
 };
 
 export default themeConfig;
