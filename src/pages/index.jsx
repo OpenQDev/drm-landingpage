@@ -19,13 +19,13 @@ const DRM = () => {
     <>
       <NextSeo
         title="OpenQ DRM - Developer Relationship Management Platform"
-        description="Harness the power of a CRM that helps you to better engage, understand and grow your developer community."
+        description="Harness the power of a CRM that helps you to better engage, understand, and grow your developer community."
         canonical="https://openq.dev"
         openGraph={{
           url: "https://openq.dev",
           title: "Developer Relationship Management Platform",
           description:
-            "Harness the power of a CRM that helps you to better engage, understand and grow your developer community.",
+            "Harness the power of a CRM that helps you to better engage, understand, and grow your developer community.",
           images: [
             {
               url: "https://openq.dev/openq-website-thumbnail.png",
@@ -42,7 +42,7 @@ const DRM = () => {
           cardType: "summary_large_image",
           title: "Developer Relationship Management Platform",
           description:
-            "Harness the power of a CRM that helps you to better engage, understand and grow your developer community.",
+            "Harness the power of a CRM that helps you to better engage, understand, and grow your developer community.",
           image: "https://openq.dev/openq-website-thumbnail.png",
         }}
       />
