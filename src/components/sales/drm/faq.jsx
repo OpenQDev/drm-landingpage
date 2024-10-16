@@ -9,7 +9,7 @@ const Faq = () => {
         <div className="title-text-size pt-3 pb-8">asked questions</div>
         <div className="w-full max-w-[1000px] ">
           <FaqQuestion
-            question="How can the DRM help improve developer retention?"
+            question="How can the DRM help improve my developer retention?"
             answer="
             By leveraging comprehensive metrics and analytics, we can quantify the impact of events and interactions while measuring business objectives more precisely. This approach leads to a better understanding of ROI and enables the measurement of retention techniques, helping identify what works best for improved developer retention."
           />
