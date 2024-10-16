@@ -37,7 +37,7 @@ const FooterBanner = () => {
           <div className="w-full lg:w-2/3 xl:w-1/2">
             <Image
               className="rounded-md"
-              src="/landingpage/drm/devrel/FooterBannerImage.png"
+              src="/landingpage/drm/devrel/devrel-landingpage-hero.png"
               alt="Table"
               width={1570}
               height={856}
