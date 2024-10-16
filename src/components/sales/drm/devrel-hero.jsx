@@ -7,7 +7,8 @@ const DevRelHero = () => {
     <div className="pt-12 md:pt-top-content-padding lg:pt-20">
       <div className="flex flex-col justify-center items-center text-center">
         <div className=" text-title-color font-custom leading-none text-6xl lg:text-8xl text-center font-bold tracking-tighter">
-          Elevate <br /> developer relations.{" "}
+          Drive more value through
+          <br /> developer relations.{" "}
         </div>
 
         <div className="text-[#3c3f44] font-medium text-xl lg:text-[1.3rem] pt-5 px-5 xxs:w-74 md:w-1/2 lg:w-1/3">

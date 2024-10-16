@@ -8,7 +8,7 @@ const DevRelCore = () => {
         <div className="flex justify-center items-center border border-gray-300 rounded-sm md:rounded-lg shadow-custom my-4">
           <Image
             className="rounded-sm md:rounded-lg"
-            src="/landingpage/drm/devrel/devrel-landingpage-image-2.png"
+            src="/landingpage/drm/devrel/devrel-landingpage-hero.png"
             alt="Centered Image"
             width={1280}
             height={768}
