@@ -73,7 +73,7 @@ const SocialProof = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <div className="pt-36 bg-[#FBFBFB]">
+    <div className="pt-16 sm:pt-36 bg-[#FBFBFB]">
       <div className="flex justify-center pt-2">
         <h2 className="text-xl font-semibold text-gray-900">Trusted by</h2>
       </div>
