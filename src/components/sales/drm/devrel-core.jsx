@@ -12,37 +12,14 @@ const DevRelCore = () => {
             alt="Centered Image"
             width={1280}
             height={768}
-            priority // Adding priority property
+            priority
             style={{
               boxShadow: "20px 25px 50px 55px rgba(36, 0, 255, 0.08)",
             }}
           />
         </div>
 
-        {/*  <div
-          className="absolute md:top-2/3 top-40 right-0 border border-gray-300 rounded-sm md:rounded-lg opacity-80"
-          style={{ transform: "translateX(30%) translateY(-25%)" }}
-        >
-          <Image
-            className="hidden xl:block rounded-sm md:rounded-lg"
-            src="/landingpage/drm/devrel/devrel-landingpage-image-1.png"
-            alt="Right Float Image"
-            width={853}
-            height={512}
-          />
-        </div>
-        <div
-          className="absolute md:top-2/3 top-40 right-0 rounded-sm md:rounded-lg"
-          style={{ transform: "translateX(30%) translateY(-25%)" }}
-        >
-          <Image
-            className="hidden xl:block rounded-sm md:rounded-lg"
-            src="/landingpage/drm/devrel/devrel-landingpage-image-1-2.png"
-            alt="Right Float Image"
-            width={853}
-            height={512}
-          />
-        </div> */}
+        {/* New logo carousel section */}
       </div>
     </div>
   );

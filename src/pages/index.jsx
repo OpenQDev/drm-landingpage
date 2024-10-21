@@ -12,6 +12,7 @@ import DeveloperDynamics from "@/components/sales/drm/developer-dynamics";
 import FooterBanner from "@/components/sales/footer-banner";
 import Footer from "@/components/sales/footer";
 import StepTwoContent from "@/components/sales/drm/elements/step-two-content";
+import SocialProof from "@/components/sales/drm/social-proof";
 import { NextSeo } from "next-seo";
 
 const DRM = () => {
@@ -51,6 +52,7 @@ const DRM = () => {
         <div className="bg-bg-primary-color">
           <DevRelHero />
           <DevRelCore />
+          <SocialProof />
           <DevRelProblems />
           <ProductShowcase />
           <LeadDiscovery />
