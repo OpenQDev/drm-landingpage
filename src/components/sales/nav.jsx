@@ -20,13 +20,18 @@ const Subnav = () => {
               />
             </div>
           </Link>
-          <div>
+          <div className="hidden md:block">
             <Link href="/help" target="_blank">
               <span className="font-semibold text-gray-700">Features</span>
             </Link>
           </div>
-          <div>
-            <Link href="/blog" target="_blank">
+          <div className="hidden md:block">
+            <Link href="/resources/guides">
+              <span className="font-semibold text-gray-700">Resources</span>
+            </Link>
+          </div>
+          <div className="hidden md:block">
+            <Link href="/blog">
               <span className="font-semibold text-gray-700">Blog</span>
             </Link>
           </div>
@@ -112,15 +117,21 @@ const Subnav = () => {
       </div>
       {isOpen && (
         <div className="flex flex-col text-left">
-          {/*  <a href="#" className="text-gray-900  text-sm font-normal pb-5">
-            Product
-          </a>
-          <a href="#" className="text-gray-900  text-sm font-normal pb-5">
-            Resources
-          </a>
-          <a href="#" className="text-gray-900  text-sm font-normal">
-            Community
-          </a> */}
+          <Link href="/help" target="_blank">
+            <span className="text-gray-900 text-sm font-normal pb-5 block">
+              Features
+            </span>
+          </Link>
+          <Link href="/resources/guides">
+            <span className="text-gray-900 text-sm font-normal pb-5 block">
+              Resources
+            </span>
+          </Link>
+          <Link href="/blog">
+            <span className="text-gray-900 text-sm font-normal pb-5 block">
+              Blog
+            </span>
+          </Link>
           <div className="flex flex-col pt-5 space-y-2">
             <div className="whitespace-nowrap border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium text-xs">
               <Link

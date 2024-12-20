@@ -340,6 +340,11 @@
     jsbi "^4.3.0"
     tslib "^2.4.1"
 
+"@loomhq/loom-embed@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@loomhq/loom-embed/-/loom-embed-1.7.0.tgz#dbc82e6d36400948c88c885ec746f40a78e8d7da"
+  integrity sha512-HJE+N/iUWLHpLhdo3afp9I9jbMo00JecaHRdXlhN2JXVbaaRR0Kcf+bN+KvdeQqfSIDI0a2I4UOs3zX2bgUI5g==
+
 "@mdx-js/esbuild@^2.0.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@mdx-js/esbuild/-/esbuild-2.3.0.tgz#97f2f1b854d904c50bcd0a219b3664657f4fe8c3"
