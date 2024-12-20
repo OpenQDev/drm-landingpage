@@ -40,7 +40,7 @@ const Guides = () => {
     <div>
       <Nav />
 
-      <div className="pl-40 pr-4 md:pr-16 lg:pr-32 py-12 space-y-16 relative">
+      <div className="px-4 md:pl-40 md:pr-16 lg:pr-32 py-12 space-y-16 relative">
         {/* Main title section */}
         <div className="mb-24">
           <h1 className="text-4xl font-bold">
@@ -54,7 +54,7 @@ const Guides = () => {
         </div>
 
         {/* Dotted line guide with stronger fade effects */}
-        <div className="absolute left-40 top-32 bottom-10 border-l-2 border-dotted border-gray-300 -z-10">
+        <div className="hidden md:block absolute left-40 top-32 bottom-10 border-l-2 border-dotted border-gray-300 -z-10">
           {/* Top fade - increased height and width */}
           <div className="absolute -top-4 h-16 w-1 bg-gradient-to-b from-white via-white to-transparent" />
           {/* Bottom fade - increased height and width */}
@@ -63,11 +63,11 @@ const Guides = () => {
 
         {/* Section 1 */}
         <div className="space-y-6 relative">
-          <div className="flex items-center">
-            <div className="bg-white h-8 w-8 rounded-full flex items-center justify-center border-2 border-gray-300 relative z-20 -ml-4 md:-ml-4 lg:-ml-4">
+          <div className="flex items-start md:items-center">
+            <div className="bg-white min-h-[32px] min-w-[32px] h-8 w-8 rounded-full flex items-center justify-center border-2 border-gray-300 relative z-20 mr-3 md:mr-8 md:-ml-4 flex-shrink-0">
               <span className="font-semibold">1</span>
             </div>
-            <div className="ml-4">
+            <div>
               <h2 className="text-2xl font-semibold">
                 Start Here: Your Introduction to OpenQ
               </h2>
@@ -77,7 +77,7 @@ const Guides = () => {
               </p>
             </div>
           </div>
-          <div className="max-w-xl ml-12">
+          <div className="md:ml-12">
             <div className="flex flex-col gap-2">
               <h3 className="text-lg font-medium">{videos[0].title}</h3>
               <div className="relative aspect-video">
@@ -94,11 +94,11 @@ const Guides = () => {
 
         {/* Section 2 */}
         <div className="space-y-6 relative">
-          <div className="flex items-center">
-            <div className="bg-white h-8 w-8 rounded-full flex items-center justify-center border-2 border-gray-300 relative z-20 -ml-4 md:-ml-4 lg:-ml-4">
+          <div className="flex items-start md:items-center">
+            <div className="bg-white min-h-[32px] min-w-[32px] h-8 w-8 rounded-full flex items-center justify-center border-2 border-gray-300 relative z-20 mr-3 md:mr-8 md:-ml-4 flex-shrink-0">
               <span className="font-semibold">2</span>
             </div>
-            <div className="ml-4">
+            <div>
               <h2 className="text-2xl font-semibold">
                 Essential Setup & Configuration Guide
               </h2>
@@ -128,11 +128,11 @@ const Guides = () => {
 
         {/* Section 3 */}
         <div className="space-y-6 pb-10 relative">
-          <div className="flex items-center">
-            <div className="bg-white h-8 w-8 rounded-full flex items-center justify-center border-2 border-gray-300 relative z-20 -ml-4 md:-ml-4 lg:-ml-4">
+          <div className="flex items-start md:items-center">
+            <div className="bg-white min-h-[32px] min-w-[32px] h-8 w-8 rounded-full flex items-center justify-center border-2 border-gray-300 relative z-20 mr-3 md:mr-8 md:-ml-4 flex-shrink-0">
               <span className="font-semibold">3</span>
             </div>
-            <div className="ml-4">
+            <div>
               <h2 className="text-2xl font-semibold">
                 Understanding Your Data & Results
               </h2>
@@ -162,11 +162,11 @@ const Guides = () => {
 
         {/* Learn More Section */}
         <div className="space-y-6 relative">
-          <div className="flex items-center">
-            <div className="bg-white h-8 w-8 rounded-full flex items-center justify-center border-2 border-gray-300 relative z-20 -ml-4 md:-ml-4 lg:-ml-4">
+          <div className="flex items-start md:items-center">
+            <div className="bg-white min-h-[32px] min-w-[32px] h-8 w-8 rounded-full flex items-center justify-center border-2 border-gray-300 relative z-20 mr-3 md:mr-8 md:-ml-4 flex-shrink-0">
               <span className="font-semibold">4</span>
             </div>
-            <div className="ml-4">
+            <div>
               <h2 className="text-2xl font-semibold">Hungry for More?</h2>
               <p className="text-gray-600 mt-1">
                 Check out our{" "}
