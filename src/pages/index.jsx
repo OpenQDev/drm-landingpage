@@ -49,18 +49,20 @@ const DRM = () => {
       />
       <main className="">
         <Nav />
-        <div className="bg-bg-primary-color">
-          <DevRelHero />
-          <DevRelCore />
-          <SocialProof />
-          <DevRelProblems />
-          <ProductShowcase />
-          <LeadDiscovery />
-          <HowItWorks />
-          <DeveloperDynamics />
-          <Faq />
-          <FooterBanner />
-          <Footer />
+        <div className="px-content-padding">
+          <div className="bg-bg-primary-color md:border-x border-gray-200 p-5">
+            <DevRelHero />
+            <DevRelCore />
+            <SocialProof />
+            <DevRelProblems />
+            <ProductShowcase />
+            <LeadDiscovery />
+            <HowItWorks />
+            <DeveloperDynamics />
+            <Faq />
+            <FooterBanner />
+            <Footer />
+          </div>
         </div>
       </main>
     </>
