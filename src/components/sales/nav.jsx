@@ -7,7 +7,7 @@ const Subnav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 bg-[#FBFBFB] border-b border-gray-200">
+    <div className="sticky top-0 bg-[#FBFBFB] border-b border-gray-200 z-50">
       <div className="px-content-padding">
         <div
           className={`flex flex-row justify-between items-center w-full py-4`}

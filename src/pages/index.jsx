@@ -52,7 +52,9 @@ const DRM = () => {
         <div className="px-content-padding">
           <div className="bg-bg-primary-color md:border-x border-gray-200 p-5">
             <DevRelHero />
+
             <DevRelCore />
+
             <SocialProof />
             <DevRelProblems />
             <ProductShowcase />

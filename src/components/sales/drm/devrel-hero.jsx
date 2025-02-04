@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const DevRelHero = () => {
   return (
-    <div className="pt-24 px-content-padding md:pt-top-content-padding lg:pt-64">
-      <div className="mx-4 flex flex-col justify-center items-center text-center">
+    <div className="pt-24 px-content-padding md:pt-top-content-padding lg:pt-48">
+      <div className="mx-0 xs:mx-4 flex flex-col justify-center items-center text-center">
         <div className=" text-title-color font-custom leading-none text-5xl lg:text-7xl text-center font-bold tracking-tighter">
           Drive more value through
           <br /> developer relations.{" "}
@@ -15,14 +15,14 @@ const DevRelHero = () => {
           Harness the power of a CRM that helps you to better engage, understand
           and grow your developer community.
         </div>
-        <div className="flex xs:flex-row flex-col space-y-4 xs:space-y-0 xs:space-x-4 pt-8">
-          <Typeform>
-            <div className="bg-[#322EE9] p-2 px-4 text-white border rounded-lg font-medium md:text-xs lg:text-lg">
-              Join waitlist
-            </div>
-          </Typeform>
+        <div className="flex xs:flex-row flex-col w-full xs:w-auto space-y-2.5 xs:space-y-0 xs:space-x-4 pt-8">
+          <div className="bg-black p-2 px-4 text-white border rounded-lg font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto">
+            <Link target="_blank" href="https://drm.openq.dev/signup">
+              Start for free
+            </Link>
+          </div>
 
-          <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium md:text-xs lg:text-lg">
+          <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto">
             <Link
               target="_blank"
               href="https://calendly.com/rickkdev/openqdemo"
