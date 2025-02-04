@@ -47,7 +47,7 @@ const DRM = () => {
           image: "https://openq.dev/openq-website-thumbnail.png",
         }}
       />
-      <main className="bg-bg-primary-color explore">
+      <main className="">
         <Nav />
         <div className="bg-bg-primary-color">
           <DevRelHero />
