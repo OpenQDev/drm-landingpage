@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const DevRelHero = () => {
   return (
-    <div className="pt-8 px-content-padding md:pt-top-content-padding lg:pt-48">
-      <div className="mx-0 xs:mx-4 flex flex-col justify-center items-center text-center">
+    <div className="pt-8 px-content-padding md:pt-top-content-padding lg:pt-36">
+      <div className="mx-0 xs:mx-4 flex flex-col justify-center items-center text-center lg:pb-24">
         <div className=" text-title-color font-custom leading-none text-4xl lg:text-7xl text-center font-bold tracking-tighter">
           Drive more value through
           <br /> developer relations.{" "}
