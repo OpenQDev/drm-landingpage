@@ -51,6 +51,15 @@ const Subnav = () => {
                 Sign in
               </Link>
             </div>
+            <div className="whitespace-nowrap bg-black rounded-lg p-1 px-4 font-medium md:text-xs lg:text-lg">
+              <Link
+                target="_blank"
+                href="https://drm.openq.dev/signup"
+                className="text-white text-xs lg:text-lg font-medium"
+              >
+                Start for free
+              </Link>
+            </div>
           </div>
           <div className="md:hidden self-end mb-1">
             <button onClick={() => setIsOpen(!isOpen)}>
