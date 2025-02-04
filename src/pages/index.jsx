@@ -53,7 +53,9 @@ const DRM = () => {
           <div className="bg-bg-primary-color md:border-x border-gray-200 p-5">
             <DevRelHero />
 
-            <DevRelCore />
+            <div className="-mr-5 sm:mr-0">
+              <DevRelCore />
+            </div>
 
             <SocialProof />
             <DevRelProblems />
