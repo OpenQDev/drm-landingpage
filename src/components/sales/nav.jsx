@@ -121,14 +121,18 @@ const Subnav = () => {
                   href="https://drm.openq.dev/"
                   className="text-gray-900 text-xs lg:text-lg font-medium"
                 >
-                  Closed beta sign in
+                  Sign in
                 </Link>
               </div>
-              <Typeform>
-                <div className="whitespace-nowrap bg-[#322EE9] p-2 px-4 text-white border rounded-lg font-medium text-xs">
-                  Join waitlist
-                </div>
-              </Typeform>
+              <div className="whitespace-nowrap bg-black rounded-lg p-2 px-4 font-medium text-xs">
+                <Link
+                  target="_blank"
+                  href="https://drm.openq.dev/signup"
+                  className="text-white text-xs lg:text-lg font-medium"
+                >
+                  Start for free
+                </Link>
+              </div>
             </div>
             <div className="border-b border-gray-300 pt-5"></div>
           </div>
