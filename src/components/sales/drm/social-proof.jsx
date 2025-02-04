@@ -15,12 +15,12 @@ const SocialProof = () => {
     {
       src: "landingpage/drm/devrel/customer-logos/buidlguidl.svg",
       alt: "BuidlGuidl",
-      height: "h-10",
+      height: "h-14",
     },
     {
       src: "landingpage/drm/devrel/customer-logos/aptos.svg",
       alt: "Aptos",
-      height: "h-8",
+      height: "h-14",
     },
     {
       src: "landingpage/drm/devrel/customer-logos/filecoin-black.png",
@@ -35,25 +35,27 @@ const SocialProof = () => {
   ];
 
   return (
-    <div className="pt-16 sm:pt-36 bg-[#FBFBFB]">
-      <div className="flex justify-center pt-2">
-        <h2 className="text-xl font-semibold text-gray-900">Trusted by</h2>
-      </div>
-      <div className="px-4 sm:px-0 max-w-full sm:max-w-[92rem] mx-auto overflow-hidden relative">
-        <div className="mt-6 flex items-center justify-center">
-          <div className="grid grid-cols-3 gap-4 lg:grid-cols-6 lg:gap-8 xl:gap-16">
-            {logos.map((logo, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center h-16 sm:h-24 w-24 sm:w-32 flex-shrink-0"
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className={`${logo.height} sm:${logo.height} object-contain scale-75 sm:scale-100`}
-                />
-              </div>
-            ))}
+    <div className="border-b border-gray-200 -mx-5 pb-10 lg:pb-12">
+      <div className="pt-8 lg:pt-16 bg-[#FBFBFB]">
+        <div className="flex justify-center">
+          <h2 className="text-xl font-semibold text-gray-900">Trusted by</h2>
+        </div>
+        <div className="px-4">
+          <div className="mt-6 flex items-center justify-center">
+            <div className="grid grid-cols-3 gap-4 lg:grid-cols-6 lg:gap-8 xl:gap-16">
+              {logos.map((logo, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center h-16 sm:h-24 w-24 sm:w-32 flex-shrink-0"
+                >
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className={`${logo.height} sm:${logo.height} object-contain scale-75 sm:scale-100`}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

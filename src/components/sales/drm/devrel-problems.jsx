@@ -6,22 +6,38 @@ const DevRelProblems = () => {
   return (
     // Add px-4 as default padding, which increases to px-8 on medium screens and px-16 on large screens
 
-    <div className="flex flex-col lg:flex-row lg:space-x-32 justify-center items-center top-content-padding px-content-padding">
+    <div className="flex flex-col lg:flex-row lg:space-x-32 justify-center items-center pt-14 px-content-padding">
       <div className="flex-1 flex flex-col text-left lg:mb-16">
         {/*   <TranslateAndFade direction="left"> */}
-        <div className="font-bold text-q-purple text-md">THE PROBLEM</div>
-        <div className="title-text-size pt-3">
-          Uncharted developer <br />
-          dynamics
+        <div className="font-medium text-q-purple text-md">THE PROBLEM</div>
+        <div className="text-title-color font-custom lg:text-3xl font-[575] pt-3">
+          The black box of developer adoption.{" "}
+          <span className="text-gray-400">
+            Understanding your developer ecosystem is a constant challenge.
+            Here's what you're missing:
+          </span>
         </div>
         <div className="text-gray-700 text-lg pt-5">
-          For firms crafting the tech landscape with developer tools, APIs, or
-          SDKs, true insight into developer activity is crucial yet elusive. The
-          data is vast, scattered, and sometimes hidden in unknown repos — a
-          complex puzzle of engagement across the digital expanse. <br /> <br />
-          With OpenQ, you provide the tools; we reveal the hands that wield them
-          — every unseen developer move, mapped and distilled into a precise
-          developer fingerprint.
+          <ul className="list-disc pl-6 space-y-4 mt-4">
+            <li>
+              Package downloads and GitHub stars don't tell the full story -
+              they mask critical insights about actual tool usage and
+              implementation
+            </li>
+            <li>
+              Key questions remain unanswered:
+              <ul className="list-circle pl-6 space-y-2 mt-2">
+                <li>Who are the real developers behind anonymous downloads?</li>
+                <li>
+                  How actively are your dependencies being used in repositories?
+                </li>
+                <li>
+                  Are weekly downloads from genuine adoption or just CI/CD
+                  pipelines?
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
         {/*  </TranslateAndFade> */}
       </div>

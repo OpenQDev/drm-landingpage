@@ -20,13 +20,21 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-SemiBold.ttf") format("truetype");
+  font-weight: 575;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Responsive Queries */
 .top-content-padding {
   @apply pt-12 lg:pt-28 xl:pt-32;
 }
 
 .top-collapse-padding {
-  @apply pt-12 lg:pt-0;
+  @apply pt-24 lg:pt-0;
 }
 
 .bottom-content-padding {
