@@ -19,6 +19,7 @@ module.exports = {
       },
       fontFamily: {
         custom: ["Gilroy", "sans-serif"], // Use your font name here
+        whyte: ["Whyte", "sans-serif"], // Added Whyte font family
         "ui-monospace": [
           "ui-monospace",
           "Menlo",

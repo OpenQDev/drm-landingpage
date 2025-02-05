@@ -35,8 +35,8 @@ const SocialProof = () => {
   ];
 
   return (
-    <div className="border-b border-gray-200 -mx-5 pb-10 lg:pb-12">
-      <div className="pt-8 lg:pt-16 bg-[#FBFBFB]">
+    <div className="border-b border-gray-200 -mx-5 pb-20 lg:pb-28 pt-20 lg:pt-28 ">
+      <div className="bg-[#FBFBFB]">
         <div className="flex justify-center">
           <h2 className="text-xl font-semibold text-gray-900">Trusted by</h2>
         </div>

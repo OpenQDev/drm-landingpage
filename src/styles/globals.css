@@ -28,6 +28,22 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Whyte";
+  src: url("/fonts/Whyte-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Whyte";
+  src: url("/fonts/Whyte-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Responsive Queries */
 .top-content-padding {
   @apply pt-12 lg:pt-28 xl:pt-32;

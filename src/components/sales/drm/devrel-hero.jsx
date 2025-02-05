@@ -11,7 +11,7 @@ const DevRelHero = () => {
           <br /> developer relations.{" "}
         </div>
 
-        <div className="text-[#3c3f44] font-medium text-xl lg:text-[1.3rem] pt-5 px-5 xxs:w-74 md:w-1/2 lg:w-1/3">
+        <div className="text-gray-600 font-normal font-whyte text-xl lg:text-[1.3rem] pt-5 px-5 xxs:w-74 md:w-1/2 lg:w-1/3">
           Harness the power of a CRM that helps you to better engage, understand
           and grow your developer community.
         </div>
