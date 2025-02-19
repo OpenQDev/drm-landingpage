@@ -73,11 +73,11 @@ const DevRelProblems = () => {
   return (
     // Add px-4 as default padding, which increases to px-8 on medium screens and px-16 on large screens
 
-    <div className="flex flex-col lg:flex-row lg:space-x-32 justify-center items-center pt-32 px-0 lg:px-24">
+    <div className="flex flex-col lg:flex-row lg:space-x-32 justify-center items-center pt-20 mt-8 mb-2 px-0 lg:px-24">
       <div className="flex-1 flex flex-col text-left lg:mb-16">
         {/*   <TranslateAndFade direction="left"> */}
         <div className="font-medium text-q-purple text-md">THE PROBLEM</div>
-        <div className="text-title-color font-whyte lg:text-3xl font-medium pt-3">
+        <div className="font-whyte text-2xl lg:text-3xl font-bold lg:font-medium pt-3 text-gray-900">
           The black box of developer adoption.{" "}
           <span className="text-gray-400">
             For dev tooling companies, understanding your developer ecosystem is

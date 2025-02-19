@@ -9,7 +9,7 @@ import TranslateAndFade from "../../animations/translate-and-fade";
 
 const ProductShowcase = () => {
   return (
-    <div className="top-content-padding">
+    <div className="top-content-padding -mt-6">
       <div className="sm:block xl:hidden px-content-padding">
         <div className="title-text-size">
           Enrich your developer accounts with precision and insight

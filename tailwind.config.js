@@ -35,6 +35,11 @@ module.exports = {
         "title-color": "#1D1E20", // Custom color defined
         "bg-primary-color": "#FBFBFB",
         "q-purple": "#322EE9",
+        "bg-background": "#111827",
+        "clr-card": "#1f2937",
+        "clr-1": "#6420aa",
+        "clr-2": "#ff3ea5",
+        "clr-3": "#ff7ed4",
       },
       variants: {
         extend: {
@@ -45,6 +50,19 @@ module.exports = {
           width: ["before"],
           height: ["before"],
         },
+      },
+      keyframes: {
+        rotate: {
+          "0%": {
+            "--gradient-angle": "0deg",
+          },
+          "100%": {
+            "--gradient-angle": "360deg",
+          },
+        },
+      },
+      animation: {
+        rotate: "rotate 2.5s linear infinite",
       },
     },
   },

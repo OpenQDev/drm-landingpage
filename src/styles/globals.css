@@ -46,7 +46,23 @@ body {
 
 /* Responsive Queries */
 .top-content-padding {
-  @apply pt-12 lg:pt-28 xl:pt-32;
+  @apply pt-12 lg:pt-20;
+}
+
+.top-spacing {
+  @apply pt-24 lg:pt-36;
+}
+
+.bottom-spacing {
+  @apply pb-24 lg:pb-36;
+}
+
+.px-spacing {
+  @apply px-0 lg:px-24;
+}
+
+.title-text {
+  @apply font-whyte text-2xl lg:text-3xl font-semibold lg:font-medium text-gray-900;
 }
 
 .top-collapse-padding {

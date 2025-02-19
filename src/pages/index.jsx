@@ -14,7 +14,8 @@ import Footer from "@/components/sales/footer";
 import StepTwoContent from "@/components/sales/drm/elements/step-two-content";
 import SocialProof from "@/components/sales/drm/social-proof";
 import { NextSeo } from "next-seo";
-
+import SolutionSpacer from "@/components/sales/drm/solution/solution-spacer";
+import SolutionConnext from "@/components/sales/drm/solution/solution-connext";
 const DRM = () => {
   return (
     <>
@@ -49,8 +50,8 @@ const DRM = () => {
       />
       <main className="">
         <Nav />
-        <div className="px-content-padding">
-          <div className="bg-bg-primary-color md:border-x border-gray-200 p-5">
+        <div className="">
+          <div className="bg-bg-primary-color border-gray-200">
             <DevRelHero />
 
             <div className="-mr-5 sm:mr-0">
@@ -58,9 +59,10 @@ const DRM = () => {
             </div>
 
             <SocialProof />
-            <DevRelProblems />
-            <ProductShowcase />
-            <LeadDiscovery />
+            {/*  <DevRelProblems /> */}
+            <SolutionSpacer />
+            <SolutionConnext />
+            {/*    <LeadDiscovery /> */}
             <HowItWorks />
             <DeveloperDynamics />
             <Faq />
