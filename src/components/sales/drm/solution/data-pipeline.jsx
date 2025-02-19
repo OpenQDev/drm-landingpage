@@ -193,12 +193,12 @@ const DataPipelineVisualization = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 mb-10 flex items-center justify-center pl-12">
+        <div className="flex-1 mb-10 flex items-center justify-center">
           {/* Stacked blocks with bottom row side by side */}
           <div className="flex flex-col space-y-2">
             {/* Organization block on top */}
-            <div className="flex flex-col border rounded-md p-3 w-full">
-              <div className="flex items-center justify-between pb-1.5 border-b">
+            <div className="flex flex-col border rounded-md p-3 w-full bg-white">
+              <div className="flex items-center justify-between space-x-5 pb-1.5 border-b">
                 <div className="flex items-center space-x-1.5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -215,14 +215,14 @@ const DataPipelineVisualization = () => {
                   enhanced
                 </span>
               </div>
-              <div className="pt-1.5 text-sm text-gray-600">2000 Contacts</div>
+              <div className="pt-1.5 text-sm text-gray-600">520 Contacts</div>
             </div>
 
             {/* Bottom row with Developers and Repos side by side */}
             <div className="flex space-x-2">
               {/* Developers block */}
-              <div className="flex flex-col border rounded-md p-3 w-full.5rem]">
-                <div className="flex items-center justify-between pb-1.5 border-b">
+              <div className="flex flex-col border rounded-md p-3 w-full.5rem] bg-white">
+                <div className="flex items-center justify-between space-x-5 pb-1.5 border-b">
                   <div className="flex items-center space-x-1.5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -247,13 +247,13 @@ const DataPipelineVisualization = () => {
                   </span>
                 </div>
                 <div className="pt-1.5 text-sm text-gray-600">
-                  2000 Contacts
+                  4202 Contacts
                 </div>
               </div>
 
               {/* Repos block */}
-              <div className="flex flex-col border rounded-md p-3 w-full.5rem]">
-                <div className="flex items-center justify-between pb-1.5 border-b">
+              <div className="flex flex-col border rounded-md p-3 w-full.5rem] bg-white">
+                <div className="flex items-center justify-between space-x-5 pb-1.5 border-b">
                   <div className="flex items-center space-x-1.5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -271,7 +271,7 @@ const DataPipelineVisualization = () => {
                   </span>
                 </div>
                 <div className="pt-1.5 text-sm text-gray-600">
-                  2000 Contacts
+                  1932 Contacts
                 </div>
               </div>
             </div>
