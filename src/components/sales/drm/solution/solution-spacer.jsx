@@ -24,14 +24,14 @@ const SolutionSpacer = () => {
           <div className="w-px h-16 bg-gray-200"></div>
           <div className="w-px h-16 bg-gray-200"></div>
         </div>
-        <div className="-mx-16 border-t border-dashed border-gray-200"></div>
+        <div className="mx-0 md:-mx-16 border-t border-dashed border-gray-200"></div>
         <div className="flex justify-between">
           <div className="w-px h-16 bg-gray-200"></div>
           <div className="w-px h-16 bg-gray-200"></div>
           <div className="w-px h-16 bg-gray-200"></div>
           <div className="w-px h-16 bg-gray-200"></div>
         </div>
-        <div className="-mx-16 border-t border-dashed border-gray-200"></div>
+        <div className="mx-0 md:-mx-16 border-t border-dashed border-gray-200"></div>
       </div>
     </div>
   );

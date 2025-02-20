@@ -8,8 +8,8 @@ const DeveloperSyncSection = () => {
       <div className="col-span-1 md:col-span-2 min-h-[400px] md:min-h-[600px]">
         <div className="w-full h-full flex justify-center items-center">
           <div className="w-full h-full grid grid-cols-1 md:grid-cols-4">
-            <div className="col-span-1 border-b md:border-b-0 md:border-r flex flex-col h-full">
-              <div className="h-1/2 md:border-b flex items-center justify-center">
+            <div className="col-span-1 border-b md:border-b-0 md:border-r flex flex-col h-full pt-28 md:pt-0">
+              <div className="h-1/2 md:border-b flex items-center justify-center p-4 md:p-0">
                 <IntegrationsList />
               </div>
               <div

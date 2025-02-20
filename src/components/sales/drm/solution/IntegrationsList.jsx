@@ -20,8 +20,8 @@ const IntegrationsList = () => {
             className="flex flex-col items-center justify-center border border-gray-400 rounded-md p-3 relative"
           >
             {(integration.name === "Gmail" || integration.name === "X") && (
-              <span className="absolute -top-1 text-[8px] font-bold bg-white px-1 whitespace-nowrap">
-                Coming Soon
+              <span className="absolute -top-1 text-[8px] font-bold bg-white rounded-lg px-2 whitespace-nowrap">
+                Coming soon
               </span>
             )}
             <Image
