@@ -1,6 +1,7 @@
 import React from "react";
 import DeveloperDiscoverySection from "./developer-discovery-section";
 import DeveloperSyncSection from "./developer-sync-section";
+import DeveloperReportingSection from "./developer-reporting-section";
 
 const SolutionConnext = () => {
   return (
@@ -10,6 +11,10 @@ const SolutionConnext = () => {
       <div className="border-x h-16" />
       <div className="border-t border-dotted mx-0 md:-mx-16"></div>
       <DeveloperSyncSection />
+      <div className="border-t border-dotted mx-0 md:-mx-16"></div>
+      <div className="border-x h-16" />
+      <div className="border-t border-dotted mx-0 md:-mx-16"></div>
+      <DeveloperReportingSection />
     </div>
   );
 };
