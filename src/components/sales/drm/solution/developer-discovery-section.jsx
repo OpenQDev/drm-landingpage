@@ -40,10 +40,10 @@ const DeveloperDiscoverySection = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-1 lg:col-span-2 px-6 lg:px-10 py-8 lg:py-0 flex items-center justify-center overflow-hidden">
-        <div className="max-w-2xl w-full">
+      <div className="col-span-1 lg:col-span-2 px-6 lg:px-10 py-8 lg:py-0 flex items-center justify-center overflow-hidden -mb-20 md:-mb-24 relative z-0">
+        <div className="w-full max-w-[450px] mx-auto">
           <video
-            className="rounded-md max-w-full max-h-full object-contain"
+            className="rounded-md w-full h-auto object-contain"
             autoPlay
             muted
             playsInline
