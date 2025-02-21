@@ -5,11 +5,11 @@ const DevRelCore = () => {
   const [showVideo, setShowVideo] = React.useState(false);
 
   return (
-    <div className="flex flex-col justify-center items-center xl:pt-5 2xl:pt-10 lg:pt-36 -mx-5 z-0">
+    <div className="flex flex-col justify-center items-center px-5 xl:pt-5 2xl:pt-10 lg:pt-36 z-0 overflow-x-hidden">
       <div className="pt-10 w-full max-w-[1390px]">
         <div
-          className="flex justify-center items-center border border-gray-300 rounded-sm md:rounded-lg shadow-[0px_2px_6px_0px_rgba(28,40,64,0.06),0px_6px_20px_-2px_rgba(28,40,64,0.08),0px_0px_0px_4px_rgba(164,173,186,0.08)] my-4 relative w-full"
-          style={{ aspectRatio: "16/10", overflow: "hidden" }}
+          className="flex justify-center items-center border border-gray-300 rounded-sm md:rounded-lg shadow-[0px_2px_6px_0px_rgba(28,40,64,0.06),0px_6px_20px_-2px_rgba(28,40,64,0.08),0px_0px_0px_4px_rgba(164,173,186,0.08)] my-4 relative w-full overflow-hidden"
+          style={{ aspectRatio: "16/10" }}
         >
           {!showVideo && (
             <div className="relative w-full h-full">

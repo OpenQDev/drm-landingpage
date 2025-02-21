@@ -11,15 +11,21 @@
   "dependencies": {
     "@loomhq/loom-embed": "^1.7.0",
     "@typeform/embed-react": "^3.8.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "contentlayer": "^0.3.4",
     "date-fns": "^2.30.0",
+    "lucide-react": "^0.475.0",
     "next": "14.0.0",
     "next-contentlayer": "^0.3.4",
     "next-seo": "^6.5.0",
     "nextra": "^2.13.3",
     "nextra-theme-docs": "^2.13.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "recharts": "^2.15.1",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.2.0",

@@ -16,8 +16,9 @@ const DeveloperDiscoverySection = () => {
           <div>
             <div className="text-gray-500 mt-4">
               Enhance your CRM with AI-powered lead discovery and enrichment.
-              Find and nurture engaged developers while getting deeper insights
-              into untapped talent that matches your needs.
+              De-anonymize npm package downloads and other data sources to
+              uncover engagement patterns while getting insights into untapped
+              communities that matches your profile.
             </div>
             <div className="flex items-center justify-start gap-2 mt-4">
               <span className="font-bold">Explore</span>

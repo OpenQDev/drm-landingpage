@@ -16,6 +16,7 @@ import SocialProof from "@/components/sales/drm/social-proof";
 import { NextSeo } from "next-seo";
 import SolutionSpacer from "@/components/sales/drm/solution/solution-spacer";
 import SolutionConnext from "@/components/sales/drm/solution/solution-connext";
+import SolutionSpacerBottom from "@/components/sales/drm/solution/solution-spacer-bottom";
 const DRM = () => {
   return (
     <>
@@ -54,17 +55,21 @@ const DRM = () => {
           <div className="bg-bg-primary-color border-gray-200">
             <DevRelHero />
 
-            {/*    <div className="-mr-5 sm:mr-0">
-              <DevRelCore />
-            </div> */}
+            {
+              <div className="-mr-5 sm:mr-0">
+                <DevRelCore />
+              </div>
+            }
 
             <SocialProof />
             {/*  <DevRelProblems /> */}
             <SolutionSpacer />
             <SolutionConnext />
-            {/*    <LeadDiscovery /> */}
+            <SolutionSpacerBottom />
             <HowItWorks />
-            <DeveloperDynamics />
+            {/*    <LeadDiscovery /> */}
+            {/*  { <HowItWorks />}
+            <DeveloperDynamics /> */}
             <Faq />
             <FooterBanner />
             <Footer />
