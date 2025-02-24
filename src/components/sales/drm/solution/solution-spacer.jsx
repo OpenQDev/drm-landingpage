@@ -7,9 +7,7 @@ const SolutionSpacer = () => {
       <div className="px-content-padding">
         <div>
           <div className="flex justify-end text-sm">
-            <span className="text-gray-300">
-              // DISCOVER IMPORT ENHANCE ACT
-            </span>
+            <span className="text-gray-300"></span>
           </div>
           <div className=""></div>
           <div className="title-text mt-10 mb-10 w-3/4">

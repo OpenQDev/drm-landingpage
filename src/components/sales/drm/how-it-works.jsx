@@ -149,9 +149,9 @@ const HowItWorks = () => {
         <div className="relative">
           <div className="absolute inset-x-0 top-[-40px] bottom-[0px] border-x"></div>
           <div>
-            <div className="relative border-y border-dashed [border-width:0.5px] border-gray-200 -mx-16"></div>
+            <div className="relative border-y border-dashed [border-width:0.5px] border-gray-200 md:-mx-16"></div>
             <div className="pt-16"></div>
-            <div className="relative border-y border-dashed [border-width:0.5px] border-gray-200 -mx-16"></div>
+            <div className="relative border-y border-dashed [border-width:0.5px] border-gray-200 md:-mx-16"></div>
           </div>
         </div>
         <div className="border-x grid grid-cols-11 gap-4">
@@ -190,9 +190,9 @@ const HowItWorks = () => {
         <div className="relative">
           <div className="absolute inset-x-0 top-[0px] bottom-[-40px] border-x"></div>
           <div>
-            <div className="relative border-y border-dashed [border-width:0.5px] border-gray-200 -mx-16"></div>
+            <div className="relative border-y border-dashed [border-width:0.5px] border-gray-200 md:-mx-16"></div>
             <div className="pt-16"></div>
-            <div className="relative border-y border-dashed [border-width:0.5px] border-gray-200 -mx-16"></div>
+            <div className="relative border-y border-dashed [border-width:0.5px] border-gray-200 md:-mx-16"></div>
           </div>
         </div>
       </div>
