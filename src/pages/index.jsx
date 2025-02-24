@@ -17,6 +17,7 @@ import { NextSeo } from "next-seo";
 import SolutionSpacer from "@/components/sales/drm/solution/solution-spacer";
 import SolutionConnext from "@/components/sales/drm/solution/solution-connext";
 import SolutionSpacerBottom from "@/components/sales/drm/solution/solution-spacer-bottom";
+import StartFreeTrial from "@/components/sales/drm/start-free-trial";
 const DRM = () => {
   return (
     <>
@@ -66,10 +67,11 @@ const DRM = () => {
             <SolutionSpacer />
             <SolutionConnext />
             <SolutionSpacerBottom />
+            <StartFreeTrial />
             <HowItWorks />
+
             {/*    <LeadDiscovery /> */}
-            {/*  { <HowItWorks />}
-            <DeveloperDynamics /> */}
+            {/*<DeveloperDynamics /> */}
             <Faq />
             <FooterBanner />
             <Footer />

@@ -124,14 +124,13 @@ function DependenciesChart() {
 
 const HowItWorks = () => {
   return (
-    <div className="flex pb-96 flex-col justify-center text-left md:text-center top-content-padding px-content-padding">
+    <div className="flex flex-col justify-center text-left md:text-center top-content-padding -mt-10 px-content-padding">
       <div className="top-content-padding">
         <div className="text-3xl font-medium w-2/3 mx-auto text-center">
           Comprehensive developer fingerprinting.{" "}
           <span className="text-gray-400">
-            Eliminate tedious GitHub repository checks. We identify the repos a
-            developer contributes to that rely on your dependency, providing a
-            holistic view of their complete developer persona.
+            We identify repositories using your dependency across a developer's
+            contributions, creating a complete usage profile.
           </span>
         </div>
 
