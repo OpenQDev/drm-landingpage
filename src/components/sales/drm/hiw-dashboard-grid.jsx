@@ -208,7 +208,7 @@ const DashboardGrid = () => {
             <h3 className="text-lg text-left -mt-5 text-sm mb-3">
               Software Engineer Wolfram
             </h3>
-            <div className="border-b -ml-5">
+            <div className="border-b lg:-ml-5">
               <div className="flex flex-row justify-between pr-5 pl-5 items-center">
                 <div className="flex flex-row space-x-3">
                   <svg

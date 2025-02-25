@@ -99,11 +99,13 @@ const Icon = ({ name }) => {
 
 const SideInfo = ({ mainText, subText, subTextIcon }) => {
   return (
-    <div className="pl-7">
+    <div className="pl-7 p">
       <div className="flex items-center py-2 border-l border-gray-400">
         <div className="flex flex-row items-center -ml-3">
-          <div className="p-1.5 bg-gray-100 rounded-full mb-1">
-            {subTextIcon && <Icon name={subTextIcon} />}
+          <div className="-ml-3 md:-ml-0">
+            <div className="p-1.5 bg-gray-100 rounded-full mb-1">
+              {subTextIcon && <Icon name={subTextIcon} />}
+            </div>
           </div>
           <div className="flex flex-col space-y-2 text-left">
             <div className="pl-3 text-xs font-medium">{mainText}</div>
