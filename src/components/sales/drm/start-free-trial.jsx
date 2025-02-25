@@ -19,20 +19,20 @@ const StartFreeTrial = () => {
                   </div>
 
                   <div className="flex xs:flex-row flex-col space-y-2.5 xs:space-y-0 xs:space-x-4">
-                    <div className="bg-black p-2 px-4 text-white border rounded-lg font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto">
-                      <Link target="_blank" href="https://drm.openq.dev/signup">
+                    <Link target="_blank" href="https://drm.openq.dev/">
+                      <div className="bg-black p-2 px-4 text-white border rounded-lg font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto">
                         Start for free
-                      </Link>
-                    </div>
+                      </div>
+                    </Link>
 
-                    <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto">
-                      <Link
-                        target="_blank"
-                        href="https://calendly.com/rickkdev/openqdemo"
-                      >
+                    <Link
+                      target="_blank"
+                      href="https://calendly.com/rickkdev/openqdemo"
+                    >
+                      <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto">
                         Request demo
-                      </Link>
-                    </div>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>

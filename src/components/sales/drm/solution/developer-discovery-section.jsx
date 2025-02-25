@@ -20,7 +20,7 @@ const DeveloperDiscoverySection = () => {
               uncover engagement patterns while getting insights into untapped
               communities that matches your profile.
             </div>
-            <div className="flex items-center justify-start gap-2 mt-4">
+            {/* <div className="flex items-center justify-start gap-2 mt-4">
               <span className="font-bold">Explore</span>
               <div className="text-gray-800 w-6 h-6 transition-all hover:scale-110 hover:text-black">
                 <svg
@@ -37,7 +37,7 @@ const DeveloperDiscoverySection = () => {
                   />
                 </svg>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

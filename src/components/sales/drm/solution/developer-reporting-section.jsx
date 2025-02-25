@@ -49,7 +49,7 @@ const DeveloperReportingSection = () => {
   return (
     <div className="border-x grid grid-cols-1 md:grid-cols-3 min-h-[600px]">
       <div className="col-span-1 px-6 md:px-10 pt-6 md:pt-10 pb-20 md:pb-96 border-t md:border-t-0 md:border-r min-h-[300px] md:min-h-[600px] relative">
-        <div className="text-gray-800 w-6 h-6 ml-auto transition-all hover:scale-110 hover:text-black">
+        {/* <div className="text-gray-800 w-6 h-6 ml-auto transition-all hover:scale-110 hover:text-black">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -63,7 +63,7 @@ const DeveloperReportingSection = () => {
               d="M6.25 3.75h6m0 0v6m0-6-8.5 8.5"
             ></path>
           </svg>
-        </div>
+        </div> */}
         <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 right-6 md:right-10">
           <div className="font-custom font-[575] text-xl md:text-2xl text-bold text-gray-900">
             Developer reporting

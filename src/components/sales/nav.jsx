@@ -42,24 +42,24 @@ const Subnav = () => {
             <div className="hidden md:block pl-10 pb-1"></div>
           </div>
           <div className="flex flex-row hidden md:flex space-x-4">
-            <div className="whitespace-nowrap border rounded-lg p-1 px-4 border-[#A6A6A6] font-medium md:text-xs lg:text-lg">
-              <Link
-                target="_blank"
-                href="https://drm.openq.dev/"
-                className="text-gray-900 text-xs lg:text-lg font-medium"
-              >
+            <Link
+              target="_blank"
+              href="https://drm.openq.dev/"
+              className="text-gray-900 text-xs lg:text-lg font-medium"
+            >
+              <div className="whitespace-nowrap border rounded-lg p-1 px-4 border-[#A6A6A6] font-medium md:text-xs lg:text-lg">
                 Sign in
-              </Link>
-            </div>
-            <div className="whitespace-nowrap bg-black rounded-lg p-1 px-4 font-medium md:text-xs lg:text-lg">
-              <Link
-                target="_blank"
-                href="https://drm.openq.dev/signup"
-                className="text-white text-xs lg:text-lg font-medium"
-              >
+              </div>
+            </Link>
+            <Link
+              target="_blank"
+              href="https://drm.openq.dev/"
+              className="text-white text-xs lg:text-lg font-medium"
+            >
+              <div className="whitespace-nowrap bg-black rounded-lg p-1 px-4 font-medium md:text-xs lg:text-lg">
                 Start for free
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
           <div className="md:hidden self-end">
             <button onClick={() => setIsOpen(!isOpen)}>
@@ -124,15 +124,15 @@ const Subnav = () => {
                   Sign in
                 </Link>
               </div>
-              <div className="whitespace-nowrap bg-black rounded-lg p-2 px-4 font-medium text-xs">
-                <Link
-                  target="_blank"
-                  href="https://drm.openq.dev/signup"
-                  className="text-white text-xs lg:text-lg font-medium"
-                >
+              <Link
+                target="_blank"
+                href="https://drm.openq.dev/"
+                className="text-white text-xs lg:text-lg font-medium"
+              >
+                <div className="whitespace-nowrap bg-black rounded-lg p-2 px-4 font-medium text-xs">
                   Start for free
-                </Link>
-              </div>
+                </div>
+              </Link>
             </div>
             <div className="border-b border-gray-300 pt-5"></div>
           </div>

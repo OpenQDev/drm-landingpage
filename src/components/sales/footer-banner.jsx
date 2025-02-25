@@ -6,25 +6,27 @@ import Typeform from "../sales/drm/elements/typeform";
 const squaresData = [
   {
     id: 1,
-    quote: "Placeholder",
+    quote: "OpenQ is a must have for any dev rel today.",
     author: "dcbuild3r",
     position: { top: "10%", left: "15%" },
     image: "/landingpage/reviews/dc.png",
   },
   {
     id: 2,
-    quote: "Placeholder",
+    quote:
+      "OpenQ transformed how we understand our open source ecosystem. Their innovative solution provides unique insights into who's actually using our repositories and how developers interact with our code, especially during hackathons. What started as a tool for visibility has become essential market intelligence for our open source strategy. It's now the first solution I recommend to every DevRel team I meet - the visibility it provides is simply unmatched.",
     author: "Redwan",
     position: { top: "20%", left: "85%" },
     image: "/landingpage/reviews/redwan.png",
   },
-  {
+  /* {
     id: 3,
-    quote: "Placeholder",
-    author: "Ridrigo",
+    quote:
+      "OpenQ helped us a lot to make decisions when it comes to funding open source projects.",
+    author: "Rodrigo",
     position: { top: "60%", left: "5%" },
     image: "/landingpage/reviews/rodrigo.png",
-  },
+  }, */
   {
     id: 4,
     quote:
@@ -49,33 +51,41 @@ const squaresData = [
     position: { top: "8%", left: "82%" },
     image: "/landingpage/reviews/pj.jpeg",
   },
-  {
+  /* {
     id: 7,
     quote: "Placeholder",
     author: "Francesco Andreloi",
     position: { top: "70%", left: "85%" },
     image: "/landingpage/reviews/francescoandreoli.png",
-  },
-  {
+  }, */
+  /* {
     id: 8,
     quote: "Placeholder",
     author: "Jonan",
     position: { top: "20%", left: "20%" },
     image: "/landingpage/reviews/jonan.png",
-  },
-  {
+  }, */
+  /* {
     id: 9,
     quote: "Placeholder",
     author: "Dominik Tobschall",
     position: { top: "5%", left: "20%" },
     image: "/landingpage/reviews/dom.png",
-  },
-  {
+  }, */
+  /* {
     id: 10,
     quote: "Placeholder",
     author: "Alex",
-    position: { top: "40%", left: "80%" },
+    position: { top: "40%", left: "87%" },
     image: "/landingpage/reviews/alex.jpeg",
+  }, */
+  {
+    id: 10,
+    quote:
+      "We love at BuidlGuidl the extensive dataset. It helps us validate tooling and discover developer activity.",
+    author: "Austin Griffith",
+    position: { top: "49%", left: "90%" },
+    image: "/landingpage/reviews/austin.png",
   },
 ];
 
@@ -177,19 +187,19 @@ const FooterBanner = () => {
               </div>
 
               <div className="flex flex-col space-y-2.5 xs:flex-row xs:space-x-4 xs:space-y-0 pt-6">
-                <div className="bg-black p-2 px-4 text-white border rounded-lg font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto whitespace-nowrap">
-                  <Link target="_blank" href="https://drm.openq.dev/">
+                <Link target="_blank" href="https://drm.openq.dev/">
+                  <div className="bg-black p-2 px-4 text-white border rounded-lg font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto whitespace-nowrap">
                     Start for free
-                  </Link>
-                </div>
-                <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto whitespace-nowrap">
-                  <Link
-                    target="_blank"
-                    href="https://calendly.com/rickkdev/openqdemo"
-                  >
+                  </div>
+                </Link>
+                <Link
+                  target="_blank"
+                  href="https://calendly.com/rickkdev/openqdemo"
+                >
+                  <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto whitespace-nowrap">
                     Book a demo
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
