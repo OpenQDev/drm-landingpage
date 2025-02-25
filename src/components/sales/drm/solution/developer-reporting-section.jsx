@@ -75,7 +75,7 @@ const DeveloperReportingSection = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-1 md:col-span-2 min-h-[400px] md:min-h-[600px]">
+      <div className="col-span-1 md:col-span-2 min-h-[400px] md:min-h-[600px] pl-5 lg:pl-0">
         <div className="w-full h-full flex justify-center items-center">
           <div className="w-full h-full grid grid-cols-1 md:grid-cols-4">
             <div className="col-span-1 md:col-span-3 p-4 md:p-6 flex items-center justify-center relative">
@@ -189,7 +189,7 @@ const DeveloperReportingSection = () => {
             </div>
             <div className="col-span-1 border-b md:border-b-0 md:border-l flex flex-col h-full pt-28 md:pt-0">
               <div className="h-1/2 md:border-b flex items-center justify-center p-4 md:p-0">
-                <div className="flex flex-col gap-3 w-full px-6">
+                <div className="flex flex-col gap-3 w-full px-2">
                   {[
                     {
                       name: "Champions",
@@ -289,14 +289,18 @@ const DeveloperReportingSection = () => {
                   ].map((item) => (
                     <div
                       key={item.name}
-                      className={`px-4 py-2 text-sm rounded-lg transition-all flex items-center gap-3 ${
+                      className={`pl-4 md:pl-4 pr-4 py-2 text-sm rounded-lg transition-all flex items-center gap-3 ${
                         item.name === "Developer Activity"
                           ? "bg-white shadow-md text-gray-900"
                           : "text-gray-500 hover:text-gray-700"
                       }`}
                     >
-                      {item.icon}
-                      {item.name}
+                      <div className="px-2 md:px-0 lg:text-xs w-full">
+                        <div className="flex flex-row items-center space-x-3 whitespace-nowrap">
+                          <div> {item.icon}</div>
+                          <div> {item.name}</div>
+                        </div>
+                      </div>
                     </div>
                   ))}
                 </div>
