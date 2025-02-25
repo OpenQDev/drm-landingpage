@@ -378,14 +378,14 @@ const DashboardGrid = () => {
           </div>
           <div className="pt-2">
             <div className="text-lg text-left pb-2 font-semibold flex items-center gap-2">
-              <div className="w-[1rem] text-gray-600">
+              <div className="w-5 text-gray-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  class="size-6"
+                  class="size-5"
                 >
                   <path
                     strokeLinecap="round"

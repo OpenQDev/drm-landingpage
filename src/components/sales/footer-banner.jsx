@@ -6,43 +6,93 @@ import Typeform from "../sales/drm/elements/typeform";
 const squaresData = [
   {
     id: 1,
-    quote: "Data is the new oil",
-    author: "Clive Humby",
+    quote: "Placeholder",
+    author: "dcbuild3r",
     position: { top: "10%", left: "15%" },
+    image: "/landingpage/reviews/dc.png",
   },
   {
     id: 2,
-    quote: "Software is eating the world",
-    author: "Marc Andreessen",
-    position: { top: "30%", left: "75%" },
+    quote: "Placeholder",
+    author: "Redwan",
+    position: { top: "20%", left: "85%" },
+    image: "/landingpage/reviews/redwan.png",
   },
   {
     id: 3,
-    quote: "Code is like humor. When you have to explain it, it's bad",
-    author: "Cory House",
+    quote: "Placeholder",
+    author: "Ridrigo",
     position: { top: "60%", left: "25%" },
+    image: "/landingpage/reviews/rodrigo.png",
   },
   {
     id: 4,
-    quote: "Developers are the new kingmakers",
-    author: "Stephen O'Grady",
-    position: { top: "20%", left: "85%" },
+    quote:
+      "Having seen the first release, I can confidently say this will become an irreplaceable tool for anyone building a developer ecosystem. There's no going back.",
+    author: "Francesco Renzi",
+    position: { top: "30%", left: "75%" },
+    image: "/landingpage/reviews/fran.png",
   },
   {
     id: 5,
-    quote: "Open source is the future",
-    author: "Linus Torvalds",
+    quote:
+      "OpenQ is one of the most interesting projects I have seen this year supporting dev tooling companies to increase developer engagement.",
+    author: "Raza Zaidi ",
+    position: { top: "20%", left: "10%" },
+    image: "/landingpage/reviews/raza.png",
+  },
+  {
+    id: 6,
+    quote:
+      "One of the largest hurdles in DevRel is metrics. How do we measure our community's activity's? How do we measure our value to the company? These are all answered by OpenQ. With great ways to mine and aggregate the data needed and the ability to build dashboards for managers and C-levels, OpenQ is above and beyond any other DevRel management tool.",
+    author: "PJ Hagerty",
+    position: { top: "8%", left: "82%" },
+    image: "/landingpage/reviews/pj.jpeg",
+  },
+  {
+    id: 7,
+    quote: "Placeholder",
+    author: "Francesco Andreloi",
     position: { top: "70%", left: "65%" },
+    image: "/landingpage/reviews/francescoandreoli.png",
+  },
+  {
+    id: 8,
+    quote: "Placeholder",
+    author: "Jonan",
+    position: { top: "20%", left: "20%" },
+    image: "/landingpage/reviews/jonan.png",
+  },
+  {
+    id: 9,
+    quote: "Placeholder",
+    author: "Dominik Tobschall",
+    position: { top: "5%", left: "20%" },
+    image: "/landingpage/reviews/dom.png",
+  },
+  {
+    id: 10,
+    quote: "Placeholder",
+    author: "Alex",
+    position: { top: "40%", left: "80%" },
+    image: "/landingpage/reviews/alex.jpeg",
   },
 ];
 
 // Add this style block at the top of your component
 const styles = {
   tooltipStyles: `
+    .tooltip-container {
+      z-index: 1;
+    }
+    .tooltip-container:hover {
+      z-index: 100 !important;
+    }
     .tooltip-container:hover .tooltip {
       opacity: 1 !important;
       visibility: visible !important;
       pointer-events: auto !important;
+      z-index: 101 !important;
     }
     .tooltip {
       opacity: 0;
@@ -51,6 +101,14 @@ const styles = {
       transition: all 0.2s ease-in-out;
       white-space: normal;
       overflow: visible;
+      margin-bottom: 10px;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      overflow-y: visible;
+      z-index: 1;
     }
     @media (max-width: 640px) { /* Adjust this breakpoint as needed */
       .flex.relative {
@@ -87,17 +145,25 @@ const FooterBanner = () => {
         {squaresData.map((square) => (
           <div
             key={square.id}
-            className="absolute w-8 h-8 bg-gray-100 rounded-md transition-all duration-300 hover:bg-gray-200 cursor-pointer tooltip-container overflow-visible"
+            className="absolute w-8 h-8 rounded-md transition-all duration-300 hover:bg-gray-200 cursor-pointer tooltip-container overflow-visible"
             style={{
               ...square.position,
               zIndex: 20,
             }}
           >
-            <div className="tooltip -mb-10 absolute z-[100] bg-white border border-gray-200 p-3 rounded-lg shadow-sm w-48 -translate-y-full -translate-x-1/2 left-1/2 mb-1 bottom-full">
+            <Image
+              src={square.image}
+              alt={square.author}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-md opacity-65"
+              style={{ zIndex: 19 }}
+            />
+            <div className="tooltip -mb-10 fixed z-[50] bg-white border border-gray-200 p-3 rounded-lg shadow-sm w-48 -translate-y-full -translate-x-1/2 left-1/2 mb-1 bottom-full">
               <p className="text-xs font-medium text-gray-600">
                 {square.author}
               </p>
-              <p className="text-sm mt-1">"{square.quote}"</p>
+              <p className="text-sm mt-1">{square.quote}</p>
               <div className="absolute w-3 h-3 bg-white border-b border-r border-gray-200 rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"></div>
             </div>
           </div>
