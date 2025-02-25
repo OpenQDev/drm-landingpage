@@ -177,12 +177,12 @@ const FooterBanner = () => {
               </div>
 
               <div className="flex flex-col space-y-2.5 xs:flex-row xs:space-x-4 xs:space-y-0 pt-6">
-                <div className="bg-black p-2 px-4 text-white border rounded-lg font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto">
+                <div className="bg-black p-2 px-4 text-white border rounded-lg font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto whitespace-nowrap">
                   <Link target="_blank" href="https://drm.openq.dev/">
                     Start for free
                   </Link>
                 </div>
-                <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto">
+                <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto whitespace-nowrap">
                   <Link
                     target="_blank"
                     href="https://calendly.com/rickkdev/openqdemo"
