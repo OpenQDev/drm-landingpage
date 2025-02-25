@@ -22,7 +22,7 @@ const squaresData = [
     id: 3,
     quote: "Placeholder",
     author: "Ridrigo",
-    position: { top: "60%", left: "25%" },
+    position: { top: "60%", left: "5%" },
     image: "/landingpage/reviews/rodrigo.png",
   },
   {
@@ -30,7 +30,7 @@ const squaresData = [
     quote:
       "Having seen the first release, I can confidently say this will become an irreplaceable tool for anyone building a developer ecosystem. There's no going back.",
     author: "Francesco Renzi",
-    position: { top: "30%", left: "75%" },
+    position: { top: "17%", left: "75%" },
     image: "/landingpage/reviews/fran.png",
   },
   {
@@ -53,7 +53,7 @@ const squaresData = [
     id: 7,
     quote: "Placeholder",
     author: "Francesco Andreloi",
-    position: { top: "70%", left: "65%" },
+    position: { top: "70%", left: "85%" },
     image: "/landingpage/reviews/francescoandreoli.png",
   },
   {
