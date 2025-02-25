@@ -61,7 +61,7 @@ const Subnav = () => {
               </Link>
             </div>
           </div>
-          <div className="md:hidden self-end mb-1">
+          <div className="md:hidden self-end">
             <button onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? (
                 <svg

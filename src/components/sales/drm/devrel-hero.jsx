@@ -4,14 +4,14 @@ import Link from "next/link";
 
 const DevRelHero = () => {
   return (
-    <div className="pt-8 px-content-padding md:pt-top-content-padding lg:pt-36">
+    <div className="pt-20 px-content-padding md:pt-top-content-padding lg:pt-36">
       <div className="mx-0 xs:mx-4 flex flex-col justify-center items-center text-center lg:pb-24">
-        <div className="font-custom leading-none text-4xl lg:text-7xl text-center font-bold tracking-tighter">
+        <div className="font-custom leading-none text-4xl lg:text-7xl text-center font-bold tracking-tighter mx-5 md:mx-0">
           Drive more value through
           <br /> developer relations.{" "}
         </div>
 
-        <div className="text-gray-400 font-normal font-whyte text-xl lg:text-[1.3rem] pt-5 px-5 xxs:w-74 md:w-1/2 lg:w-1/2">
+        <div className="text-gray-400 font-normal font-whyte text-xl lg:text-[1.3rem] pt-5 px-5 xxs:w-74 md:w-1/2 lg:w-1/2 mx-6 md:mx-0">
           A CRM built for developer tooling companies. Unlock deep, actionable
           insights beyond basic metrics. We've pioneered a new era of developer
           data accessibility—no one else comes close.

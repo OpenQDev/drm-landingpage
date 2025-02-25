@@ -55,7 +55,9 @@ const DRM = () => {
         <div className="">
           <div className="bg-bg-primary-color border-gray-200">
             <DevRelHero />
-            <DevRelCore />
+            <div className="px-content-padding">
+              <DevRelCore />
+            </div>
             <SocialProof />
 
             <SolutionSpacer />

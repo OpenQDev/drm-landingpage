@@ -207,7 +207,7 @@ const DataPipelineVisualization = () => {
           {/* Stacked blocks with bottom row side by side */}
           <div className="flex flex-col space-y-2">
             {/* Organization block on top */}
-            <div className="flex flex-col border rounded-md p-2 lg:p-3 w-full bg-white">
+            <div className="flex flex-col border rounded-md p-2 mx-4 lg:p-3 w-full bg-white">
               <div className="flex items-center justify-between space-x-3 lg:space-x-4 pb-1 lg:pb-1.5 border-b">
                 <div className="flex items-center space-x-1 lg:space-x-2">
                   <svg
