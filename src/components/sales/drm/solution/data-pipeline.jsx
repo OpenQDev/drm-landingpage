@@ -207,83 +207,87 @@ const DataPipelineVisualization = () => {
           {/* Stacked blocks with bottom row side by side */}
           <div className="flex flex-col space-y-2">
             {/* Organization block on top */}
-            <div className="flex flex-col border rounded-md p-2 mx-4 lg:p-3 w-full bg-white">
-              <div className="flex items-center justify-between space-x-3 lg:space-x-4 pb-1 lg:pb-1.5 border-b">
-                <div className="flex items-center space-x-1 lg:space-x-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    className="w-3.5 h-3.5 lg:w-4 lg:h-4"
-                  >
-                    <path d="M1.75 16A1.75 1.75 0 0 1 0 14.25V1.75C0 .784.784 0 1.75 0h8.5C11.216 0 12 .784 12 1.75v12.5c0 .085-.006.168-.018.25h2.268a.25.25 0 0 0 .25-.25V8.285a.25.25 0 0 0-.111-.208l-1.055-.703a.749.749 0 1 1 .832-1.248l1.055.703c.487.325.779.871.779 1.456v5.965A1.75 1.75 0 0 1 14.25 16h-3.5a.766.766 0 0 1-.197-.026c-.099.017-.2.026-.303.026h-3a.75.75 0 0 1-.75-.75V14h-1v1.25a.75.75 0 0 1-.75.75Zm-.25-1.75c0 .138.112.25.25.25H4v-1.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v1.25h2.25a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25ZM3.75 6h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 3.75A.75.75 0 0 1 3.75 3h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 3.75Zm4 3A.75.75 0 0 1 7.75 6h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 7 6.75ZM7.75 3h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 9.75A.75.75 0 0 1 3.75 9h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 9.75ZM7.75 9h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5Z" />
-                  </svg>
-                  <span className="text-gray-800 text-xs lg:text-sm font-medium">
-                    Organizations
+            <div className="flex flex-col border rounded-md bg-white">
+              <div className="px-4 py-2">
+                <div className="flex items-center justify-between space-x-3 pb-1 border-b">
+                  <div className="flex items-center space-x-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      className="w-3.5 h-3.5"
+                    >
+                      <path d="M1.75 16A1.75 1.75 0 0 1 0 14.25V1.75C0 .784.784 0 1.75 0h8.5C11.216 0 12 .784 12 1.75v12.5c0 .085-.006.168-.018.25h2.268a.25.25 0 0 0 .25-.25V8.285a.25.25 0 0 0-.111-.208l-1.055-.703a.749.749 0 1 1 .832-1.248l1.055.703c.487.325.779.871.779 1.456v5.965A1.75 1.75 0 0 1 14.25 16h-3.5a.766.766 0 0 1-.197-.026c-.099.017-.2.026-.303.026h-3a.75.75 0 0 1-.75-.75V14h-1v1.25a.75.75 0 0 1-.75.75Zm-.25-1.75c0 .138.112.25.25.25H4v-1.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v1.25h2.25a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25ZM3.75 6h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 3.75A.75.75 0 0 1 3.75 3h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 3.75Zm4 3A.75.75 0 0 1 7.75 6h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 7 6.75ZM7.75 3h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 9.75A.75.75 0 0 1 3.75 9h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 9.75ZM7.75 9h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5Z" />
+                    </svg>
+                    <span className="text-gray-800 text-xs font-medium">
+                      Organizations
+                    </span>
+                  </div>
+                  <span className="bg-green-200 text-green-800 text-[10px] px-1.5 py-0.5 rounded">
+                    enhanced
                   </span>
                 </div>
-                <span className="bg-green-200 text-green-800 text-[10px] lg:text-xs px-1.5 lg:px-2 py-0.5 rounded">
-                  enhanced
-                </span>
-              </div>
-              <div className="pt-1 lg:pt-1.5 text-xs lg:text-sm text-gray-600">
-                520 Contacts
+                <div className="pt-1 text-xs text-gray-600">520 Contacts</div>
               </div>
             </div>
 
             {/* Bottom row with Developers and Repos side by side */}
-            <div className="flex space-x-2">
+            <div className="flex gap-2 sm:gap-1">
               {/* Developers block */}
-              <div className="flex flex-col border rounded-md p-2 lg:p-3 w-full bg-white">
-                <div className="flex items-center justify-between space-x-3 lg:space-x-4 pb-1 lg:pb-1.5 border-b">
-                  <div className="flex items-center space-x-1 lg:space-x-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="w-3.5 h-3.5 lg:w-4 lg:h-4"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"
-                      />
-                    </svg>
-                    <span className="text-gray-800 text-xs lg:text-sm font-medium">
-                      Developers
+              <div className="flex flex-col border rounded-md bg-white">
+                <div className="px-4 py-2">
+                  <div className="flex items-center justify-between space-x-3 pb-1 border-b">
+                    <div className="flex items-center space-x-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                        className="w-3.5 h-3.5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"
+                        />
+                      </svg>
+                      <span className="text-gray-800 text-xs font-medium">
+                        Developers
+                      </span>
+                    </div>
+                    <span className="bg-green-200 text-green-800 text-[10px] px-1.5 py-0.5 rounded">
+                      enhanced
                     </span>
                   </div>
-                  <span className="bg-green-200 text-green-800 text-[10px] lg:text-xs px-1.5 lg:px-2 py-0.5 rounded">
-                    enhanced
-                  </span>
-                </div>
-                <div className="pt-1 lg:pt-1.5 text-xs lg:text-sm text-gray-600">
-                  4202 Contacts
+                  <div className="pt-1 text-xs text-gray-600">
+                    4202 Contacts
+                  </div>
                 </div>
               </div>
 
               {/* Repos block */}
-              <div className="flex flex-col border rounded-md p-2 lg:p-3 w-full bg-white">
-                <div className="flex items-center justify-between space-x-3 lg:space-x-4 pb-1 lg:pb-1.5 border-b">
-                  <div className="flex items-center space-x-1 lg:space-x-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 16 16"
-                      className="w-3.5 h-3.5 lg:w-4 lg:h-4"
-                    >
-                      <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z" />
-                    </svg>
-                    <span className="text-gray-800 text-xs lg:text-sm font-medium">
-                      Repos
+              <div className="flex flex-col border rounded-md bg-white">
+                <div className="px-4 py-2">
+                  <div className="flex items-center justify-between space-x-3 pb-1 border-b">
+                    <div className="flex items-center space-x-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 16 16"
+                        className="w-3.5 h-3.5"
+                      >
+                        <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z" />
+                      </svg>
+                      <span className="text-gray-800 text-xs font-medium">
+                        Repos
+                      </span>
+                    </div>
+                    <span className="bg-green-200 text-green-800 text-[10px] px-1.5 py-0.5 rounded">
+                      enhanced
                     </span>
                   </div>
-                  <span className="bg-green-200 text-green-800 text-[10px] lg:text-xs px-1.5 lg:px-2 py-0.5 rounded">
-                    enhanced
-                  </span>
-                </div>
-                <div className="pt-1 lg:pt-1.5 text-xs lg:text-sm text-gray-600">
-                  1932 Contacts
+                  <div className="pt-1 text-xs text-gray-600">
+                    1932 Contacts
+                  </div>
                 </div>
               </div>
             </div>
