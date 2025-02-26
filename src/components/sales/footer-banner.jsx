@@ -1,51 +1,211 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Typeform from "../sales/drm/elements/typeform";
 
+const squaresData = [
+  {
+    id: 1,
+    quote: "OpenQ is a must have for any dev rel today.",
+    author: "dcbuild3r",
+    position: { top: "10%", left: "15%" },
+    image: "/landingpage/reviews/dc.png",
+  },
+  {
+    id: 2,
+    quote:
+      "OpenQ transformed how we understand our open source ecosystem. Their innovative solution provides unique insights into who's actually using our repositories and how developers interact with our code, especially during hackathons. What started as a tool for visibility has become essential market intelligence for our open source strategy. It's now the first solution I recommend to every DevRel team I meet - the visibility it provides is simply unmatched.",
+    author: "Redwan",
+    position: { top: "20%", left: "85%" },
+    image: "/landingpage/reviews/redwan.png",
+  },
+  /* {
+    id: 3,
+    quote:
+      "OpenQ helped us a lot to make decisions when it comes to funding open source projects.",
+    author: "Rodrigo",
+    position: { top: "60%", left: "5%" },
+    image: "/landingpage/reviews/rodrigo.png",
+  }, */
+  {
+    id: 4,
+    quote:
+      "Having seen the first release, I can confidently say this will become an irreplaceable tool for anyone building a developer ecosystem. There's no going back.",
+    author: "Francesco Renzi",
+    position: { top: "17%", left: "75%" },
+    image: "/landingpage/reviews/fran.png",
+  },
+  {
+    id: 5,
+    quote:
+      "OpenQ is one of the most interesting projects I have seen this year supporting dev tooling companies to increase developer engagement.",
+    author: "Raza Zaidi ",
+    position: { top: "20%", left: "10%" },
+    image: "/landingpage/reviews/raza.png",
+  },
+  {
+    id: 6,
+    quote:
+      "One of the largest hurdles in DevRel is metrics. How do we measure our community's activity's? How do we measure our value to the company? These are all answered by OpenQ. With great ways to mine and aggregate the data needed and the ability to build dashboards for managers and C-levels, OpenQ is above and beyond any other DevRel management tool.",
+    author: "PJ Hagerty",
+    position: { top: "8%", left: "82%" },
+    image: "/landingpage/reviews/pj.jpeg",
+  },
+  /* {
+    id: 7,
+    quote: "Placeholder",
+    author: "Francesco Andreloi",
+    position: { top: "70%", left: "85%" },
+    image: "/landingpage/reviews/francescoandreoli.png",
+  }, */
+  /* {
+    id: 8,
+    quote: "Placeholder",
+    author: "Jonan",
+    position: { top: "20%", left: "20%" },
+    image: "/landingpage/reviews/jonan.png",
+  }, */
+  /* {
+    id: 9,
+    quote: "Placeholder",
+    author: "Dominik Tobschall",
+    position: { top: "5%", left: "20%" },
+    image: "/landingpage/reviews/dom.png",
+  }, */
+  /* {
+    id: 10,
+    quote: "Placeholder",
+    author: "Alex",
+    position: { top: "40%", left: "87%" },
+    image: "/landingpage/reviews/alex.jpeg",
+  }, */
+  {
+    id: 10,
+    quote:
+      "We love at BuidlGuidl the extensive dataset. It helps us validate tooling and discover developer activity.",
+    author: "Austin Griffith",
+    position: { top: "49%", left: "90%" },
+    image: "/landingpage/reviews/austin.png",
+  },
+];
+
+// Add this style block at the top of your component
+const styles = {
+  tooltipStyles: `
+    .tooltip-container {
+      z-index: 1;
+    }
+    .tooltip-container:hover {
+      z-index: 100 !important;
+    }
+    .tooltip-container:hover .tooltip {
+      opacity: 1 !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
+      z-index: 101 !important;
+    }
+    .tooltip {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all 0.2s ease-in-out;
+      white-space: normal;
+      overflow: visible;
+      margin-bottom: 10px;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      overflow-y: visible;
+      z-index: 1;
+    }
+    @media (max-width: 640px) { /* Adjust this breakpoint as needed */
+      .flex.relative {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+      }
+      .px-content-padding-mobile,
+      .relative,
+      .flex {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .w-full {
+        width: 100% !important;
+      }
+      .bg-transparent {
+        background-color: transparent !important;
+      }
+    }
+  `,
+};
+
 const FooterBanner = () => {
+  const [activeTooltip, setActiveTooltip] = useState(null);
+
   return (
-    <div className="flex top-content-padding relative bg-transparent">
-      <div className="absolute top-2/3 bottom-0 left-0 right-0 bg-[#101010] z-0"></div>
-      <div className="relative px-content-padding z-10">
-        <div className="flex flex-col lg:flex-row bg-q-purple px-content-padding-mobile lg:px-0 lg:pl-24 pt-12 rounded-lg">
-          <div className="flex flex-col lg:w-1/2 justify-center space-y-4 pb-12">
-            <div className="font-custom text-3xl lg:text-4xl font-extrabold text-white text-left ">
-              Level Up
+    <>
+      <style>{styles.tooltipStyles}</style>
+      <div className="flex relative bg-transparent pb-24 pt-28 overflow-visible">
+        {/* Background squares */}
+        {squaresData.map((square) => (
+          <div
+            key={square.id}
+            className="absolute w-8 h-8 rounded-md transition-all duration-300 hover:bg-gray-200 cursor-pointer tooltip-container overflow-visible"
+            style={{
+              ...square.position,
+              zIndex: 20,
+            }}
+          >
+            <Image
+              src={square.image}
+              alt={square.author}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-md opacity-65"
+              style={{ zIndex: 19 }}
+            />
+            <div className="tooltip -mb-10 fixed z-[50] bg-white border border-gray-200 p-3 rounded-lg shadow-sm w-48 -translate-y-full -translate-x-1/2 left-1/2 mb-1 bottom-full">
+              <p className="text-xs font-medium text-gray-600">
+                {square.author}
+              </p>
+              <p className="text-sm mt-1">{square.quote}</p>
+              <div className="absolute w-3 h-3 bg-white border-b border-r border-gray-200 rotate-45 -bottom-1.5 left-1/2 -translate-x-1/2"></div>
             </div>
-            <div className="text-white text-left lg:w-2/3">
-              Sign up to our waitlist, we onboard new companies every week.
-              Become a design partner and start shaping the future of our
-              product.
-            </div>
-            <div className="flex flex-col space-y-3 justify-left xs:flex-row xs:space-x-3 xs:space-y-0 xs:items-center">
-              <Typeform>
-                <div className="bg-white rounded-lg p-2  px-3 text-q-purple font-semibold">
-                  Join waitlist
-                </div>
-              </Typeform>
-              <div className="text-white border border-white rounded-lg p-2 px-3 font-semibold">
+          </div>
+        ))}
+
+        <div className="relative px-content-padding z-10 w-full">
+          <div className="flex flex-col px-content-padding-mobile pt-12 rounded-lg items-center justify-center">
+            <div className="flex flex-col justify-center space-y-4 pb-12 items-center text-center">
+              <div className="font-custom w-2/3 text-3xl lg:text-4xl font-extrabold text-black">
+                Pioneering a new era of developer data accessibility.
+              </div>
+
+              <div className="flex flex-col space-y-2.5 xs:flex-row xs:space-x-4 xs:space-y-0 pt-6">
+                <Link target="_blank" href="https://drm.openq.dev/">
+                  <div className="bg-black p-2 px-4 text-white border rounded-lg font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto whitespace-nowrap">
+                    Start for free
+                  </div>
+                </Link>
                 <Link
                   target="_blank"
                   href="https://calendly.com/rickkdev/openqdemo"
                 >
-                  Request demo
+                  <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto whitespace-nowrap">
+                    Book a demo
+                  </div>
                 </Link>
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-2/3 xl:w-1/2">
-            <Image
-              className="rounded-md"
-              src="/landingpage/drm/devrel/devrel-landingpage-hero.png"
-              alt="Table"
-              width={1570}
-              height={856}
-            />
-          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

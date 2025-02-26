@@ -14,7 +14,10 @@ import Footer from "@/components/sales/footer";
 import StepTwoContent from "@/components/sales/drm/elements/step-two-content";
 import SocialProof from "@/components/sales/drm/social-proof";
 import { NextSeo } from "next-seo";
-
+import SolutionSpacer from "@/components/sales/drm/solution/solution-spacer";
+import SolutionConnext from "@/components/sales/drm/solution/solution-connext";
+import SolutionSpacerBottom from "@/components/sales/drm/solution/solution-spacer-bottom";
+import StartFreeTrial from "@/components/sales/drm/start-free-trial";
 const DRM = () => {
   return (
     <>
@@ -47,20 +50,26 @@ const DRM = () => {
           image: "https://openq.dev/openq-website-thumbnail.png",
         }}
       />
-      <main className="bg-bg-primary-color explore">
+      <main className="">
         <Nav />
-        <div className="bg-bg-primary-color">
-          <DevRelHero />
-          <DevRelCore />
-          <SocialProof />
-          <DevRelProblems />
-          <ProductShowcase />
-          <LeadDiscovery />
-          <HowItWorks />
-          <DeveloperDynamics />
-          <Faq />
-          <FooterBanner />
-          <Footer />
+        <div className="">
+          <div className="bg-bg-primary-color border-gray-200">
+            <DevRelHero />
+            <div className="px-content-padding">
+              <DevRelCore />
+            </div>
+            <SocialProof />
+
+            <SolutionSpacer />
+            <SolutionConnext />
+            <SolutionSpacerBottom />
+            <StartFreeTrial />
+            <HowItWorks />
+
+            <Faq />
+            <FooterBanner />
+            <Footer />
+          </div>
         </div>
       </main>
     </>

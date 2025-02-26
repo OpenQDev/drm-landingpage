@@ -3,31 +3,30 @@ import FaqQuestion from "./faq-questions";
 
 const Faq = () => {
   return (
-    <div className="top-content-padding">
-      <div className="flex flex-col px-8 justify-center items-center lg:text-center">
+    <div className="top-content-padding mt-16 mb-20">
+      <div className="flex flex-col justify-center items-center lg:text-center">
         <div className="title-text-size">Frequently</div>
         <div className="title-text-size pt-3 pb-8">asked questions</div>
-        <div className="w-full max-w-[1000px] ">
+        <div className="w-full px-8 max-w-[1000px] ">
           <FaqQuestion
-            question="How can the DRM help improve my developer retention?"
-            answer="
-            By leveraging comprehensive metrics and analytics, we can quantify the impact of events and interactions while measuring business objectives more precisely. This approach leads to a better understanding of ROI and enables the measurement of retention techniques, helping identify what works best for improved developer retention."
+            question="How can OpenQ help improve my developer retention?"
+            answer="Our analytics measure the impact or all your marketing strategies and business objectives to calculate their ROI. With our data we can identify which retention strategies work best for your community."
           />
           <FaqQuestion
             question="How can we improve developer profiles and monitor dependency usage?"
-            answer="We enhance developer profiles by utilizing our git scraper, which downloads all repositories they have created or engaged with. We then verify if requested dependencies are present in their config files and check for recent activity in those repositories. Our scraper works in real-time to ensure that you have access to the most current status of your open source community."
+            answer="OpenQ analyzes repositories on GitHub developers create or engage with that are relevant to you. It checks for dependencies in config files and monitors repository activity regularly."
           />
           <FaqQuestion
-            question="How can we identify potential leads interested in our tech?"
-            answer="We employ a combination of web scrapers, developer profiles, and Google's GitHub event indexer (gh archive) to analyze millions of developer profiles. This process helps us identify leads who share interests with your existing community or are already using your dependency, even if you're not aware of them. Our approach includes additional proprietary techniques to enhance lead discovery."
+            question="How can you identify potential leads interested in my tech?"
+            answer="We maintain a comprehensive database of developers with detailed profile classifications. This allows us to identify developers who align with your community's interests or are already utilizing your dependencies in their projects."
           />
           <FaqQuestion
             question="How can you determine if users have stopped using my dependencies or become inactive?"
-            answer="We actively monitor the repositories where your dependencies are used and check for signs of churn. If we detect that dependencies have been removed, we provide a report. Additionally, we flag repositories as inactive if there have been no commits in the last 6 weeks, helping you identify users who are no longer active."
+            answer="We track dependency removal in repositories and flag accounts as inactive after 6 weeks without commits. You receive reports for both churn and inactivity."
           />
           <FaqQuestion
             question="Do you have an API I can integrate with my existing CRM?"
-            answer="Not yet but very soon."
+            answer="Coming soon."
           />
         </div>
       </div>

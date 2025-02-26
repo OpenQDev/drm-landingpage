@@ -9,7 +9,7 @@ const FaqQuestion = ({ question, answer }) => {
 
   return (
     <div onClick={toggleAnswer} className="flex flex-col cursor-pointer">
-      <div className="flex flex-row items-center justify-start border-b border-gray-300 pt-2 pb-5">
+      <div className="flex flex-row items-center justify-start border-b border-gray-200 pt-2 pb-5">
         <div className="flex flex-col">
           <div className="text-black text-xl font-semibold pt-3 flex gap-2 content-center items-center text-left">
             <div className="w-6 h-6 min-w-[24px]  flex-initial">
