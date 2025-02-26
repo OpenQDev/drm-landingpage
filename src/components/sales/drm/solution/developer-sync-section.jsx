@@ -45,31 +45,18 @@ const DeveloperSyncSection = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-1 px-6 md:px-10 pt-6 md:pt-10 pb-20 md:pb-96 border-t md:border-t-0 md:border-l min-h-[300px] md:min-h-[600px] relative">
-        {/* <div className="text-gray-800 w-6 h-6 ml-auto transition-all hover:scale-110 hover:text-black">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 16 16"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1.5"
-              d="M6.25 3.75h6m0 0v6m0-6-8.5 8.5"
-            ></path>
-          </svg>
-        </div> */}
-        <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 right-6 md:right-10">
-          <div className="font-custom font-[575] text-xl md:text-2xl text-bold text-gray-900">
-            Sync developer data
-          </div>
-          <div className="mt-3 md:mt-4 text-sm md:text-base text-gray-500">
-            Bring in developer data from event lists, marketing sources, user
-            rosters, or general CSV files, then connect it through our
-            integrations with GitHub, Discord, Slack, and other developer
-            platforms.
+      <div className="col-span-1 order-first md:order-last px-6 md:px-10 pt-6 md:pt-10 pb-10 border-b md:border-b-0 md:border-l min-h-[300px] md:min-h-[600px]">
+        <div className="h-full flex flex-col">
+          <div>
+            <div className="font-custom font-[575] text-xl md:text-2xl text-bold text-gray-900">
+              Sync developer data
+            </div>
+            <div className="mt-3 md:mt-4 text-sm md:text-base text-gray-500">
+              Bring in developer data from event lists, marketing sources, user
+              rosters, or general CSV files, then connect it through our
+              integrations with GitHub, Discord, Slack, and other developer
+              platforms.
+            </div>
           </div>
         </div>
       </div>
