@@ -16,7 +16,7 @@ const DevRelHero = () => {
           insights beyond basic metrics. We've pioneered a new era of developer
           data accessibility—no one else comes close.
         </div>
-        <div className="flex xs:flex-row flex-col w-full xs:w-auto space-y-2.5 xs:space-y-0 xs:space-x-4 pt-8">
+        <div className="flex xs:flex-row flex-col w-full xs:w-auto space-y-2.5 xs:space-y-0 xs:space-x-4 pt-8 items-center justify-center">
           <Link target="_blank" href="https://drm.openq.dev/">
             <div className="bg-black p-2 px-4 text-white border rounded-lg font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto">
               Start for free
