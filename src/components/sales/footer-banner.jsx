@@ -87,6 +87,14 @@ const squaresData = [
     position: { top: "49%", left: "90%" },
     image: "/landingpage/reviews/austin.png",
   },
+  {
+    id: 11,
+    quote:
+      "Measuring developers engagement with our Github repo used to be impossible—OpenQ makes it simple.",
+    author: "Vadim Galeev",
+    position: { top: "0%", left: "90%" },
+    image: "/landingpage/reviews/vadim.jpeg",
+  },
 ];
 
 // Add this style block at the top of your component
@@ -120,7 +128,20 @@ const styles = {
       overflow-y: visible;
       z-index: 1;
     }
-    @media (max-width: 640px) { /* Adjust this breakpoint as needed */
+    @media (max-width: 640px) {
+      .tooltip {
+        position: fixed;
+        left: 50%;
+        bottom: auto;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 300px;
+        margin: 0;
+      }
+      .tooltip-container:hover .tooltip {
+        position: fixed;
+      }
       .flex.relative {
         max-width: 100% !important;
         overflow-x: hidden !important;
@@ -184,6 +205,9 @@ const FooterBanner = () => {
             <div className="flex flex-col justify-center space-y-4 pb-12 items-center text-center">
               <div className="font-custom w-2/3 text-3xl lg:text-4xl font-extrabold text-black">
                 Pioneering a new era of developer data accessibility.
+              </div>
+              <div className="font-custom w-2/3 text-lg lg:text-xl font-medium text-medium text-gray-400">
+                Industry leaders agree this is a must have for all dev rels.
               </div>
 
               <div className="flex flex-col space-y-2.5 xs:flex-row xs:space-x-4 xs:space-y-0 pt-6">
