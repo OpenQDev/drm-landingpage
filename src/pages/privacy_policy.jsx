@@ -12,14 +12,17 @@ const Imprint = () => {
           <h1 className="text-3xl font-bold border-b border-gray-400 pb-10">
             Privacy Policy
           </h1>
-          <p className="pt-1">Last Updated 22.11.2023</p>
+          <p className="pt-1">Last Updated February 28th, 2025</p>
           <br />
 
           <p className="pt-2">
-            This Privacy Policy describes Our policies and procedures on the
-            collection, use and disclosure of Your information when You use the
-            Service and tells You about Your privacy rights and how the law
-            protects You.
+            This Privacy Policy (“Privacy Policy”) describes how OpenQ Labs GmbH
+            ("Company," "we," "us," or "our") collects, uses, and protects
+            personal data in compliance with the General Data Protection
+            Regulation (GDPR) and the German Federal Data Protection Act (BDSG).
+            This Privacy Policy further describes Our policies and procedures on
+            disclosure of Your information when You use the Service and tells
+            You about Your privacy rights and how the law protects You.
           </p>
 
           <p className="pt-2">
@@ -499,6 +502,127 @@ const Imprint = () => {
           <ul className="list-disc pl-5">
             <li>By email: info@openq.dev</li>
           </ul>
+          <h2 className="text-xl font-bold pt-4">
+            Legal Basis for Processing Your Data (Art. 6 GDPR)
+          </h2>
+          <p className="pt-2">
+            Under the General Data Protection Regulation (GDPR), we process
+            personal data based on the following legal grounds:
+          </p>
+          <ul className="list-disc pl-5">
+            <li>
+              <strong>Contractual Necessity (Art. 6(1)(b) GDPR):</strong> When
+              processing is required to fulfill a contract with you or to take
+              pre-contractual steps at your request.
+            </li>
+            <li>
+              <strong>Consent (Art. 6(1)(a) GDPR):</strong> When you have given
+              explicit consent for specific data processing activities.
+            </li>
+            <li>
+              <strong>Legitimate Interests (Art. 6(1)(f) GDPR):</strong> When
+              processing is necessary for our legitimate interests or those of a
+              third party.
+            </li>
+            <li>
+              <strong>Legal Obligations (Art. 6(1)(c) GDPR):</strong> When
+              processing is necessary to comply with legal or regulatory
+              obligations.
+            </li>
+            <li>
+              <strong>Vital Interests (Art. 6(1)(d) GDPR):</strong> When
+              processing is necessary to protect someone's life.
+            </li>
+          </ul>
+          <h2 className="text-xl font-bold pt-4">
+            Data Retention (Art. 5 & 13 GDPR)
+          </h2>
+          <p className="pt-2">We retain your data only as long as necessary:</p>
+          <ul className="list-disc pl-5">
+            <li>
+              <strong>Account Data:</strong> Retained for as long as your
+              account remains active.
+            </li>
+            <li>
+              <strong>Contractual and Transactional Data:</strong> Retained for
+              6 years after the termination of a contract.
+            </li>
+            <li>
+              <strong>Marketing Data:</strong> Retained until you withdraw
+              consent.
+            </li>
+            <li>
+              <strong>Customer Support Inquiries:</strong> Retained for 1 year
+              after the inquiry is closed.
+            </li>
+            <li>
+              <strong>Analytics and Usage Data:</strong> Anonymized and retained
+              for 12 months.
+            </li>
+          </ul>
+          <h2 className="text-xl font-bold pt-4">
+            Your Rights (Art. 12-22 GDPR)
+          </h2>
+          <p className="pt-2">
+            You have the following rights regarding your personal data, as
+            provided under the General Data Protection Regulation (GDPR):
+          </p>
+          <ul className="list-disc pl-5">
+            <li>
+              <strong>Right to Access (Art. 15 GDPR):</strong> You can request a
+              copy of the personal data we hold about you.
+            </li>
+            <li>
+              <strong>Right to Rectification (Art. 16 GDPR):</strong> If your
+              personal data is incorrect or incomplete, you can request a
+              correction.
+            </li>
+            <li>
+              <strong>Right to Erasure (Art. 17 GDPR):</strong> You may request
+              the deletion of your personal data.
+            </li>
+            <li>
+              <strong>Right to Restrict Processing (Art. 18 GDPR):</strong> You
+              can request that we limit the processing of your data.
+            </li>
+            <li>
+              <strong>Right to Data Portability (Art. 20 GDPR):</strong> You may
+              receive your personal data in a structured format.
+            </li>
+            <li>
+              <strong>Right to Object (Art. 21 GDPR):</strong> You can object to
+              the processing of your personal data.
+            </li>
+            <li>
+              <strong>Right to Withdraw Consent (Art. 7(3) GDPR):</strong> If
+              processing is based on consent, you may withdraw it at any time.
+            </li>
+          </ul>
+          <h2 className="text-xl font-bold pt-4">
+            Supervisory Authority & Complaints (Art. 77 GDPR)
+          </h2>
+          <p className="pt-2">
+            If you believe that our processing of your personal data violates
+            applicable data protection laws, you have the right to lodge a
+            complaint with a supervisory authority. In Germany, the competent
+            authority is:
+          </p>
+          <p className="pt-2">
+            Berliner Beauftragte für Datenschutz und Informationsfreiheit
+            <br />
+            Friedrichstr. 219, 10969 Berlin, Germany
+            <br />
+            Email: mailbox@datenschutz-berlin.de
+            <br />
+            Website:{" "}
+            <a href="https://www.datenschutz-berlin.de">
+              https://www.datenschutz-berlin.de
+            </a>
+          </p>
+          <p className="pt-2">
+            Before filing a complaint with a supervisory authority, we encourage
+            you to contact us first so we can address your concerns promptly.
+          </p>
         </div>
       </main>
       <FooterBanner />

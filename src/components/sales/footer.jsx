@@ -113,10 +113,10 @@ const Footer = () => {
                   <span>Imprint</span>
                 </Link>
               </div>
-              <Link href="/privacy_policies">
+              <Link href="/privacy_policy">
                 <div>Privacy Policies</div>
               </Link>
-              <Link href="/terms_of_use">
+              <Link href="/terms-of-service">
                 <div>Terms of Use</div>
               </Link>
             </div>
