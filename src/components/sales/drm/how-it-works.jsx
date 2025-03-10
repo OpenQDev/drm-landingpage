@@ -136,9 +136,10 @@ const HowItWorks = () => {
 
         <div className="flex justify-center mt-8">
           <Link target="_blank" href="https://drm.openq.dev">
-            <div className="border bg-white p-2 px-4 text-black rounded-lg font-medium text-sm md:text-xs lg:text-lg">
+            <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button">
               Start for free
-            </div>
+              <span className="ml-2">→</span>
+            </button>
           </Link>
         </div>
       </div>

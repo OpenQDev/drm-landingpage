@@ -18,14 +18,16 @@ const DevRelHero = () => {
         </div>
         <div className="flex xs:flex-row flex-col w-full xs:w-auto space-y-2.5 xs:space-y-0 xs:space-x-4 pt-8 items-center justify-center">
           <Link target="_blank" href="https://drm.openq.dev/">
-            <div className="bg-black p-2 px-4 text-white border rounded-lg font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto">
+            <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button h-10">
               Start for free
-            </div>
+              <span className="ml-2">→</span>
+            </button>
           </Link>
           <Link target="_blank" href="https://calendly.com/rickkdev/openqdemo">
-            <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto">
+            <button className="border border-black text-black py-2 px-4 rounded flex items-center justify-center responsive-button h-10">
               Request demo
-            </div>
+              <span className="ml-2">→</span>
+            </button>
           </Link>
         </div>
       </div>

@@ -47,7 +47,7 @@ const Subnav = () => {
               href="https://drm.openq.dev/"
               className="text-gray-900 text-xs lg:text-lg font-medium"
             >
-              <div className="whitespace-nowrap border rounded-lg p-1 px-4 border-[#A6A6A6] font-medium md:text-xs lg:text-lg">
+              <div className="border border-black text-black py-2 px-4 rounded flex items-center justify-center responsive-button h-10">
                 Sign in
               </div>
             </Link>
@@ -56,9 +56,10 @@ const Subnav = () => {
               href="https://drm.openq.dev/"
               className="text-white text-xs lg:text-lg font-medium"
             >
-              <div className="whitespace-nowrap bg-black rounded-lg p-1 px-4 font-medium md:text-xs lg:text-lg">
+              <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button h-10">
                 Start for free
-              </div>
+                <span className="ml-2">→</span>
+              </button>
             </Link>
           </div>
           <div className="md:hidden self-end">
@@ -129,9 +130,10 @@ const Subnav = () => {
                 href="https://drm.openq.dev/"
                 className="text-white text-xs lg:text-lg font-medium"
               >
-                <div className="whitespace-nowrap bg-black rounded-lg p-2 px-4 font-medium text-xs">
+                <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button">
                   Start for free
-                </div>
+                  <span className="ml-2">→</span>
+                </button>
               </Link>
             </div>
             <div className="border-b border-gray-300 pt-5"></div>

@@ -210,19 +210,22 @@ const FooterBanner = () => {
                 Industry leaders agree this is a must have for all dev rels.
               </div>
 
-              <div className="flex flex-col space-y-2.5 xs:flex-row xs:space-x-4 xs:space-y-0 pt-6">
+              <div className="flex xs:flex-row flex-col space-y-2 xs:space-y-0 xs:space-x-4">
                 <Link target="_blank" href="https://drm.openq.dev/">
-                  <div className="bg-black p-2 px-4 text-white border rounded-lg font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto whitespace-nowrap">
+                  <button className="bg-black text-white py-[0.56rem] px-4 rounded flex items-center justify-center responsive-button">
                     Start for free
-                  </div>
+                    <span className="ml-2">→</span>
+                  </button>
                 </Link>
+
                 <Link
                   target="_blank"
                   href="https://calendly.com/rickkdev/openqdemo"
                 >
-                  <div className="border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium text-sm md:text-xs lg:text-lg w-full xs:w-auto whitespace-nowrap">
-                    Book a demo
-                  </div>
+                  <button className="border border-black text-black py-2 px-4 rounded flex items-center justify-center responsive-button">
+                    Request demo
+                    <span className="ml-2">→</span>
+                  </button>
                 </Link>
               </div>
             </div>
