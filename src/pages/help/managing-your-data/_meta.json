@@ -1,5 +1,7 @@
 {
-  "index": "Overview",
+  "index": {
+    "display": "hidden"
+  },
   "dependency-tracking": "Dependency tracking",
   "what-are-lists": "What are lists?",
   "lists": "Lists"
