@@ -1,8 +1,6 @@
 {
-  "index": {
-    "display": "hidden"
-  },
-  "what-are-campaigns": "What are campaigns?",
-  "campaigns": "Campaigns",
-  "dependency-tracking": "Dependency tracking"
+  "index": "Overview",
+  "dependency-tracking": "Dependency tracking",
+  "what-are-lists": "What are lists?",
+  "lists": "Lists"
 }
