@@ -344,9 +344,10 @@ const Imprint = () => {
             </li>
           </ul>
 
-					<p className="pt-2">
-						We affirm that Google Workspace APIs are not used to develop, improve, or train generalized AI and/or ML models.
-					</p>
+          <p className="pt-2">
+            We affirm that Google Workspace APIs aren't used to develop,
+            improve, or train generalized AI and/or ML models.
+          </p>
 
           <h3 className="font-bold pt-3 text-lg">
             Retention of Your Personal Data
