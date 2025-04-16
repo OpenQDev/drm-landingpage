@@ -9,7 +9,7 @@ author:
 postImage: /landingpage/blog/how-to-track-developer-activity/header-2.png
 ---
 
-In 2021, while consulting for several developer tooling companies in the dynamic realm of blockchain, I encountered diverse challenges in cultivating developer communities. Some clients were at the initial stages of building their developer base, while others boasted a rich pool of thousands who had dabbled in their technology.
+In 2021, while consulting for several developer tooling companies in the dynamic realm of blockchain, I encountered a lot of challenges in cultivating and building developer communities. Some clients were at the initial stages of building their developer base, while others boasted a rich pool of thousands who had dabbled in their technology.
 
 For those with an established community, my primary inquiry revolved around the vibrancy and engagement levels of these developers. Understanding the pulse of a developer community is crucial, as it directly influences the strategies employed in Developer Relations (DevRel).
 In the world of DevRel, the overarching goal is to amplify product awareness. However, a subtle but significant metric often shadows this objective: the count of active developers or users.

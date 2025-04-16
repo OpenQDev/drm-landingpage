@@ -20,16 +20,17 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const post = allPosts.find((p) => p.slug === params.slug);
+  const otherPosts = allPosts.filter((p) => p.slug !== params.slug).slice(0, 5); // Fetch 5 other posts
 
   if (!post) {
     return { notFound: true };
   }
 
-  return { props: { post } };
+  return { props: { post, otherPosts } };
 }
 
 // Your page component now directly receives the post object.
-const PostLayout = ({ post }) => {
+const PostLayout = ({ post, otherPosts }) => {
   if (!post) {
     return <p>Post not found</p>;
   }
@@ -65,8 +66,28 @@ const PostLayout = ({ post }) => {
         }}
       />
       <Nav />
+
       <article className="font-custom px-content-padding-blog py-8 pt-20">
         <div className="flex flex-col max-w-3xl justify-center mb-8">
+          {/* Breadcrumb Navigation */}
+          <nav className="breadcrumb mb-4">
+            <ol className="flex space-x-2 text-sm text-gray-500">
+              <li>
+                <a href="/" className="hover:underline">
+                  Home
+                </a>
+              </li>
+              <li>/</li>
+              <li>
+                <a href="/blog" className="hover:underline">
+                  Blog
+                </a>
+              </li>
+              <li>/</li>
+              <li className="text-gray-700">{post.title}</li>
+            </ol>
+          </nav>
+
           <h1 className="text-5xl font-extrabold">{post.title}</h1>
           <h2 className="text-xl font-semibold pt-5 text-[#424242]">
             {post.subtitle}

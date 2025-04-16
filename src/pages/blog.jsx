@@ -1,3 +1,4 @@
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { compareDesc, format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
@@ -97,9 +98,39 @@ function PostCard({ title, subtitle, url, date, body, postImage, author }) {
 }
 
 export default function Blog() {
+  const [visiblePosts, setVisiblePosts] = useState([]);
+  const [page, setPage] = useState(1);
+  const loadMoreRef = useRef();
+
+  const postsPerPage = 6; // Number of posts to load per page
   const posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
   );
+
+  useEffect(() => {
+    setVisiblePosts(posts.slice(0, postsPerPage * page));
+  }, [page, posts]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setPage((prevPage) => prevPage + 1);
+        }
+      },
+      { threshold: 1.0 }
+    );
+
+    if (loadMoreRef.current) {
+      observer.observe(loadMoreRef.current);
+    }
+
+    return () => {
+      if (loadMoreRef.current) {
+        observer.unobserve(loadMoreRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="">
@@ -139,18 +170,24 @@ export default function Blog() {
       </div>
       <div className="flex flex-col md:flex-row  px-content-padding pt-10 space-x-0 md:space-x-10">
         <div className="">
-          {posts.slice(0, 1).map((post, idx) => (
+          {visiblePosts.slice(0, 1).map((post, idx) => (
             <PostCardHighlight key={idx} {...post} />
           ))}
         </div>
         <div className="flex flex-col space-y-3 -mt-7">
           <div className="">
-            {posts.slice(1, 3).map((post, idx) => (
+            {visiblePosts.slice(1, 3).map((post, idx) => (
               <PostCard key={idx + 4} {...post} />
             ))}
           </div>
         </div>
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-content-padding mt-5">
+        {visiblePosts.slice(3).map((post, idx) => (
+          <PostCard key={idx + 6} {...post} />
+        ))}
+      </div>
+      <div ref={loadMoreRef} className="h-10"></div>
       <FooterBanner />
       <Footer />
     </div>
