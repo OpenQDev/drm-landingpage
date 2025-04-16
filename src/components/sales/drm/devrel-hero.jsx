@@ -16,15 +16,23 @@ const DevRelHero = () => {
           insights beyond basic metrics. We've pioneered a new era of developer
           data accessibility—no one else comes close.
         </div>
-        <div className="flex xs:flex-row flex-col w-full xs:w-auto space-y-2.5 xs:space-y-0 xs:space-x-4 pt-8 items-center justify-center">
-          <Link target="_blank" href="https://drm.openq.dev/">
-            <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button h-10">
+        <div className="flex flex-col md:flex-row space-y-2.5 md:space-y-0 space-x-0 md:space-x-4 pt-8 items-center justify-center px-4 md:px-0 w-full md:w-auto">
+          <Link
+            target="_blank"
+            href="https://drm.openq.dev/"
+            className="w-full md:w-auto"
+          >
+            <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center h-10 w-full">
               Start for free
               <span className="ml-2">→</span>
             </button>
           </Link>
-          <Link target="_blank" href="https://calendly.com/rickkdev/openqdemo">
-            <button className="border border-black text-black py-2 px-4 rounded flex items-center justify-center responsive-button h-10">
+          <Link
+            target="_blank"
+            href="https://calendly.com/rickkdev/openqdemo"
+            className="w-full md:w-auto"
+          >
+            <button className="border border-black text-black py-2 px-4 rounded flex items-center justify-center h-10 w-full">
               Request demo
               <span className="ml-2">→</span>
             </button>

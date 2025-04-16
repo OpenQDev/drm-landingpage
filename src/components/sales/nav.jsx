@@ -130,7 +130,7 @@ const Subnav = () => {
                 href="https://drm.openq.dev/"
                 className="text-white text-xs lg:text-lg font-medium"
               >
-                <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button">
+                <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button w-full">
                   Start for free
                   <span className="ml-2">→</span>
                 </button>

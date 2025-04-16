@@ -18,19 +18,23 @@ const StartFreeTrial = () => {
                     no credit card required.
                   </div>
 
-                  <div className="flex xs:flex-row flex-col space-y-2 xs:space-y-0 xs:space-x-4">
-                    <Link target="_blank" href="https://drm.openq.dev/">
-                      <button className="bg-black text-white py-[0.56rem] px-4 rounded flex items-center justify-center responsive-button">
+                  <div className="flex flex-col md:flex-row space-y-2.5 md:space-y-0 space-x-0 md:space-x-4 pt-8 items-center justify-center px-4 md:px-0 w-full md:w-auto">
+                    <Link
+                      target="_blank"
+                      href="https://drm.openq.dev/"
+                      className="w-full md:w-auto"
+                    >
+                      <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center h-10 w-full">
                         Start for free
                         <span className="ml-2">→</span>
                       </button>
                     </Link>
-
                     <Link
                       target="_blank"
                       href="https://calendly.com/rickkdev/openqdemo"
+                      className="w-full md:w-auto"
                     >
-                      <button className="border border-black text-black py-2 px-4 rounded flex items-center justify-center responsive-button">
+                      <button className="border border-black text-black py-2 px-4 rounded flex items-center justify-center h-10 w-full">
                         Request demo
                         <span className="ml-2">→</span>
                       </button>
