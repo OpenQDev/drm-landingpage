@@ -18,7 +18,7 @@ function PostCardHighlight({
   author,
 }) {
   return (
-    <div className="mb-8">
+    <div className="mb-8 px-4">
       <Link href={url}>
         <Image
           className="rounded-md"
@@ -60,7 +60,7 @@ function PostCardHighlight({
 
 function PostCard({ title, subtitle, url, date, body, postImage, author }) {
   return (
-    <div className="flex flex-col md:flex-row space-x-0 md:space-x-4 border-b border-gray-300 py-7">
+    <div className="flex flex-col md:flex-row space-x-0 md:space-x-4 border-b border-gray-300 py-7 px-4">
       <div className="h-[150px] w-[300px] md:h-[150px] md:w-[150px] flex-shrink-0 relative">
         <Link href={url}>
           <Image
@@ -168,22 +168,27 @@ export default function Blog() {
       <div className="sticky top-0 z-10 border-b border-gray-300 bg-[#FBFBFB]">
         <Nav />
       </div>
-      <div className="flex flex-col md:flex-row  px-content-padding pt-10 space-x-0 md:space-x-10">
-        <div className="">
+      <div className="flex flex-col md:flex-row px-4 md:px-content-padding pt-10 space-x-0 md:space-x-10">
+        <div className="flex-1">
           {visiblePosts.slice(0, 1).map((post, idx) => (
             <PostCardHighlight key={idx} {...post} />
           ))}
         </div>
-        <div className="flex flex-col space-y-3 -mt-7">
-          <div className="">
+        <div className="flex flex-col space-y-3 -mt-7 hidden md:grid">
+          <div className="flex-1">
             {visiblePosts.slice(1, 3).map((post, idx) => (
               <PostCard key={idx + 4} {...post} />
             ))}
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-content-padding mt-5">
+      <div className="grid grid-cols-2 gap-4 pl-4 mt-5 hidden md:grid">
         {visiblePosts.slice(3).map((post, idx) => (
+          <PostCard key={idx + 6} {...post} />
+        ))}
+      </div>
+      <div className="grid grid-cols-1 gap-4 pl-4 mt-5 md:hidden">
+        {visiblePosts.slice(1).map((post, idx) => (
           <PostCard key={idx + 6} {...post} />
         ))}
       </div>
