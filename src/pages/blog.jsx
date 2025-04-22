@@ -6,7 +6,7 @@ import Nav from "../components/sales/nav";
 import Footer from "@/components/sales/footer";
 import FooterBanner from "@/components/sales/footer-banner";
 import { NextSeo } from "next-seo";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 function PostCardHighlight({
   title,

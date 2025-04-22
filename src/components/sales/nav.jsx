@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import Typeform from "../sales/drm/elements/typeform";
 
@@ -10,7 +10,7 @@ const Subnav = () => {
     <div className="sticky top-0 bg-[#FBFBFB] border-b border-gray-200 z-50">
       <div className="px-content-padding">
         <div
-          className={`flex flex-row justify-between items-center w-full py-4`}
+          className={`flex flex-row justify-between items-center w-full -mb-1`}
         >
           <div className="flex flex-row items-center space-x-12">
             <Link href="/">
@@ -20,6 +20,7 @@ const Subnav = () => {
                   alt="OpenQ"
                   width={125} // Original width of the image
                   height={75} // Original height of the image
+                  objectFit="contain"
                 />
               </div>
             </Link>
@@ -62,7 +63,7 @@ const Subnav = () => {
               </button>
             </Link>
           </div>
-          <div className="md:hidden self-end">
+          <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? (
                 <svg

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import TranslateAndFade from "../animations/translate-and-fade";
 
 const DevRelProblems = () => {
@@ -111,7 +111,6 @@ const DevRelProblems = () => {
         </div>
         {/*  </TranslateAndFade> */}
       </div>
-
       <div className="w-full md:w-1/2 lg:w-1/3 top-collapse-padding justify-center items-center">
         <video
           className="rounded-md"

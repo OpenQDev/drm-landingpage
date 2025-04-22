@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Footer from "@/components/sales/footer";
 import CustomSidebarTitle from "@/components/sales/custom-sidebar-title";
 import { NextSeo } from "next-seo";

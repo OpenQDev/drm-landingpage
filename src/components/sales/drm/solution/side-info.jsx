@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 // create a component that switches between different SVGs
 // based on the props passed in

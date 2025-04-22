@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -12,8 +12,9 @@ const Footer = () => {
               <Image
                 src="/openq-logo-white.png"
                 alt="OpenQ Logo"
-                width={96}
-                height={96}
+                width={110}
+                height={30}
+                objectFit="contain"
               />
               <div className="pt-3">
                 The CRM for developer relations to connect community, product

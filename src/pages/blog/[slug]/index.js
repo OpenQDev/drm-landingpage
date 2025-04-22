@@ -4,7 +4,7 @@ import { allPosts } from "contentlayer/generated";
 import Nav from "@/components/sales/nav";
 import Footer from "@/components/sales/footer";
 import FooterBanner from "@/components/sales/footer-banner";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Head from "next/head";
 import { useMDXComponent } from "next-contentlayer/hooks";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import LeadDiscoveryResult from "./product-showcase/lead-discovery-result";
 import TranslateAndFade from "../animations/translate-and-fade";
 
