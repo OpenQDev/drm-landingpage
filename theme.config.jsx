@@ -2,9 +2,29 @@ import Image from "next/legacy/image";
 import Footer from "@/components/sales/footer";
 import CustomSidebarTitle from "@/components/sales/custom-sidebar-title";
 import { NextSeo } from "next-seo";
+import { useTheme } from "next-themes";
+
+// Define a component for the dynamic logo
+const DynamicLogo = () => {
+  const { resolvedTheme } = useTheme();
+  // Assume you have logo-light.png for light mode and logo-dark.png for dark mode
+  // Adjust the src paths as necessary
+  const logoSrc =
+    resolvedTheme === "dark" ? "/openq-logo-white.png" : "/logo.png";
+
+  return (
+    <Image
+      src={logoSrc}
+      alt="OpenQ"
+      width={125} // Original width of the image
+      height={30} // Original height of the image
+      objectFit="contain"
+    />
+  );
+};
 
 const themeConfig = {
-  logo: <Image src="/logo.png" alt="OpenQ" width={125} height={75} />,
+  logo: DynamicLogo,
   footer: {
     component: <Footer />,
   },
@@ -49,7 +69,6 @@ const themeConfig = {
       },
     };
   },
-  darkMode: false,
   head: null,
 };
 
