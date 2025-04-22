@@ -6,23 +6,26 @@ import Footer from "@/components/sales/footer";
 import FooterBanner from "@/components/sales/footer-banner";
 import Image from "next/image";
 import Head from "next/head";
+import { useMDXComponent } from "next-contentlayer/hooks";
 
 // This function determines which paths will be pre-rendered.
 export async function getStaticPaths() {
   const paths = allPosts
     .map((post) => ({
-      params: { slug: post.slug }, // Ensure 'post.slug' exists and is a string
+      params: { slug: post.slug },
     }))
-    .filter(({ params }) => params.slug); // Filter out any undefined slugs
+    .filter(({ params }) => params.slug);
 
   return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
   const post = allPosts.find((p) => p.slug === params.slug);
-  const otherPosts = allPosts.filter((p) => p.slug !== params.slug).slice(0, 5); // Fetch 5 other posts
+
+  const otherPosts = allPosts.filter((p) => p.slug !== params.slug).slice(0, 5);
 
   if (!post) {
+    console.error(`Post not found for slug: ${params.slug}`);
     return { notFound: true };
   }
 
@@ -31,6 +34,9 @@ export async function getStaticProps({ params }) {
 
 // Your page component now directly receives the post object.
 const PostLayout = ({ post, otherPosts }) => {
+  // Parse the MDX file via the useMDXComponent hook.
+  const MDXContent = useMDXComponent(post.body.code);
+
   if (!post) {
     return <p>Post not found</p>;
   }
@@ -48,10 +54,10 @@ const PostLayout = ({ post, otherPosts }) => {
           images: [
             {
               url: `https://openq.dev${post.postImage}`,
-              width: 800, // You might want to specify the actual size of your images
-              height: 600, // You might want to specify the actual size of your images
+              width: 800,
+              height: 600,
               alt: post.title,
-              type: "image/jpeg", // Or the correct image type (e.g., image/png)
+              type: "image/jpeg",
             },
           ],
           siteName: "OpenQ",
@@ -69,7 +75,6 @@ const PostLayout = ({ post, otherPosts }) => {
 
       <article className="font-custom px-content-padding-blog py-8 pt-20">
         <div className="flex flex-col max-w-3xl justify-center mb-8">
-          {/* Breadcrumb Navigation */}
           <nav className="breadcrumb mb-4">
             <ol className="flex space-x-2 text-sm text-gray-500">
               <li>
@@ -94,14 +99,11 @@ const PostLayout = ({ post, otherPosts }) => {
           </h2>
         </div>
 
-        {/* Image (Assuming you have a post.image property) */}
         {post.postImage && <img src={post.postImage} alt="Post image" />}
 
-        {/* Author Information */}
         <div className="flex flex-col space-y-4 py-6 border-b border-gray-800">
           <span className="text-gray-400 font-ui-monospace">Author</span>
 
-          {/* Author Image (Assuming you have a post.author.image property) */}
           <div className="flex flex-row justify-between items-center">
             <div className="flex flex-row space-x-2 items-center">
               {post.author && post.author.image && (
@@ -132,10 +134,9 @@ const PostLayout = ({ post, otherPosts }) => {
         </div>
 
         {/* Post Body */}
-        <div
-          className="[&>*]:mb-3 [&>*:last-child]:mb-0 markdown text-left text-lg pt-4"
-          dangerouslySetInnerHTML={{ __html: post.body.html }}
-        />
+        <div className="[&>*]:mb-3 [&>*:last-child]:mb-0 markdown text-left text-lg pt-4">
+          <MDXContent />
+        </div>
       </article>
       <FooterBanner />
       <Footer />

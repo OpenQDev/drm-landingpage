@@ -1,27 +1,42 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import {
+  defineDocumentType,
+  makeSource,
+  defineNestedType,
+} from "contentlayer/source-files";
 
 const Post = defineDocumentType(() => ({
   name: "Post",
-  filePathPattern: "blog/**/*.md",
+  filePathPattern: "blog/**/*.mdx",
+  contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
     subtitle: { type: "string", required: true },
     date: { type: "date", required: true },
-    author: { type: "json" },
+    author: { type: "nested", of: Author },
     postImage: { type: "string" }, // Assuming postImage is a string path
   },
   computedFields: {
     slug: {
       type: "string",
-      // Generate slug based on the file name, stripping the .md extension
-      resolve: (post) => post._raw.sourceFileName.replace(/\.md$/, ""),
+      // Resolves the slug from the file path, taking the last part
+      // e.g., 'blog/my-post.mdx' -> 'my-post'
+      resolve: (doc) => doc._raw.flattenedPath.split("/").pop(),
     },
     // If you still need the URL for some reason, adjust it accordingly
     url: {
       type: "string",
       resolve: (post) =>
-        `/blog/${post._raw.sourceFileName.replace(/\.md$/, "")}`,
+        `/blog/${post._raw.sourceFileName.replace(/\.mdx$/, "")}`,
     },
+  },
+}));
+
+// Define Author type if you haven't already
+const Author = defineNestedType(() => ({
+  name: "Author",
+  fields: {
+    name: { type: "string", required: true },
+    image: { type: "string", required: true },
   },
 }));
 
