@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@loomhq/loom-embed": "^1.7.0",
+    "@next/third-parties": "^15.3.2",
     "@react-three/drei": "^9.99.5",
     "@react-three/fiber": "^8.15.16",
     "@typeform/embed-react": "^3.8.0",
