@@ -1,0 +1,95 @@
+---
+title: How to turn your open source community into a qualified GTM funnel
+subtitle: A full playbook for dev tooling companies
+date: 2025-05-8
+author:
+  name: Riccardo Lamanna
+  image: /landingpage/blog/authors/rick.png
+postImage: /landingpage/blog/open-source-into-gtm/article-thumbnail.png
+---
+
+Many haven't leveraged their open-source community to turn it into a qualified GTM funnel. So, we thought we'd write a quick playbook on how it works.
+
+Open-source traction is often the clearest sign of market pull. Developers don't fill out lead forms, they don't register when they use your tools. They npm install, fork, star, and open issues.
+
+But while OSS usage signals high intent, most GTM teams don't capture or act on it. That's a missed opportunity.
+
+Here's how to turn open source momentum into a structured, qualified funnel:
+
+### 1. Track developer-level adoption
+
+![Post Image](/landingpage/blog/how-to-track-developer-activity/article-thumbnail.png)
+
+**Instrument visibility** into who's using your tool. Analyze:
+
+- GitHub repos for dependency or config usage
+- Contributor interactions
+- Patterns in forks, stars, and issues
+
+This is the most important part, without this you won't be able to start. We at OpenQ scrape GitHub to do this and to a much bigger extent than anyone has ever done. If you want to do it yourself, here are some pointers for your Salesforce engineering team.
+
+First of all, you need to **identify the developers using your tools**. NPM package downloads are anonymous, so it's hard to find them, but there are ways around it. [We've written an entire article on this topic](/blog/how-to-track-developer-activity), as there are a few things to set up and play around with.
+
+### 2. Resolve identity to company
+
+**Map usage to employers** by:
+
+- Using commit metadata (email domains, org names)
+
+You can get the email of a developer either from the GitHub API or the commit message of a developer if the API doesn't provide it.
+
+- Linking GitHub handles to LinkedIn or org profiles
+
+You need to obtain their email or name via GitHub, provided the developer doesn't use a pseudonym, and pass it to a third-party LinkedIn data provider. Then, resolve it to identify the actual person and query their last job to determine the company they are working for. [Clay](https://clay.com/) is excellent for these types of enrichments.
+
+- Aggregating contributors by company
+
+This connects individual usage to commercial opportunity.
+
+### 3. Layer in intent from other channels
+
+Not all usage is equal. **Qualify interest** by checking for:
+
+- Company IPs visiting docs or landing pages
+
+There are tons of tools for this, but if you are building your own pipeline, you can use [Snitcher](https://snitcher.com/) to get their domain from an IP.
+
+- Engagement on marketing content
+
+In today's landscape, obtaining signals from social media has become increasingly challenging. The Twitter API is prohibitively expensive, leading many SaaS providers to discontinue support, while LinkedIn presents a similar challenge by not offering an accessible API. To address this, I suggest implementing a Slack bot on your server. This bot can monitor for mentions of your company and post relevant tweets in a designated channel, allowing you to manually track and analyze the results.
+
+- Multiple developers from the same org
+
+This separates signal from noise.
+
+### 4. Score and tier leads
+
+**Combine GitHub signals, web behavior, and company fit** (ICP, size, industry). Use A/B/C tiers to prioritize outreach and align teams. You basically want to match your landing page intent signals with your mapped dev usage to create a signal strength attribute in your CRM.
+
+There is a lot of secret sauce on how to do this. You need to aggregate all the data together and build an algorithm that works for you to match them and create strength levels.
+
+### 5. Enable GTM activation
+
+**Push these insights into your CRM**. Equip reps with technical context and usage data so they can engage with relevance and credibility to not waste their time.
+
+### Maximizing your open source community value extraction early
+
+![Full Flow Diagram](/landingpage/blog/open-source-into-gtm/full-flow.png)
+
+**Avoid the common mistake of delaying this** until the enterprise level, like most companies do. At this stage, costs can skyrocket as Salesforce engineers are happy to develop fully custom solutions.
+If you're a startup or scaleup and need help to set this up, that's what we do at OpenQ.
+
+If you already use Commonroom or have developed your own GitHub tracking, that's fantastic. We can now more easily assist you in further enhancing your funnel, as most setups typically capture only 5 to 10 percent of the actual signal.
+
+So either way there is always room for improvement.
+
+A quick video on how you can leverage OpenQ to find developers for your next steps can be found here:
+
+<iframe
+  src="https://www.loom.com/embed/6cd61a978fcc4472b82e655f37cbd437?sid=7e0955a3-ca81-43f6-845b-20bb76d561dd"
+  frameborder="0"
+  webkitallowfullscreen
+  mozallowfullscreen
+  allowfullscreen
+  style={{ width: "100%", height: "400px" }}
+></iframe>
