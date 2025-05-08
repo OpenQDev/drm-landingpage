@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Component {...pageProps} />
       <CookieBanner />
-      <GoogleAnalytics gaId="G-HWEBVEMW1L" />
+      <GoogleAnalytics gaId="G-PMCBFEC10P" />
     </>
   );
 }
