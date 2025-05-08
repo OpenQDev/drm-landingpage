@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import Script from "next/script";
+import CookieBanner from "@/components/CookieBanner";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -17,6 +18,7 @@ export default function App({ Component, pageProps }) {
         `}
       </Script>
       <Component {...pageProps} />
+      <CookieBanner />
     </>
   );
 }
