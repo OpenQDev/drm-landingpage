@@ -30,18 +30,104 @@ curl -H "Authorization: Bearer 123e4567-e89b-12d3-a456-426614174000" \
 - **Permissions**: Access to all read-only endpoints
 - **Rate Limits**: Configurable per key (default varies)
 - **Usage**: For regular API consumers and applications
+- **Credit System**: Each API key has a credit limit that is decremented based on usage
 
+## API Credit System
 
-### Admin API Keys
+The Gitguru API uses a credit-based system to manage API usage and ensure fair access to resources. Each API key has a configurable credit limit that is decremented based on the amount of data returned by each request.
 
-- **Role**: `admin`
-- **Permissions**: All user permissions plus admin-only endpoints
-- **Rate Limits**: Configurable per key (typically higher limits)
-- **Usage**: For API key management and administrative tasks
+### How Credits Work
 
-**Additional Access:**
-- API key generation endpoints
-- Admin-only operations
+- **Credits are consumed per request** based on the number of items returned
+- **Credits are decremented after successful requests** but before the response is sent
+- **Insufficient credits result in a 403 Forbidden response**
+- **Credit limits are enforced in real-time** for all user API keys
+
+### Credit Usage by Endpoint
+
+#### User Endpoints
+
+| Endpoint | Credit Cost | Description |
+|----------|-------------|-------------|
+| `GET /users` | Number of users returned | Credits = actual number of users in the response |
+| `GET /users/{login}` | 1 credit | Fixed cost for single user lookup |
+
+#### Repository Endpoints
+
+| Endpoint | Credit Cost | Description |
+|----------|-------------|-------------|
+| `GET /repos` | Number of repos returned | Credits = actual number of repositories in the response |
+| `GET /repos/{owner}/{name}` | 1 credit | Fixed cost for single repository lookup |
+
+### Credit Examples
+
+**Example 1: Paginated Users Request**
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     "https://drm.openq.dev/public-api/users?per_page=10"
+```
+- If the response contains 10 users: **10 credits consumed**
+- If the response contains 5 users (last page): **5 credits consumed**
+
+**Example 2: Single User Lookup**
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     "https://drm.openq.dev/public-api/users/octocat"
+```
+- **1 credit consumed** (regardless of whether user exists)
+
+**Example 3: Repository List**
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     "https://drm.openq.dev/public-api/repos?per_page=25"
+```
+- If the response contains 25 repos: **25 credits consumed**
+- If the response contains 3 repos (last page): **3 credits consumed**
+
+### Credit Management
+
+- **Check your remaining credits** using the `/api-key/credits` endpoint
+- **Plan your requests** based on your credit limit
+- **Use pagination efficiently** to control credit consumption
+- **Contact support** if you need to increase your credit limit
+
+### Checking Your Credits
+
+You can check your remaining credits at any time using the credits endpoint:
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     "https://drm.openq.dev/public-api/api-key/credits"
+```
+
+**Response:**
+```json
+{
+  "api_key": "123e4567-e89b-12d3-a456-426614174000",
+  "remaining_credits": 150,
+  "role": "user"
+}
+```
+
+This endpoint:
+- **Does not consume any credits** (free to use)
+- **Shows your current remaining credits**
+- **Displays your API key role**
+- **Requires authentication** (like all other endpoints)
+
+### Credit Error Responses
+
+When you run out of credits, you'll receive a 403 Forbidden response:
+
+```json
+{
+  "error": "insufficient credits: need 10, have 5"
+}
+```
+
+This error includes:
+- **Need**: Number of credits required for the request
+- **Have**: Number of credits remaining on your API key
 
 ## Endpoint Categories
 
@@ -62,87 +148,30 @@ The following endpoints do not require authentication:
 
 All endpoints below require a valid user or admin API key:
 
-#### User Management Endpoints
+#### User Info Endpoints
 
 | Endpoint | Method | Description | Parameters |
 |----------|--------|-------------|------------|
 | `/users` | GET | List all users with filtering | `page`, `per_page`, `location`, `dependency_names` |
 | `/users/{login}` | GET | Get user by GitHub login | `login` (path) |
-| `/users/{login}/commits` | GET | Get user commits | `login` (path), `page`, `per_page` |
-| `/users/{login}/activity/total` | GET | Get user activity metrics | `login` (path), `since`, `until` |
-| `/users/{login}/dependencies` | GET | Get user dependencies | `login` (path), `page`, `per_page` |
 
-#### Repository Management Endpoints
+#### Repository Info Endpoints
 
 | Endpoint | Method | Description | Parameters |
 |----------|--------|-------------|------------|
 | `/repos` | GET | List all repositories with filtering | `page`, `per_page`, `dependency_names` |
 | `/repos/{owner}/{name}` | GET | Get repository by owner and name | `owner`, `name` (path) |
-| `/repos/{owner}/{name}/commits` | GET | Get repository commits | `owner`, `name` (path), `page`, `per_page` |
-| `/repos/{owner}/{name}/dependencies` | GET | Get repository dependencies | `owner`, `name` (path), `page`, `per_page`, `sort_by`, `order` |
 
-#### Analytics Endpoints
+#### API Key Management Endpoints
 
 | Endpoint | Method | Description | Parameters |
 |----------|--------|-------------|------------|
-| `/analytics/activity/total` | GET | Get platform activity metrics | None |
+| `/api-key/credits` | GET | Check remaining credits for your API key | None |
 
-#### Search Endpoints
 
-| Endpoint | Method | Description | Parameters |
-|----------|--------|-------------|------------|
-| `/search` | GET | Global search across users, repos, and dependencies | `q`, `type`, `page`, `limit` |
 
-### Admin-Only Endpoints
 
-The following endpoints require an admin API key:
 
-| Endpoint | Method | Description | Parameters |
-|----------|--------|-------------|------------|
-| `/generate-user-api-key` | POST | Generate new user API key | `admin_api_key`, `api_limit` |
-
-### Super Admin Endpoints
-
-The following endpoints require super admin access:
-
-| Endpoint | Method | Description | Parameters |
-|----------|--------|-------------|------------|
-| `/create-admin-api-key` | POST | Create new admin API key | `super_admin_api_key` |
-
-## API Key Management
-
-### Generating User API Keys
-
-**Endpoint:** `POST /generate-user-api-key`
-
-**Description:** Generates a new user API key. Requires an admin API key.
-
-**Request Body:**
-```json
-{
-  "admin_api_key": "your-admin-api-key-uuid",
-  "api_limit": 1000
-}
-```
-
-**Response:**
-```json
-{
-  "key": "987fcdeb-51a2-43d7-8f9e-123456789abc",
-  "role": "user",
-  "api_limit": 1000
-}
-```
-
-**Example:**
-```bash
-curl -X POST "https://drm.openq.dev/public-api/generate-user-api-key" \
-     -H "Content-Type: application/json" \
-     -d '{
-       "admin_api_key": "123e4567-e89b-12d3-a456-426614174000",
-       "api_limit": 1000
-     }'
-```
 
 ## API Key Format
 
@@ -164,6 +193,7 @@ curl -X POST "https://drm.openq.dev/public-api/generate-user-api-key" \
 | `401 Unauthorized` | "Invalid API key" | API key not found or invalid |
 | `403 Forbidden` | "Insufficient permissions" | API key role doesn't have required permissions |
 | `403 Forbidden` | "Admin access required" | Admin role required for endpoint |
+| `403 Forbidden` | "insufficient credits: need X, have Y" | Not enough credits for the request |
 
 ### Example Error Response
 
@@ -173,51 +203,6 @@ curl -X POST "https://drm.openq.dev/public-api/generate-user-api-key" \
 }
 ```
 
-
-## Security Best Practices
-
-### API Key Security
-
-1. **Keep API keys secret** - Never expose them in client-side code or public repositories
-2. **Use environment variables** - Store API keys in environment variables
-3. **Rotate keys regularly** - Generate new keys periodically
-4. **Use HTTPS only** - Always use HTTPS when making API requests
-5. **Monitor usage** - Keep track of API key usage and limits
-
-### Example: Secure API Key Storage
-
-```bash
-# Store in environment variable
-export GITGURU_API_KEY="123e4567-e89b-12d3-a456-426614174000"
-
-# Use in requests
-curl -H "Authorization: Bearer $GITGURU_API_KEY" \
-     "https://drm.openq.dev/public-api/users"
-```
-
-## Getting Started
-
-### Step 1: Generate User API Keys
-
-Use your admin API key to generate user API keys:
-
-```bash
-curl -X POST "https://drm.openq.dev/public-api/generate-user-api-key" \
-     -H "Content-Type: application/json" \
-     -d '{
-       "admin_api_key": "YOUR_ADMIN_API_KEY",
-       "api_limit": 1000
-     }'
-```
-
-### Step 3: Use Your API Key
-
-Make authenticated requests using your user API key:
-
-```bash
-curl -H "Authorization: Bearer YOUR_USER_API_KEY" \
-     "https://drm.openq.dev/public-api/users"
-```
 
 ## Troubleshooting
 
@@ -241,7 +226,12 @@ curl -H "Authorization: Bearer YOUR_USER_API_KEY" \
 
 **5. "Insufficient permissions"**
 - Check that your API key has the correct role
-- Ensure you're using a user or admin API key (not a super admin key)
+
+**6. "insufficient credits: need X, have Y"**
+- You've run out of API credits
+- The error shows how many credits you need vs. how many you have
+- Consider reducing the number of items per request (use smaller `per_page` values)
+- Contact support to increase your credit limit
 
 ### Testing Authentication
 
@@ -251,9 +241,21 @@ Test your API key with a simple request:
 # Test with health endpoint (no auth required)
 curl "https://drm.openq.dev/public-api/health"
 
-# Test with authenticated endpoint
+# Test with authenticated endpoint (consumes 1 credit)
 curl -H "Authorization: Bearer YOUR_API_KEY" \
      "https://drm.openq.dev/public-api/users?per_page=1"
+
+# Test single user lookup (consumes 1 credit)
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     "https://drm.openq.dev/public-api/users/octocat"
+
+# Test repository lookup (consumes 1 credit)
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     "https://drm.openq.dev/public-api/repos/octocat/Hello-World"
+
+# Check your remaining credits (consumes 0 credits)
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     "https://drm.openq.dev/public-api/api-key/credits"
 ```
 
 ## Support
@@ -273,7 +275,8 @@ If you encounter authentication issues:
 ```javascript
 const apiKey = process.env.GITGURU_API_KEY;
 
-const response = await fetch('https://drm.openq.dev/public-api/users', {
+// This request will consume credits equal to the number of users returned
+const response = await fetch('https://drm.openq.dev/public-api/users?per_page=10', {
   headers: {
     'Authorization': `Bearer ${apiKey}`,
     'Content-Type': 'application/json'
@@ -295,8 +298,9 @@ headers = {
     'Content-Type': 'application/json'
 }
 
+# This request will consume credits equal to the number of users returned
 response = requests.get(
-    'https://drm.openq.dev/public-api/users',
+    'https://drm.openq.dev/public-api/users?per_page=10',
     headers=headers
 )
 
@@ -317,7 +321,8 @@ import (
 func main() {
     apiKey := os.Getenv("GITGURU_API_KEY")
     
-    req, _ := http.NewRequest("GET", "https://drm.openq.dev/public-api/users", nil)
+    // This request will consume credits equal to the number of users returned
+    req, _ := http.NewRequest("GET", "https://drm.openq.dev/public-api/users?per_page=10", nil)
     req.Header.Set("Authorization", "Bearer " + apiKey)
     
     client := &http.Client{}
