@@ -14,7 +14,7 @@ const squaresData = [
   {
     id: 2,
     quote:
-      "OpenQ transformed how we understand our open source ecosystem. Their innovative solution provides unique insights into who's actually using our repositories and how developers interact with our code, especially during hackathons. What started as a tool for visibility has become essential market intelligence for our open source strategy. It's now the first solution I recommend to every DevRel team I meet - the visibility it provides is simply unmatched.",
+      "OpenQ transformed how we understand our open source ecosystem. Their solution provides unique insights into who's actually using our repositories and how developers interact with our code, especially during hackathons. What started as a tool for visibility has become essential market intelligence for our open source strategy. It's now the first solution I recommend to every DevRel team I meet - the visibility it provides is simply unmatched.",
     author: "Redwan",
     position: { top: "20%", left: "85%" },
     image: "/landingpage/reviews/redwan.png",
