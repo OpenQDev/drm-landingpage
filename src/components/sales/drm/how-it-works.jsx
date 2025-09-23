@@ -137,10 +137,10 @@ const HowItWorks = () => {
           <div className="flex justify-center mt-8 px-4 md:px-0">
             <Link
               target="_blank"
-              href="https://drm.openq.dev"
+              href="https://calendly.com/rickkdev/openqdemo"
               className="w-full md:w-auto"
             >
-              <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center h-10 w-full md:w-auto">
+              <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center h-10 w-full md:w-auto cursor-pointer">
                 Get a demo
                 <span className="ml-2">→</span>
               </button>

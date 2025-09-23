@@ -18,7 +18,7 @@ const Cta = () => {
           </Link>
           <div className='flex flex-row space-x-1 items-center'>
             <div className='relative inline-block'>
-              <Link href='/demo'>
+              <Link href='https://calendly.com/rickkdev/openqdemo'>
                 <div className='underline rounded-sm text-black text-xl font-semibold py-1 px-3'>Schedule demo</div>
               </Link>
               <span className='absolute bg-white bottom-0 left-0 h-px w-full'></span>

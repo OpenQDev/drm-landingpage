@@ -24,7 +24,7 @@ const StartFreeTrial = () => {
                       href="https://drm.openq.dev/"
                       className="w-full md:w-auto"
                     >
-                      <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center h-10 w-full">
+                      <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center h-10 w-full cursor-pointer">
                         Start for free
                         <span className="ml-2">→</span>
                       </button>
@@ -34,7 +34,7 @@ const StartFreeTrial = () => {
                       href="https://calendly.com/rickkdev/openqdemo"
                       className="w-full md:w-auto"
                     >
-                      <button className="border border-black text-black py-2 px-4 rounded flex items-center justify-center h-10 w-full">
+                      <button className="border border-black text-black py-2 px-4 rounded flex items-center justify-center h-10 w-full cursor-pointer">
                         Request demo
                         <span className="ml-2">→</span>
                       </button>

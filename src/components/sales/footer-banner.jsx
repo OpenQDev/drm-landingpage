@@ -215,8 +215,8 @@ const FooterBanner = () => {
                   target="_blank"
                   href="https://calendly.com/rickkdev/openqdemo"
                 >
-                  <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button">
-                    Request demo
+                  <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button cursor-pointer">
+                    Get a demo
                     <span className="ml-2">→</span>
                   </button>
                 </Link>
