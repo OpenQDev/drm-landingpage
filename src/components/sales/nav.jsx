@@ -39,6 +39,11 @@ const Subnav = () => {
                 <span className="font-semibold text-gray-700">Blog</span>
               </Link>
             </div>
+            <div className="hidden md:block">
+              <Link href="/developer-data">
+                <span className="font-semibold text-gray-700">Developer Data</span>
+              </Link>
+            </div>
 
             <div className="hidden md:block pl-10 pb-1"></div>
           </div>
@@ -114,6 +119,11 @@ const Subnav = () => {
             <Link href="/blog">
               <span className="text-gray-900 text-sm font-normal pb-5 block">
                 Blog
+              </span>
+            </Link>
+            <Link href="/developer-data">
+              <span className="text-gray-900 text-sm font-normal pb-5 block">
+                Developer Data
               </span>
             </Link>
             <div className="flex flex-col pt-5 space-y-2">
