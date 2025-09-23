@@ -211,18 +211,11 @@ const FooterBanner = () => {
               </div>
 
               <div className="flex xs:flex-row flex-col space-y-2 xs:space-y-0 xs:space-x-4">
-                <Link target="_blank" href="https://drm.openq.dev/">
-                  <button className="bg-black text-white py-[0.56rem] px-4 rounded flex items-center justify-center responsive-button">
-                    Start for free
-                    <span className="ml-2">→</span>
-                  </button>
-                </Link>
-
                 <Link
                   target="_blank"
                   href="https://calendly.com/rickkdev/openqdemo"
                 >
-                  <button className="border border-black text-black py-2 px-4 rounded flex items-center justify-center responsive-button">
+                  <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button">
                     Request demo
                     <span className="ml-2">→</span>
                   </button>

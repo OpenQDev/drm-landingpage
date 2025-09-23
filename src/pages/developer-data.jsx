@@ -84,7 +84,7 @@ const DeveloperData = () => {
             <SolutionSpacer />
             <SolutionConnext />
             <SolutionSpacerBottom />
-            <StartFreeTrial />
+    
             <HowItWorks />
 
             <Faq />

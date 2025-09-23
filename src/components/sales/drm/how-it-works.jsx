@@ -141,7 +141,7 @@ const HowItWorks = () => {
               className="w-full md:w-auto"
             >
               <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center h-10 w-full md:w-auto">
-                Start for free
+                Get a demo
                 <span className="ml-2">→</span>
               </button>
             </Link>

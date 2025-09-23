@@ -49,13 +49,11 @@ const DeveloperSyncSection = () => {
         <div className="h-full flex flex-col">
           <div>
             <div className="font-custom font-[575] text-xl md:text-2xl text-bold text-gray-900">
-              Sync developer data
+              Developer data, tailored to you
             </div>
             <div className="mt-3 md:mt-4 text-sm md:text-base text-gray-500">
-              Bring in developer data from event lists, marketing sources, user
-              rosters, or general CSV files, then connect it through our
-              integrations with GitHub, Discord, Slack, and other developer
-              platforms.
+              We profile your developer audience and automatically pull in the
+              most relevant data, wherever it lives.
             </div>
           </div>
         </div>
