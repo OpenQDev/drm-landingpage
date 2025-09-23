@@ -1,0 +1,9 @@
+{
+  "index": {
+    "title": "README",
+    "display": "normal"
+  },
+  "authentication": "Authentication Guide",
+  "users": "User Endpoints",
+  "repos": "Repository Endpoints"
+}
