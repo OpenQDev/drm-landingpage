@@ -17,14 +17,12 @@ const ApiHero = () => {
     <div className="pt-20 px-content-padding md:pt-top-content-padding lg:pt-36">
       <div className="mx-0 xs:mx-4 flex flex-col justify-center items-center text-center lg:pb-24">
         <div className="font-custom leading-none text-4xl lg:text-7xl text-center font-bold tracking-tighter mx-5 md:mx-0">
-          Developer Data API
-          <br /> for modern teams.{" "}
+          Developer Data
+          <br /> for engineering intelligence.{" "}
         </div>
 
         <div className="text-gray-400 font-normal font-whyte text-xl lg:text-[1.3rem] pt-5 px-5 xxs:w-74 md:w-1/2 lg:w-1/2 mx-6 md:mx-0">
-          Access comprehensive developer insights through our powerful API.
-          Integrate developer activity, engagement metrics, and community data
-          directly into your workflows and applications.
+          Access curated developer insights at scale. Our API delivers activity data, engagement signals, and ecosystem context—fueling sales, growth, research, and community strategies.
         </div>
         <div className="pt-8">
           <PopupButton
@@ -45,12 +43,12 @@ const DeveloperData = () => {
   return (
     <>
       <NextSeo
-        title="OpenQ API - Developer Data API Platform"
+        title="OpenQ API - Developer Data API"
         description="Access comprehensive developer data through our powerful API. Integrate developer insights directly into your workflows."
         canonical="https://openq.dev/developer-data"
         openGraph={{
           url: "https://openq.dev/developer-data",
-          title: "Developer Data API Platform",
+          title: "Developer Data API",
           description:
             "Access comprehensive developer data through our powerful API. Integrate developer insights directly into your workflows.",
           images: [
@@ -67,7 +65,7 @@ const DeveloperData = () => {
         }}
         twitter={{
           cardType: "summary_large_image",
-          title: "Developer Data API Platform",
+          title: "Developer Data API",
           description:
             "Access comprehensive developer data through our powerful API. Integrate developer insights directly into your workflows.",
           image: "https://openq.dev/openq-website-thumbnail.png",
