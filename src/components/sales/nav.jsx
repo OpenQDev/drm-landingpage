@@ -23,7 +23,7 @@ const Subnav = () => {
             </Link>
             <div className="hidden h-full md:flex items-center">
               <Link href="/blog" className="flex h-full items-center">
-                <span className="pb-[5px] font-semibold leading-none text-gray-700">
+                <span className="pb-[3px] font-semibold leading-none text-gray-700">
                   Blog
                 </span>
               </Link>
