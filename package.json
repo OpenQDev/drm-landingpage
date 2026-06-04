@@ -32,6 +32,9 @@
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.161.0"
   },
+  "resolutions": {
+    "next-mdx-remote": "^6.0.0"
+  },
   "devDependencies": {
     "@faker-js/faker": "^8.2.0",
     "autoprefixer": "^10",
