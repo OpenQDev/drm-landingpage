@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/legacy/image";
 import Link from "next/link";
-import Typeform from "../sales/drm/elements/typeform";
 
 const Subnav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,53 +17,27 @@ const Subnav = () => {
                 <Image
                   src="/logo.png"
                   alt="OpenQ"
-                  width={125} // Original width of the image
-                  height={75} // Original height of the image
+                  width={125}
+                  height={75}
                   objectFit="contain"
                 />
               </div>
             </Link>
             <div className="hidden md:block">
-              <Link href="/help" target="_blank">
-                <span className="font-semibold text-gray-700">Features</span>
-              </Link>
-            </div>
-            <div className="hidden md:block">
-              <Link href="/resources/guides">
-                <span className="font-semibold text-gray-700">Resources</span>
-              </Link>
-            </div>
-            <div className="hidden md:block">
               <Link href="/blog">
                 <span className="font-semibold text-gray-700">Blog</span>
               </Link>
             </div>
-            <div className="hidden md:block">
-              <Link href="/developer-data">
-                <span className="font-semibold text-gray-700">Developer Data</span>
-              </Link>
-            </div>
-
-            <div className="hidden md:block pl-10 pb-1"></div>
           </div>
           <div className="flex flex-row hidden md:flex space-x-4">
             <Link
               target="_blank"
-              href="https://drm.openq.dev/"
-              className="text-gray-900 text-xs lg:text-lg font-medium"
-            >
-              <div className="border border-black text-black py-2 px-4 rounded flex items-center justify-center responsive-button h-10">
-                Sign in
-              </div>
-            </Link>
-            <Link
-              target="_blank"
-              href="https://drm.openq.dev/"
+              href="https://calendly.com/rickkdev/openqdemo"
               className="text-white text-xs lg:text-lg font-medium"
             >
               <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button h-10">
-                Start for free
-                <span className="ml-2">→</span>
+                Get access
+                <span className="ml-2">&rarr;</span>
               </button>
             </Link>
           </div>
@@ -106,44 +79,20 @@ const Subnav = () => {
         </div>
         {isOpen && (
           <div className="flex flex-col text-left">
-            <Link href="/help" target="_blank">
-              <span className="text-gray-900 text-sm font-normal pb-5 block">
-                Features
-              </span>
-            </Link>
-            <Link href="/resources/guides">
-              <span className="text-gray-900 text-sm font-normal pb-5 block">
-                Resources
-              </span>
-            </Link>
             <Link href="/blog">
               <span className="text-gray-900 text-sm font-normal pb-5 block">
                 Blog
               </span>
             </Link>
-            <Link href="/developer-data">
-              <span className="text-gray-900 text-sm font-normal pb-5 block">
-                Developer Data
-              </span>
-            </Link>
             <div className="flex flex-col pt-5 space-y-2">
-              <div className="whitespace-nowrap border rounded-lg p-2 px-4 border-[#A6A6A6] font-medium text-xs">
-                <Link
-                  target="_blank"
-                  href="https://drm.openq.dev/"
-                  className="text-gray-900 text-xs lg:text-lg font-medium"
-                >
-                  Sign in
-                </Link>
-              </div>
               <Link
                 target="_blank"
-                href="https://drm.openq.dev/"
+                href="https://calendly.com/rickkdev/openqdemo"
                 className="text-white text-xs lg:text-lg font-medium"
               >
                 <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button w-full">
-                  Start for free
-                  <span className="ml-2">→</span>
+                  Get access
+                  <span className="ml-2">&rarr;</span>
                 </button>
               </Link>
             </div>

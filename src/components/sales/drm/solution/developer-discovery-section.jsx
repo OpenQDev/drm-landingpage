@@ -5,56 +5,49 @@ const DeveloperDiscoverySection = () => {
     <div className="border-x grid grid-cols-1 lg:grid-cols-3 min-h-[600px]">
       <div className="col-span-1 px-6 lg:px-10 py-8 lg:py-10 border-b lg:border-b-0 lg:border-r">
         <div className="flex flex-col h-full justify-between">
-          {/* Top / Title */}
           <div>
             <div className="font-custom font-[575] text-3xl lg:text-4xl text-bold text-gray-900">
-              Discover and enhance your developer data
+              Scrape GitHub at scale. Find real adoption.
             </div>
           </div>
-
-          {/* Bottom / Description & Explore Button */}
           <div>
             <div className="text-gray-500 mt-4">
-              Enhance your CRM with AI-powered lead discovery and enrichment.
-              De-anonymize npm package downloads and other data sources to
-              uncover engagement patterns while getting insights into untapped
-              communities that matches your profile.
+              We analyze public repositories, dependencies, forks, contributors,
+              commit history, and project metadata to show who is actually using
+              your tool and which communities are forming around it.
             </div>
-            {/* <div className="flex items-center justify-start gap-2 mt-4">
-              <span className="font-bold">Explore</span>
-              <div className="text-gray-800 w-6 h-6 transition-all hover:scale-110 hover:text-black">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    d="M6.25 3.75h6m0 0v6m0-6-8.5 8.5"
-                  />
-                </svg>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
-      <div className="col-span-1 lg:col-span-2 px-6 lg:px-10 py-8 lg:py-0 flex items-center justify-center overflow-hidden -mb-20 md:-mb-24 relative z-0">
-        <div className="w-full max-w-[450px] mx-auto">
-          <video
-            className="rounded-md w-full h-auto object-contain"
-            autoPlay
-            muted
-            playsInline
-            style={{ backgroundColor: "transparent" }}
-          >
-            <source
-              src="/landingpage/drm/devrel/problem-animation-2.mp4"
-              type="video/mp4"
-            />
-          </video>
+      <div className="col-span-1 lg:col-span-2 px-6 lg:px-10 py-8 lg:py-10 flex items-center justify-center overflow-hidden">
+        <div className="w-full max-w-[600px] mx-auto font-mono text-sm">
+          <div className="bg-[#0d1117] rounded-lg border border-gray-800 overflow-hidden">
+            <div className="px-4 py-3 border-b border-gray-800 text-gray-400 text-xs">
+              adoption_scan.json
+            </div>
+            <div className="p-4 text-gray-300 space-y-1">
+              <div>
+                <span className="text-gray-500">repos_scanned:</span>{" "}
+                <span className="text-green-400">14,283,901</span>
+              </div>
+              <div>
+                <span className="text-gray-500">dependencies_checked:</span>{" "}
+                <span className="text-green-400">892,441,203</span>
+              </div>
+              <div>
+                <span className="text-gray-500">developers_mapped:</span>{" "}
+                <span className="text-green-400">4,200,000+</span>
+              </div>
+              <div>
+                <span className="text-gray-500">company_matches:</span>{" "}
+                <span className="text-green-400">enriched</span>
+              </div>
+              <div>
+                <span className="text-gray-500">update_frequency:</span>{" "}
+                <span className="text-blue-400">continuous</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

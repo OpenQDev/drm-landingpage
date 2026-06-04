@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/legacy/image";
 import Link from "next/link";
-import Typeform from "../sales/drm/elements/typeform";
 
 const squaresData = [
   {
@@ -19,14 +18,6 @@ const squaresData = [
     position: { top: "20%", left: "85%" },
     image: "/landingpage/reviews/redwan.png",
   },
-  /* {
-    id: 3,
-    quote:
-      "OpenQ helped us a lot to make decisions when it comes to funding open source projects.",
-    author: "Rodrigo",
-    position: { top: "60%", left: "5%" },
-    image: "/landingpage/reviews/rodrigo.png",
-  }, */
   {
     id: 4,
     quote:
@@ -51,34 +42,6 @@ const squaresData = [
     position: { top: "8%", left: "82%" },
     image: "/landingpage/reviews/pj.jpeg",
   },
-  /* {
-    id: 7,
-    quote: "Placeholder",
-    author: "Francesco Andreloi",
-    position: { top: "70%", left: "85%" },
-    image: "/landingpage/reviews/francescoandreoli.png",
-  }, */
-  /* {
-    id: 8,
-    quote: "Placeholder",
-    author: "Jonan",
-    position: { top: "20%", left: "20%" },
-    image: "/landingpage/reviews/jonan.png",
-  }, */
-  /* {
-    id: 9,
-    quote: "Placeholder",
-    author: "Dominik Tobschall",
-    position: { top: "5%", left: "20%" },
-    image: "/landingpage/reviews/dom.png",
-  }, */
-  /* {
-    id: 10,
-    quote: "Placeholder",
-    author: "Alex",
-    position: { top: "40%", left: "87%" },
-    image: "/landingpage/reviews/alex.jpeg",
-  }, */
   {
     id: 10,
     quote:
@@ -204,10 +167,11 @@ const FooterBanner = () => {
           <div className="flex flex-col px-content-padding-mobile pt-12 rounded-lg items-center justify-center">
             <div className="flex flex-col justify-center space-y-4 pb-12 items-center text-center">
               <div className="font-custom w-2/3 text-3xl lg:text-4xl font-extrabold text-black">
-                Pioneering a new era of developer data accessibility.
+                Grow the community behind your developer tool.
               </div>
               <div className="font-custom w-2/3 text-lg lg:text-xl font-medium text-medium text-gray-400">
-                Industry leaders agree this is a must have for all dev rels.
+                OpenQ helps teams improve open source visibility, understand
+                developer adoption, and turn community signal into GTM.
               </div>
 
               <div className="flex xs:flex-row flex-col space-y-2 xs:space-y-0 xs:space-x-4">
@@ -217,7 +181,7 @@ const FooterBanner = () => {
                 >
                   <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button cursor-pointer">
                     Get a demo
-                    <span className="ml-2">→</span>
+                    <span className="ml-2">&rarr;</span>
                   </button>
                 </Link>
               </div>

@@ -9,24 +9,24 @@ const Faq = () => {
         <div className="title-text-size pt-3 pb-8">asked questions</div>
         <div className="w-full px-8 max-w-[1000px] ">
           <FaqQuestion
-            question="How can OpenQ help improve my developer retention?"
-            answer="Our analytics measure the impact or all your marketing strategies and business objectives to calculate their ROI. With our data we can identify which retention strategies work best for your community."
+            question="What does OpenQ help with?"
+            answer="OpenQ helps developer tool teams understand adoption, grow open source communities, improve visibility in LLM answers and public examples, and turn developer activity into GTM segments."
           />
           <FaqQuestion
-            question="How can we improve developer profiles and monitor dependency usage?"
-            answer="OpenQ analyzes repositories on GitHub developers create or engage with that are relevant to you. It checks for dependencies in config files and monitors repository activity regularly."
+            question="Do you only provide software?"
+            answer="No. The product provides developer data, GitHub scraping, open source observability, and community analytics, but we also work with teams on the distribution strategy and execution needed to use that signal."
           />
           <FaqQuestion
-            question="How can you identify potential leads interested in my tech?"
-            answer="We maintain a comprehensive database of developers with detailed profile classifications. This allows us to identify developers who align with your community's interests or are already utilizing your dependencies in their projects."
+            question="How do you improve LLM visibility?"
+            answer="We look at whether your docs, examples, repositories, and public community answers give AI assistants enough reliable material to explain and recommend your tool. Then we identify the missing content and distribution gaps."
           />
           <FaqQuestion
-            question="How can you determine if users have stopped using my dependencies or become inactive?"
-            answer="We track dependency removal in repositories and flag accounts as inactive after 6 weeks without commits. You receive reports for both churn and inactivity."
+            question="Can you help open source communities?"
+            answer="Yes. We map contributors, forks, dependency usage, power users, organizations, and dormant users so teams can understand community health and prioritize where to engage."
           />
           <FaqQuestion
-            question="Do you have an API I can integrate with my existing CRM?"
-            answer="Coming soon."
+            question="Can community activity become revenue signal?"
+            answer="Yes. We connect developer usage to companies and GTM segments so teams can identify qualified accounts, route high-intent activity, and convert community members into paying customers when there is a natural fit."
           />
         </div>
       </div>

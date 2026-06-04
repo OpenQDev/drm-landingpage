@@ -17,14 +17,14 @@ const Footer = () => {
                 objectFit="contain"
               />
               <div className="pt-3">
-                The CRM for developer relations to connect community, product
-                and customer data.
+                Developer community growth, open source observability, and GTM
+                signal.
               </div>
             </div>
             <div className="flex flex-col md:flex-row pt-5 md:pt-0 lg:space-x-10">
               <div className="flex flex-col pb-5 lg:pb-0">
                 <div className="font-bold sm:text-sm md:text-md lg:text-md xl:text-md 2xl:textl-lg">
-                  Help me
+                  Get in touch
                 </div>
                 <div>
                   <Link href="#">
@@ -43,47 +43,26 @@ const Footer = () => {
                     </button>
                   </Link>
                 </div>
-                <div>
-                  <Link
-                    href="https://github.com/OpenQDev/openq-feedback/issues"
-                    target="_blank"
-                  >
-                    <span>Feature requests</span>
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    href="https://github.com/OpenQDev/openq-feedback/issues"
-                    target="_blank"
-                  >
-                    <span>Feedback</span>
-                  </Link>
-                </div>
               </div>
               <div className="flex flex-col pb-5 lg:pb-0">
-                <div className="font-bold sm:text-sm md:text-mdlg:text-md xl:text-md 2xl:textl-lg">
+                <div className="font-bold sm:text-sm md:text-md lg:text-md xl:text-md 2xl:textl-lg">
                   Company
                 </div>
                 <div>About</div>
                 <div>Careers</div>
               </div>
               <div className="flex flex-col pb-5 lg:pb-0">
-                <div className="font-bold sm:text-sm md:text-mdlg:text-md xl:text-md 2xl:textl-lg">
+                <div className="font-bold sm:text-sm md:text-md lg:text-md xl:text-md 2xl:textl-lg">
                   Resources
                 </div>
                 <Link href="/blog">
                   <span>Blog</span>
                 </Link>
-                <div>
-                  <Link href="/help" target="_blank">
-                    <span>Help center</span>
-                  </Link>
-                </div>
               </div>
             </div>
             <div className="flex flex-col">
               <div className="font-bold sm:text-sm md:text-md lg:text-md xl:text-md 2xl:textl-lg">
-                Made by dev rels for dev rels
+                Built for developer tool teams
               </div>
               <div className="flex flex-row space-x-2 items-center">
                 <svg
@@ -107,7 +86,7 @@ const Footer = () => {
         </div>
         <div className="">
           <div className="flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:justify-between border-t border-gray-400 pt-8 pb-8">
-            <div>© 2025 OpenQ Labs GmbH. All right reserved.</div>
+            <div>&copy; 2025 OpenQ Labs GmbH. All right reserved.</div>
             <div className="flex flex-col space-y-3 lg:space-y-0 lg:flex-row lg:space-x-5">
               <div>
                 <Link href="/imprint">
