@@ -8,12 +8,10 @@ const Subnav = () => {
   return (
     <div className="sticky top-0 bg-[#FBFBFB] border-b border-gray-200 z-50">
       <div className="px-content-padding">
-        <div
-          className={`flex flex-row justify-between items-center w-full -mb-1`}
-        >
-          <div className="flex flex-row items-center space-x-12">
-            <Link href="/">
-              <div>
+        <div className="flex h-20 flex-row justify-between items-center w-full">
+          <div className="flex h-full flex-row items-center space-x-12">
+            <Link href="/" className="flex h-full items-center">
+              <div className="flex items-center">
                 <Image
                   src="/logo.png"
                   alt="OpenQ"
@@ -23,17 +21,19 @@ const Subnav = () => {
                 />
               </div>
             </Link>
-            <div className="hidden md:block">
-              <Link href="/blog">
-                <span className="font-semibold text-gray-700">Blog</span>
+            <div className="hidden h-full md:flex items-center">
+              <Link href="/blog" className="flex h-full items-center">
+                <span className="font-semibold leading-none text-gray-700">
+                  Blog
+                </span>
               </Link>
             </div>
           </div>
-          <div className="flex flex-row hidden md:flex space-x-4">
+          <div className="hidden h-full flex-row items-center space-x-4 md:flex">
             <Link
               target="_blank"
               href="https://calendly.com/rickkdev/openqdemo"
-              className="text-white text-xs lg:text-lg font-medium"
+              className="flex items-center text-white text-xs lg:text-lg font-medium"
             >
               <button className="bg-black text-white py-2 px-4 rounded flex items-center justify-center responsive-button h-10">
                 Get access
