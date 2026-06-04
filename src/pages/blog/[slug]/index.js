@@ -47,6 +47,20 @@ const PostLayout = ({ post, otherPosts }) => {
         title={post.title}
         description={post.subtitle}
         canonical={`https://openq.dev/blog/${post.slug}`}
+        additionalMetaTags={[
+          {
+            name: "twitter:title",
+            content: post.title,
+          },
+          {
+            name: "twitter:description",
+            content: post.subtitle,
+          },
+          {
+            name: "twitter:image",
+            content: `https://openq.dev${post.postImage}`,
+          },
+        ]}
         openGraph={{
           url: `https://openq.dev/blog/${post.slug}`,
           title: post.title,

@@ -43,14 +43,29 @@ const DeveloperData = () => {
   return (
     <>
       <NextSeo
-        title="OpenQ API - Developer Data API"
-        description="Access comprehensive developer data through our powerful API. Integrate developer insights directly into your workflows."
+        title="OpenQ API - Open Source Developer Data"
+        description="Access GitHub adoption, dependency usage, contributor graphs, company enrichment, and scraped open source signals through the OpenQ API."
         canonical="https://openq.dev/developer-data"
+        additionalMetaTags={[
+          {
+            name: "twitter:title",
+            content: "OpenQ API - Open Source Developer Data",
+          },
+          {
+            name: "twitter:description",
+            content:
+              "Access GitHub adoption, dependency usage, contributor graphs, company enrichment, and scraped open source signals through the OpenQ API.",
+          },
+          {
+            name: "twitter:image",
+            content: "https://openq.dev/openq-website-thumbnail.png",
+          },
+        ]}
         openGraph={{
           url: "https://openq.dev/developer-data",
-          title: "Developer Data API",
+          title: "OpenQ API - Open Source Developer Data",
           description:
-            "Access comprehensive developer data through our powerful API. Integrate developer insights directly into your workflows.",
+            "Access GitHub adoption, dependency usage, contributor graphs, company enrichment, and scraped open source signals through the OpenQ API.",
           images: [
             {
               url: "https://openq.dev/openq-website-thumbnail.png",
@@ -64,10 +79,12 @@ const DeveloperData = () => {
           type: "website",
         }}
         twitter={{
+          handle: "@openqlabs",
+          site: "@openqlabs",
           cardType: "summary_large_image",
-          title: "Developer Data API",
+          title: "OpenQ API - Open Source Developer Data",
           description:
-            "Access comprehensive developer data through our powerful API. Integrate developer insights directly into your workflows.",
+            "Access GitHub adoption, dependency usage, contributor graphs, company enrichment, and scraped open source signals through the OpenQ API.",
           image: "https://openq.dev/openq-website-thumbnail.png",
         }}
       />

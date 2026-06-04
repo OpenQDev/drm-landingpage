@@ -105,21 +105,35 @@ export default function Blog() {
   return (
     <div className="">
       <NextSeo
-        title="The OpenQ Blog - Updates, ideas and inspiration from OpenQ to enhance developer relations."
-        description="Latest insights, strategies, and inspiration from OpenQ for enhancing developer relations, accelerating your community's growth, and boosting engagement effectively."
+        title="OpenQ Blog - Open Source Observability and Developer Growth"
+        description="Insights on open source observability, GitHub adoption, LLM visibility, developer community growth, and turning open source activity into GTM signal."
         canonical="https://openq.dev/blog"
+        additionalMetaTags={[
+          {
+            name: "twitter:title",
+            content: "OpenQ Blog - Open Source Observability and Developer Growth",
+          },
+          {
+            name: "twitter:description",
+            content:
+              "Insights on open source observability, GitHub adoption, LLM visibility, developer community growth, and turning open source activity into GTM signal.",
+          },
+          {
+            name: "twitter:image",
+            content: "https://openq.dev/openq-website-thumbnail.png",
+          },
+        ]}
         openGraph={{
           url: "https://openq.dev/blog",
-          title:
-            "The OpenQ Blog - Updates, ideas and inspiration from OpenQ to enhance developer relations.",
+          title: "OpenQ Blog - Open Source Observability and Developer Growth",
           description:
-            "Harness the power of a CRM that helps you to better engage, understand and grow your developer community.",
+            "Insights on open source observability, GitHub adoption, LLM visibility, developer community growth, and turning open source activity into GTM signal.",
           images: [
             {
               url: "https://openq.dev/openq-website-thumbnail.png",
               width: 1200,
               height: 630,
-              alt: "OpenQ",
+              alt: "OpenQ Blog",
               type: "image/png",
             },
           ],
@@ -127,11 +141,12 @@ export default function Blog() {
           type: "website",
         }}
         twitter={{
+          handle: "@openqlabs",
+          site: "@openqlabs",
           cardType: "summary_large_image",
-          title:
-            "The OpenQ Blog - Updates, ideas and inspiration from OpenQ to enhance developer relations.",
+          title: "OpenQ Blog - Open Source Observability and Developer Growth",
           description:
-            "Latest insights, strategies, and inspiration from OpenQ for enhancing developer relations, accelerating your community's growth, and boosting engagement effectively.",
+            "Insights on open source observability, GitHub adoption, LLM visibility, developer community growth, and turning open source activity into GTM signal.",
           image: "https://openq.dev/openq-website-thumbnail.png",
         }}
       />

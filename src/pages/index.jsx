@@ -15,24 +15,56 @@ import StartFreeTrial from "@/components/sales/drm/start-free-trial";
 import FunnelCollapse from "@/components/sales/drm/funnel-collapse";
 import DeveloperIntelligence from "@/components/sales/drm/developer-intelligence";
 
+const seoTitle = "OpenQ - Open Source Observability for Developer Tools";
+const seoDescription =
+  "Track GitHub adoption, dependency usage, contributors, LLM visibility, and scraped open source code data for developer tools and AI training workflows.";
+const seoUrl = "https://openq.dev";
+const seoImage = "https://openq.dev/openq-website-thumbnail.png";
+
 const DRM = () => {
   return (
     <>
       <NextSeo
-        title="OpenQ - Open Source Observability for Developer Tools"
-        description="OpenQ tracks GitHub adoption, dependency usage, contributors, LLM visibility, and scraped open source code data for developer tools and AI teams."
-        canonical="https://openq.dev"
+        title={seoTitle}
+        description={seoDescription}
+        canonical={seoUrl}
+        additionalMetaTags={[
+          {
+            name: "keywords",
+            content:
+              "open source observability, GitHub analytics, dependency tracking, developer tools, LLM visibility, open source scraping, code datasets, developer community growth",
+          },
+          {
+            name: "application-name",
+            content: "OpenQ",
+          },
+          {
+            name: "apple-mobile-web-app-title",
+            content: "OpenQ",
+          },
+          {
+            name: "twitter:title",
+            content: seoTitle,
+          },
+          {
+            name: "twitter:description",
+            content: seoDescription,
+          },
+          {
+            name: "twitter:image",
+            content: seoImage,
+          },
+        ]}
         openGraph={{
-          url: "https://openq.dev",
-          title: "OpenQ - Open Source Observability for Developer Tools",
-          description:
-            "OpenQ tracks GitHub adoption, dependency usage, contributors, LLM visibility, and scraped open source code data for developer tools and AI teams.",
+          url: seoUrl,
+          title: seoTitle,
+          description: seoDescription,
           images: [
             {
-              url: "https://openq.dev/openq-website-thumbnail.png",
+              url: seoImage,
               width: 1200,
               height: 630,
-              alt: "OpenQ",
+              alt: "OpenQ open source observability dashboard",
               type: "image/png",
             },
           ],
@@ -40,11 +72,12 @@ const DRM = () => {
           type: "website",
         }}
         twitter={{
+          handle: "@openqlabs",
+          site: "@openqlabs",
           cardType: "summary_large_image",
-          title: "OpenQ - Open Source Observability for Developer Tools",
-          description:
-            "OpenQ tracks GitHub adoption, dependency usage, contributors, LLM visibility, and scraped open source code data for developer tools and AI teams.",
-          image: "https://openq.dev/openq-website-thumbnail.png",
+          title: seoTitle,
+          description: seoDescription,
+          image: seoImage,
         }}
       />
       <main className="">

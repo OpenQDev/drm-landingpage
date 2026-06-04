@@ -40,16 +40,31 @@ const themeConfig = {
     return {
       titleTemplate: "%s | OpenQ Help Center",
       description:
-        "Discover comprehensive support and in-depth guides on OpenQ - your CRM for developer relations. Whether you're looking for feature references, detailed tutorials, or answers to FAQs, our Help Page offers everything you need to maximize your OpenQ experience.",
-      canonical: "https://www.openq.dev/help",
+        "Documentation and guides for OpenQ open source observability, including GitHub adoption tracking, dependency monitoring, developer data, and community analytics.",
+      canonical: "https://openq.dev/help",
+      additionalMetaTags: [
+        {
+          name: "twitter:title",
+          content: "OpenQ Help Center - Open Source Observability Docs",
+        },
+        {
+          name: "twitter:description",
+          content:
+            "Documentation and guides for OpenQ open source observability, including GitHub adoption tracking, dependency monitoring, developer data, and community analytics.",
+        },
+        {
+          name: "twitter:image",
+          content: "https://openq.dev/openq-website-thumbnail.png",
+        },
+      ],
       openGraph: {
-        url: "https://www.openq.dev/help",
-        title: "How can we help? | OpenQ Help Center",
+        url: "https://openq.dev/help",
+        title: "OpenQ Help Center - Open Source Observability Docs",
         description:
-          "Discover comprehensive support and in-depth guides on OpenQ - your CRM for developer relations. Whether you're looking for feature references, detailed tutorials, or answers to FAQs, our Help Page offers everything you need to maximize your OpenQ experience.",
+          "Documentation and guides for OpenQ open source observability, including GitHub adoption tracking, dependency monitoring, developer data, and community analytics.",
         images: [
           {
-            url: "https://www.openq.dev/openq-website-thumbnail.png",
+            url: "https://openq.dev/openq-website-thumbnail.png",
             width: 1200,
             height: 630,
             alt: "OpenQ Help Center",
@@ -62,9 +77,9 @@ const themeConfig = {
         handle: "@openqlabs",
         site: "@openqlabs",
         cardType: "summary_large_image",
-        title: "How can we help? | OpenQ Help Center",
+        title: "OpenQ Help Center - Open Source Observability Docs",
         description:
-          "Discover comprehensive support and in-depth guides on OpenQ - your CRM for developer relations. Whether you're looking for feature references, detailed tutorials, or answers to FAQs, our Help Page offers everything you need to maximize your OpenQ experience.",
+          "Documentation and guides for OpenQ open source observability, including GitHub adoption tracking, dependency monitoring, developer data, and community analytics.",
         image: "https://openq.dev/openq-website-thumbnail.png",
       },
     };
